@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>ICCH Bullettin</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="fonts/fontawesome/css/font-awesome.min.css">
+        <script src="lib/moment-with-locales.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="lib/remarkable.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/vue.js"></script>
+        <script src="js/vue-fa-calendar.js"></script>
+        <script src="js/vue-color.min.js"></script>
+    </head>
+    <body>
+        <div id="inputDialog" v-if="show">
+            <div class="textbox" v-if="type === 'textbox'">
+                <textarea v-model="data"></textarea>
+            </div>
+            <div class="readingpicker" v-if="type === 'readingpicker'">
+                <input type="text" class="reading" v-model:value="data"></input>
+                <ul>
+                    <li v-on:click="selectSuggestion(suggestion.short)" v-for="suggestion in dataSuggestions">{{ suggestion.short }} <span class="hint">({{ suggestion.long }})</span></li>
+                </ul>
+            </div>
+            <div class="sundaypicker" v-if="type === 'sundaypicker'">
+                <input type="text" class="sunday-label" v-bind:value="data"></input>
+                <button v-on:click="decreaseData(7)" class="prev">&larr;</button>
+                <button v-on:click="increaseData(7)" class="next">&rarr;</button>
+            </div>
+            <div class="daypicker" v-if="type === 'daypicker'">
+                <fa-month-table 
+                    date-format="x"
+                    v-on:dateclicked="okDay"
+                    v-bind:month-date="data"></fa-month-table>
+            </div>
+
+            <button v-if="type !== 'daypicker'" v-on:click="ok">Ok</button>
+            <button v-on:click="cancel">Cancel</button>
+        </div>
+        <div id="app">
+            <ul id="toolBar">
+                <li>Color: 
+                    <slider-picker v-model="colors" v-on:change-color="updateColor1"></slider-picker>
+                </li>
+                <li>Font:
+                    <select v-model="bullettin.fonts.text.family">
+                        <option value="Verdana">Verdana</option>
+                        <option value="Tahoma">Tahoma</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Serif">Serif</option>
+                        <option value="Sans-Serif">Sans-Serif</option>
+                    </select>
+                    <button v-on:click="increaseFontSize">+</button>
+                    {{ bullettin.fonts.text.size }}pt
+                    <button v-on:click="decreaseFontSize">-</button>
+                </li>
+                <li>Appointment: 
+                    <button v-on:click="addAppointment">Add</button>
+                </li>
+                <li>
+                    <button v-on:click="saveBullettin">Save Bullettin</button>
+                </li>
+            </ul>
+            <div class="address">
+                <h1>ICCH</h1>
+                <h2>International Catholic Community of Heidelberg</h2>
+                <ul>
+                    <li>St. Michael's Church</li>
+                    <li>Kirschgartenstr. 35, 69126 Heidelberg Sudstadt</li>
+                    <li>06221/13020 – office Fr. Christof Heimpel</li>
+                </ul>
+            </div>
+            <div class="readings">
+                <h1>Today's readings:</h1>
+                <p class="ref">
+                    <span class="action" v-on:click="showInput('readingpicker', 'bullettin.reading1')">{{ bullettin.reading1 }}</span> |
+                    <span class="action" v-on:click="showInput('readingpicker', 'bullettin.reading2')">{{ bullettin.reading2 }}</span> |
+                    <span class="action" v-on:click="showInput('readingpicker', 'bullettin.reading3')">{{ bullettin.reading3 }}</span>
+                <p class="welcome action" v-on:click="showInput('textbox', 'bullettin.father')">{{ bullettin.father }}</p>
+            </div>
+            <h1 class="title" v-bind:style="{ 'background-color': bullettin.colors.color1 }">
+                <span class="action" v-on:click="showInput('sundaypicker', 'bullettin.date')">{{ bullettin.date }}</span> - <span class="action" v-on:click="showInput('textbox', 'bullettin.title')">{{ bullettin.title }}</span></h1>
+            <p class="text action" v-bind:style="'font-family:' + bullettin.fonts.text.family + '; font-size:' + bullettin.fonts.text.size + 'pt'" v-on:click="showInput('textbox', 'bullettin.text')" v-html="md2html(bullettin.text)"></p>
+            <div class="source action" v-on:click="showInput('textbox', 'bullettin.source')">Source: {{ bullettin.source }}</div>
+            <div v-if="bullettin.appointments.length" section class="page-footer">
+                <h2 class="subtitle" v-bind:style="{ 'background-color': bullettin.colors.color1 }">NEWS</h2>
+                <ul class="info">
+                    <li v-for="appointment in bullettin.appointments">
+                        <span class="action" v-on:click="showInput('daypicker', 'epoch', appointment)">{{ appointment.date }}</span> &dash;
+                        <span class="action" v-on:click="showInput('textbox', 'description', appointment)">{{ appointment.description }}</span>
+                    </li>
+                </ul>
+                <ul class="footer">
+                    <li>If you would like to be added to our email list please send your contact information to:</li>
+                    <li><a href="mailto:infoheidelberg@internationalcatholiccommunity.com">infoheidelberg@internationalcatholiccommunity.com</a></li>
+                </ul>
+            </div>
+            <ul v-else class="footer">
+                <li>If you would like to be added to our email list please send your contact information to:</li>
+                <li><a href="mailto:infoheidelberg@internationalcatholiccommunity.com">infoheidelberg@internationalcatholiccommunity.com</a></li>
+            </ul>
+        </div>
+        <script src="js/main.js"></script>
+    </body>
+</html>

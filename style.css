@@ -1,0 +1,252 @@
+body {
+    margin: 0;
+    padding: 1em;
+    font-family: Times, Georgia;
+    font-size: 0.5em;
+}
+
+a, a:hover {
+    color: black;
+}
+
+.address {
+    background: #CCC;
+    border: 1px solid #333;
+    text-align: center;
+    font-size: 1.3em;
+    line-height: 1em;
+    width: 65%;
+    float: left;
+    margin-bottom: 2em;
+}
+.address h1 { 
+}
+.address h2 {
+    font-size: 1.8em;
+    margin: 4pt 0;
+}
+.address ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    font-size: 1.5em;
+    line-height: 1.1em;
+}
+
+.readings {
+    margin-top: 1.2em;
+    float: right;
+    width: 30%;
+    text-align: right;
+    font-size: 1.3em;
+}
+.readings h1 {
+    margin: 0;
+}
+.readings .ref {
+    margin: 0.3em;
+    font-size: 10pt;
+}
+.readings .welcome {
+    font-style: italic;
+    text-decoration: underline;
+    font-size: 10pt;
+}
+
+.title {
+    clear: both;
+    background-color: black;
+    color: #FFF;
+    font-size: 18pt;
+    margin-top: 2em;
+}
+
+.text {
+    text-align: justify;
+    font-size: 10pt;
+}
+
+.subtitle {
+    clear: both;
+    background: black;
+    color: #FFF;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.source {
+    text-align: right;
+    font-size: 1.3em;
+}
+
+.footer {
+    border-top: 1px solid black;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    font-size: 10pt;
+    line-height: 1.3em;
+    text-align: center;
+    margin-top: 1em;
+    padding-top: 1em;
+}
+
+.page-footer {
+    position: fixed;
+    bottom: 0;
+    left: 1em;
+    right: 1em;
+    font-size: 1em;
+    background-color: white;
+}
+.info {
+    font-size: 2em;
+}
+
+.action:hover {
+    color: #00ABFF;
+    cursor: pointer;
+    cursor: hand;
+}
+
+@media screen {
+    .action:after {
+        content: "✎";
+        display: inline;
+        color: transparent;
+    }
+    .action:hover:after {
+        color: #00ABFF;
+    }
+}
+
+#inputDialog {
+    display: block;
+    background: rgba(0,0,0,0.8);
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 2em;
+}
+
+#inputDialog {
+    font-family: Tahoma;
+    font-size: 12pt;
+}
+
+#inputDialog textarea,
+#inputDialog input[type=text] {
+    background-color: #FFEECC;
+}
+#inputDialog textarea {
+    min-height: 12em;
+    width: 100%;
+    height: 80%;
+    padding: 0.5em;
+}
+#inputDialog button:hover,
+#inputDialog li:hover {
+    background: yellow;
+    cursor: pointer;
+    cursor: hand;
+}
+#inputDialog button,
+#inputDialog input[type=text],
+#inputDialog textarea {
+    border: none;
+    border-left: 3px solid #00ABFF;
+    border-radius: 3px;
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+#inputDialog ul {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1em;
+    margin-top: -1em;
+    max-height: 10em;
+    overflow-y: scroll;
+}
+
+#inputDialog li {
+    display: block;
+    background: white;
+    margin-top: 1px;
+    border-left: 4px solid #00ABFF;
+    padding: 0.2em;
+}
+
+#inputDialog .hint {
+    color: #AAA;
+    font-weight: bold;
+}
+
+#inputDialog .daypicker {
+    color: white;
+}
+#inputDialog .daypicker table {
+    margin-bottom: 1em;
+}
+
+#inputDialog .daypicker tr td.text-center:hover {
+    color: #00ABFF;
+    cursor: hand;
+    cursor: pointer;
+}
+#inputDialog .daypicker i.fa-caret-left {
+    float: left;
+    cursor: hand;
+    cursor: pointer;
+    font-size: 1.3em;
+}
+#inputDialog .daypicker i.fa-caret-right {
+    float: right;
+    cursor: hand;
+    cursor: pointer;
+    font-size: 1.3em;
+}
+
+#toolBar {
+    background: #00ABFF;
+    margin-top: -1em;
+    border-radius: 0 0 3px 3px;
+    font-family: Tahoma;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    font-size: 2em;
+}
+#toolBar ul {
+    margin: 0;
+    padding: 0;
+}
+#toolBar li {
+    margin-right: 1em;
+    list-style: none;
+    border: 0;
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+}
+#toolBar .color {
+    display: inline-block;
+    height: 0.7em;
+    width: 0.7em;
+    border: 1px solid black;
+}
+
+@media print {
+    #toolBar {
+        display: none;
+    }
+}
+.vue-color__slider {
+    width: 100px !important;
+}
+.vue-color__slider__swatches {
+    display: none !important;
+}
