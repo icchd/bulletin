@@ -9,6 +9,12 @@ a, a:hover {
     color: black;
 }
 
+#app {
+    width: 800px;
+    margin: 0 auto;
+    padding: 1em;
+}
+
 .address {
     background: #CCC;
     border: 1px solid #333;
@@ -98,6 +104,8 @@ a, a:hover {
     right: 1em;
     font-size: 1em;
     background-color: white;
+    width: 800px;
+    margin: 0 auto;
 }
 .info {
     font-size: 2em;
@@ -225,12 +233,15 @@ a, a:hover {
     padding: 0;
 }
 #toolBar li {
-    margin-right: 1em;
+    margin-right: 0.7em;
     list-style: none;
     border: 0;
     display: inline-block;
     color: white;
     font-weight: bold;
+}
+#toolBar li:last-child {
+    margin-right: 0;
 }
 #toolBar .color {
     display: inline-block;
@@ -249,4 +260,10 @@ a, a:hover {
 }
 .vue-color__slider__swatches {
     display: none !important;
+}
+
+.image1 {
+    float: left;
+    margin-top: 0.5em;
+    margin-right: 1em;
 }

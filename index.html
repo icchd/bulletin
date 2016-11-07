@@ -59,7 +59,10 @@
                     <button v-on:click="addAppointment">Add</button>
                 </li>
                 <li>
-                    <button v-on:click="saveBullettin">Save Bullettin</button>
+                    <button v-on:click="toggleImage" class="fa fa-picture-o"></button>
+                </li>
+                <li>
+                    <button v-on:click="saveBullettin">Done</button>
                 </li>
             </ul>
             <div class="address">
@@ -80,7 +83,12 @@
                 <p class="welcome action" v-on:click="showInput('textbox', 'bullettin.father')">{{ bullettin.father }}</p>
             </div>
             <h1 class="title" v-bind:style="{ 'background-color': bullettin.colors.color1 }">
-                <span class="action" v-on:click="showInput('sundaypicker', 'bullettin.date')">{{ bullettin.date }}</span> - <span class="action" v-on:click="showInput('textbox', 'bullettin.title')">{{ bullettin.title }}</span></h1>
+                <span class="action" v-on:click="showInput('sundaypicker', 'bullettin.date')">{{ bullettin.date }}</span> - <span class="action" v-on:click="showInput('textbox', 'bullettin.title')">{{ bullettin.title }}</span>
+            </h1>
+            <img v-if="bullettin.image.enabled"
+                class="image1 action"
+                v-on:click="showInput('textbox', 'bullettin.image.src')"
+                v-bind:src="bullettin.image.src" />
             <p class="text action" v-bind:style="'font-family:' + bullettin.fonts.text.family + '; font-size:' + bullettin.fonts.text.size + 'pt'" v-on:click="showInput('textbox', 'bullettin.text')" v-html="md2html(bullettin.text)"></p>
             <div class="source action" v-on:click="showInput('textbox', 'bullettin.source')">Source: {{ bullettin.source }}</div>
             <div v-if="bullettin.appointments.length" section class="page-footer">
