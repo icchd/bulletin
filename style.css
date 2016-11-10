@@ -1,8 +1,8 @@
 body {
     margin: 0;
     padding: 1em;
-    font-family: Times, Georgia;
     font-size: 0.5em;
+    font-family: Tahoma, Verdana;
 }
 
 a, a:hover {
@@ -13,6 +13,7 @@ a, a:hover {
     width: 800px;
     margin: 0 auto;
     padding: 1em;
+    font-family: Times, Georgia;
 }
 
 .address {
@@ -251,19 +252,63 @@ a, a:hover {
 }
 
 @media print {
-    #toolBar {
-        display: none;
+    .hideinprint {
+        display: none !important;
     }
 }
 .vue-color__slider {
     width: 100px !important;
 }
 .vue-color__slider__swatches {
-    display: none !important;
+    margin-top: 0 !important;
+}
+.vue-color__slider__hue-warp {
 }
 
 .image1 {
     float: left;
     margin-top: 0.5em;
     margin-right: 1em;
+}
+
+.publishPassword {
+    width: 5em;
+}
+
+#messageToasts {
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    width: 0;
+    z-index: 999;
+}
+.messageToast.error {
+    background: rgb(134, 45, 46);
+}
+.messageToast.confirm{
+    background: rgb(45, 134, 71);
+}
+.messageToast {
+    float: left;
+    font-size: 2em;
+    padding: 1em;
+    border-radius: 3px;
+    border: 2px solid #BBB;
+    color: white;
+    background: #00ABFF;
+    font-weight: bold;
+    width: 20em;
+    margin-bottom: 0.5em;
+}
+.messageToast.show-true {
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+.messageToast.show-false {
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
 }

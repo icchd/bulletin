@@ -12,6 +12,31 @@
         <script src="js/vue-color.min.js"></script>
     </head>
     <body>
+        <!-- begin of facebook sdk -->
+        <script>
+          window.fbAsyncInit = function() {
+            FB.init({
+              appId      : '1866817903604683',
+              xfbml      : true,
+              version    : 'v2.8'
+            });
+            FB.AppEvents.logPageView();
+          };
+
+          (function(d, s, id){
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) {return;}
+             js = d.createElement(s); js.id = id;
+             js.src = "//connect.facebook.net/en_US/sdk.js";
+             fjs.parentNode.insertBefore(js, fjs);
+           }(document, 'script', 'facebook-jssdk'));
+        </script>
+        <!-- end of facebook sdk -->
+        <div id="messageToasts" v-if="messages.length">
+            <div v-for="message in messages" v-bind:class="'messageToast ' + message.type + ' show-' + message.display">
+                {{ message.text }}
+            </div>
+        </div>
         <div id="inputDialog" v-if="show">
             <div class="textbox" v-if="type === 'textbox'">
                 <textarea v-model="data"></textarea>
@@ -38,11 +63,12 @@
             <button v-on:click="cancel">Cancel</button>
         </div>
         <div id="app">
-            <ul id="toolBar">
-                <li>Color: 
+            <ul id="toolBar" class="hideinprint">
+                <li><span class="fa fa-paint-brush" /></li>
+                <li>
                     <slider-picker v-model="colors" v-on:change-color="updateColor1"></slider-picker>
                 </li>
-                <li>Font:
+                <li><span class="fa fa-font">&nbsp;</span>
                     <select v-model="bullettin.fonts.text.family">
                         <option value="Verdana">Verdana</option>
                         <option value="Tahoma">Tahoma</option>
@@ -55,14 +81,16 @@
                     {{ bullettin.fonts.text.size }}pt
                     <button v-on:click="decreaseFontSize">-</button>
                 </li>
-                <li>Appointment: 
-                    <button v-on:click="addAppointment">Add</button>
+                <li>
+                    <button v-on:click="addAppointment"><span class="fa fa-calendar"></span></button>
                 </li>
                 <li>
-                    <button v-on:click="toggleImage" class="fa fa-picture-o"></button>
+                    <button v-on:click="toggleImage"><span class="fa fa-picture-o"></span></button>
                 </li>
                 <li>
-                    <button v-on:click="saveBullettin">Done</button>
+                    Publish:
+                    <input class="publishPassword" v-model="bullettin.password" placeholder="Pass" type="password"></input>
+                    <button v-on:click="publishBullettin"><span class="fa fa-check"></span></button>
                 </li>
             </ul>
             <div class="address">
@@ -89,12 +117,13 @@
                 class="image1 action"
                 v-on:click="showInput('textbox', 'bullettin.image.src')"
                 v-bind:src="bullettin.image.src" />
-            <p class="text action" v-bind:style="'font-family:' + bullettin.fonts.text.family + '; font-size:' + bullettin.fonts.text.size + 'pt'" v-on:click="showInput('textbox', 'bullettin.text')" v-html="md2html(bullettin.text)"></p>
+            <span class="text action" v-bind:style="'font-family:' + bullettin.fonts.text.family + '; font-size:' + bullettin.fonts.text.size + 'pt'" v-on:click="showInput('textbox', 'bullettin.text')" v-html="md2html(bullettin.text)"></span>
             <div class="source action" v-on:click="showInput('textbox', 'bullettin.source')">Source: {{ bullettin.source }}</div>
             <div v-if="bullettin.appointments.length" section class="page-footer">
                 <h2 class="subtitle" v-bind:style="{ 'background-color': bullettin.colors.color1 }">NEWS</h2>
                 <ul class="info">
                     <li v-for="appointment in bullettin.appointments">
+                        <button v-on:click="deleteAppointment(appointment)" class="hideinprint fa-trash-o fa"></button>
                         <span class="action" v-on:click="showInput('daypicker', 'epoch', appointment)">{{ appointment.date }}</span> &dash;
                         <span class="action" v-on:click="showInput('textbox', 'description', appointment)">{{ appointment.description }}</span>
                     </li>

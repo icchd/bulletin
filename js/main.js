@@ -2,12 +2,12 @@ var m = function () { return moment.apply(this, arguments).locale("en-gb"); }
 
 var markdown = new Remarkable();
 
-function getNextSunday() {
+function getNextSunday(sFormat) {
     var days = 0;
     while (m().add(days, "days").format("dddd") !== "Sunday") {
         days++;
     }
-    return m().add(days, "days").format("LL");
+    return m().add(days, "days").format(sFormat || "LL");
 }
 
 var oBooks = {
@@ -202,7 +202,10 @@ var app = new Vue({
           a: 1
         },
         bullettin: {
+            password: "",
             date: getNextSunday(),
+            saveAs: getNextSunday("YYYY-MM-DD") + "-bullettin.markdown",
+            dateChanged: m().format("YYYY-MM-DD hh:mm:ss +02:00"),
             image: {
                 enabled: true,
                 src: "https://placeholdit.imgix.net/~text?txtsize=33&txt=Image&w=230&h=230"
@@ -214,7 +217,7 @@ var app = new Vue({
             reading1: "Reading 1",
             reading2: "Reading 2",
             reading3: "Gospel",
-            appointments: [ formatAppointment(m()) ],
+            appointments: [ ],
             colors: {
                color1: "000",
             },
@@ -237,19 +240,85 @@ var app = new Vue({
             app.bullettin.image.enabled = !app.bullettin.image.enabled;
         },
         increaseFontSize: function () {
-            app.bullettin.fonts.text.size++;
+            app.bullettin.fonts.text.size+=0.5;
         },
         decreaseFontSize: function () {
             app.bullettin.fonts.text.size--;
         },
-        saveBullettin: function () {
-            // TODO
+        publishBullettin: function () {
+            // first make sure the bullettin is published
+
+            function sendPublishRequest() {
+                return new Promise(function (fnDone, fnError) {
+                    var request = new XMLHttpRequest();
+                    request.onreadystatechange = function () {
+                        if (request.readyState === XMLHttpRequest.DONE) {
+                            try {
+                                fnDone(JSON.parse(request.responseText));
+                            } catch (oError) {
+                                fnError(oError);
+                            }
+                        }
+                    };
+                    request.open("POST", "http://iot.dimatteo.it/iot/bullettin", true);
+                    // request.open("POST", "https://icch-api.herokuapp.com/bullettin", true);
+                    request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+                    request.send(JSON.stringify(app.bullettin));
+                });
+            }
+
+            function publishToFacebook() {
+                FB.login(function(){
+                  FB.api("/InternationalCatholicCommunityofHeidelberg?fields=access_token", 'get', function (o) { 
+                    if (!o.access_token) {
+                        alert.show("error", "Something went wrong while getting access token. Try again.");
+                        return;
+                    }
+                    var sAccessToken = o.access_token;
+                    FB.api(
+                        '/InternationalCatholicCommunityofHeidelberg/feed', 
+                        'post', {
+                            message: 'Our bullettin for Sunday mass on ' + app.bullettin.date + ' is available.',
+                            link: 'http://www.google.com',
+                            access_token: sAccessToken 
+                        }, function (oRes) { 
+                            if (oRes.error) {
+                                alert.show("error", "An error occurred while publishing the bullettin. Try again.");
+                                return;
+                            }
+                            alert.show("confirm", "The bullettin was published on Facebook!");
+                        });
+                  });
+                  
+                }, {scope: 'manage_pages,publish_pages'});
+            }
+
+            sendPublishRequest().then(function (oResponse) {
+                if (!oResponse.success) {
+                    alert.show("error", oResponse.message);
+                    return;
+                } else {
+                    alert.show("confirm", oResponse.message);
+                }
+            }, function (oError) {
+                alert.show("error", "" + oError);
+            });
+            
         },
         addAppointment: function () {
             app.bullettin.appointments.push(formatAppointment(m()));
-
+            app.sortAppointments();
+        },
+        sortAppointments: function () {
             app.bullettin.appointments = app.bullettin.appointments.sort(
                 function (a, b) { return a.epoch >= b.epoch; }
+            );
+        },
+        deleteAppointment: function (oAppointment) {
+            app.bullettin.appointments = app.bullettin.appointments.filter(
+                function (oAppointmentFromList) {
+                    return oAppointmentFromList !== oAppointment;
+                }
             );
         },
         md2html: function (sMarkdown) {
@@ -304,10 +373,41 @@ var app = new Vue({
                     Object.keys(oOptionalObject).forEach(function (sCurrentObjKey) {
                         oOptionalObject[sCurrentObjKey] = oNewAppointment[sCurrentObjKey];
                     });
+
+                    app.sortAppointments();
                 };
             }
 
             input.show = true;
+        }
+    }
+});
+
+var alert = new Vue({
+    el: "#messageToasts",
+    data: {
+        messages: [
+        ]
+    },
+    methods: {
+        show: function (sType, sText) {
+            var oMessage = {
+                display: true,
+                type: sType,
+                text: sText
+            };
+            alert.messages.push(oMessage);
+            setTimeout(function () {
+                oMessage.display = false;
+
+                setTimeout(function () {
+                    // garbage collect
+                    alert.messages = alert.messages.filter(function (oMessage) {
+                        return oMessage.display === true;
+                    });
+                }, 500);
+            }, 4000);
+
         }
     }
 });
