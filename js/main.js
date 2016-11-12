@@ -260,8 +260,7 @@ var app = new Vue({
                             }
                         }
                     };
-                    request.open("POST", "http://iot.dimatteo.it/iot/bullettin", true);
-                    // request.open("POST", "https://icch-api.herokuapp.com/bullettin", true);
+                    request.open("POST", "https://icch-api.herokuapp.com/bullettin", true);
                     request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
                     request.send(JSON.stringify(app.bullettin));
                 });
