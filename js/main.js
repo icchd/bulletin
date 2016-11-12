@@ -278,7 +278,7 @@ var app = new Vue({
                         '/InternationalCatholicCommunityofHeidelberg/feed', 
                         'post', {
                             message: 'Our bullettin for Sunday mass on ' + app.bullettin.date + ' is available.',
-                            link: 'http://www.google.com',
+                            link: 'http://www.google.com', // TODO: point to ICCH post
                             access_token: sAccessToken 
                         }, function (oRes) { 
                             if (oRes.error) {
