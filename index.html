@@ -117,7 +117,7 @@
                 class="image1 action"
                 v-on:click="showInput('textbox', 'bullettin.image.src')"
                 v-bind:src="bullettin.image.src" />
-            <span class="text action" v-bind:style="'font-family:' + bullettin.fonts.text.family + '; font-size:' + bullettin.fonts.text.size + 'pt'" v-on:click="showInput('textbox', 'bullettin.text')" v-html="md2html(bullettin.text)"></span>
+            <span class="text action" v-bind:style="'line-height:' + bullettin.fonts.text.lineHeight + 'pt; font-family:' + bullettin.fonts.text.family + '; font-size:' + bullettin.fonts.text.size + 'pt'" v-on:click="showInput('textbox', 'bullettin.text')" v-html="md2html(bullettin.text)"></span>
             <div class="source action" v-on:click="showInput('textbox', 'bullettin.source')">Source: {{ bullettin.source }}</div>
             <div v-if="bullettin.appointments.length" section class="page-footer">
                 <h2 class="subtitle" v-bind:style="{ 'background-color': bullettin.colors.color1 }">NEWS</h2>

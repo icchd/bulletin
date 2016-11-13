@@ -224,6 +224,7 @@ var app = new Vue({
             fonts: {
                 text: {
                     family: "Georgia",
+                    lineHeight: 12,
                     size: 11
                 }
             }
