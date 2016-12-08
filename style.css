@@ -9,6 +9,24 @@ a, a:hover {
     color: black;
 }
 
+.btn {
+    cursor: pointer;
+    cursor: hand;
+}
+.btn:hover {
+    color: #FFFF00;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                          not supported by any browser */
+}
+
 #app {
     width: 800px;
     margin: 0 auto;
@@ -221,13 +239,20 @@ a, a:hover {
 }
 
 #toolBar {
-    background: #00ABFF;
+    padding-left: 1em;
+    padding-right: 1em;
+    /* background: #00ABFF; */
     margin-top: -1em;
     border-radius: 0 0 3px 3px;
     font-family: Tahoma;
-    padding-top: 1em;
     padding-bottom: 0.5em;
     font-size: 2em;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00abff+0,006eff+100 */
+    background: rgb(0,171,255); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(0,171,255,1) 0%, rgba(0,110,255,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,171,255,1) 0%,rgba(0,110,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,171,255,1) 0%,rgba(0,110,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00abff', endColorstr='#006eff',GradientType=0 ); /* IE6-9 */
 }
 #toolBar ul {
     margin: 0;
@@ -250,6 +275,38 @@ a, a:hover {
     width: 0.7em;
     border: 1px solid black;
 }
+#toolBar .tabs {
+    width: 100%;
+    margin-bottom: 1em;
+}
+#toolBar .tabs li:hover {
+    color: #FFFF00;
+}
+#toolBar .tabs li {
+    color: white;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 2em;
+    cursor: hand;
+    cursor: pointer;
+}
+#toolBar .tabs li.selected {
+    background: #000099;
+}
+
+#toolBar .sizeBox {
+    width: 3.8em;
+    text-align: left;
+    display: inline-block;
+    background: #00A1F0;
+}
+
+#toolBar .theme {
+    width: 4em;
+    height: 2em;
+    padding: 0.2em;
+    font-size: 0.8em;
+}
 
 @media print {
     .hideinprint {
@@ -266,10 +323,18 @@ a, a:hover {
 }
 
 .image1 {
-    float: left;
     margin-top: 0.5em;
-    margin-right: 1em;
+    max-width: 100%;
 }
+.image1.float-left {
+    margin-right: 1em;
+    float: left;
+}
+.image1.float-right {
+    margin-left: 1em;
+    float: right;
+}
+
 
 .publishPassword {
     width: 5em;
@@ -278,7 +343,7 @@ a, a:hover {
 #messageToasts {
     position: fixed;
     top: 1em;
-    left: 1em;
+    right: 48em;
     width: 0;
     z-index: 999;
 }
