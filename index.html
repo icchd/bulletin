@@ -195,9 +195,20 @@
                     'background-color': bullettin.colors.color1,
                     border: '1px solid ' + bullettin.colors.border
                 }">NEWS</h2>
+                <div class="hideinprint">
+                    <button v-on:click="addAppointment"><span class="fa fa-plus"> Add</span></button>
+                    <button v-on:click="sortAppointments()">
+                        <span class="fa fa-sort"> Sort</span>
+                    </button>
+                    <button v-on:click="deleteAllAppointments()">
+                        <span class="fa fa-trash-o"> Delete all</span>
+                    </button>
+                </div>
                 <ul class="info">
                     <li v-for="appointment in bullettin.appointments">
                         <button v-on:click="deleteAppointment(appointment)" class="hideinprint fa-trash-o fa"></button>
+                        <button v-on:click="moveAppointmentUp(appointment)" class="hideinprint fa fa-arrow-up"></button>
+                        <button v-on:click="moveAppointmentDown(appointment)" class="hideinprint fa fa-arrow-down"></button>
                         <span class="action" v-on:click="showInput('daypicker', 'epoch', appointment)">{{ appointment.date }}</span> &dash;
                         <span class="action" v-on:click="showInput('textbox', 'description', appointment)">{{ appointment.description }}</span>
                     </li>

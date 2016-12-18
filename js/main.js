@@ -1,4 +1,31 @@
 
+
+function arraySwapInPlace (A, a, b) {
+    /*
+     * Utility function to swap two elements of an array in place.
+     */
+    var iAlen = A.length;
+    var iApos = A.indexOf(a);
+    var iBpos = A.indexOf(b);
+
+    var aAitems = [];
+    while (A.length) {
+        aAitems.push(A.shift());
+    }
+    aAitems.map(function (x, i) {
+        if (i === iApos) {
+            return iBpos;
+        }
+        if (i === iBpos) {
+            return iApos;
+        }
+        return i;
+    }).forEach(function (iPushFrom) {
+        A.push(aAitems[iPushFrom]);
+    });
+
+};
+
 var m = function () { return moment.apply(this, arguments).locale("en-gb"); }
 
 var markdown = new Remarkable();
@@ -433,10 +460,40 @@ var app = new Vue({
             app.bullettin.appointments.push(formatAppointment(m()));
             app.sortAppointments();
         },
+        deleteAllAppointments: function () {
+            app.bullettin.appointments = [];
+        },
         sortAppointments: function () {
             app.bullettin.appointments = app.bullettin.appointments.sort(
                 function (a, b) { return a.epoch >= b.epoch; }
             );
+        },
+        moveAppointmentUp: function (oAppointment) {
+            var aBullettinAppointments = app.bullettin.appointments;
+            var nAppointments = aBullettinAppointments.length;
+            var iAppointmentPosition = aBullettinAppointments.indexOf(oAppointment);
+
+            if (iAppointmentPosition === 0) {
+                alert.show("error", "cannot move appointment up");
+                return;
+            }
+
+            var oPrevAppointment = aBullettinAppointments[iAppointmentPosition - 1];
+            arraySwapInPlace(aBullettinAppointments, oAppointment, oPrevAppointment);
+
+        },
+        moveAppointmentDown: function (oAppointment) {
+            var aBullettinAppointments = app.bullettin.appointments;
+            var nAppointments = aBullettinAppointments.length;
+            var iAppointmentPosition = aBullettinAppointments.indexOf(oAppointment);
+
+            if (iAppointmentPosition === nAppointments - 1) {
+                alert.show("error", "cannot move appointment down");
+                return;
+            }
+
+            var oNextAppointment = aBullettinAppointments[iAppointmentPosition + 1];
+            arraySwapInPlace(aBullettinAppointments, oAppointment, oNextAppointment);
         },
         deleteAppointment: function (oAppointment) {
             app.bullettin.appointments = app.bullettin.appointments.filter(
@@ -596,8 +653,6 @@ var app = new Vue({
                     Object.keys(oOptionalObject).forEach(function (sCurrentObjKey) {
                         oOptionalObject[sCurrentObjKey] = oNewAppointment[sCurrentObjKey];
                     });
-
-                    app.sortAppointments();
                 };
             }
 
