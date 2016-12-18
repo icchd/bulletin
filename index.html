@@ -6,7 +6,7 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="fonts/fontawesome/css/font-awesome.min.css">
         <script src="lib/moment-with-locales.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="lib/remarkable.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="lib/showdown.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="js/vue.js"></script>
         <script src="js/vue-fa-calendar.js"></script>
         <script src="js/vue-color.min.js"></script>
@@ -38,7 +38,7 @@
             </div>
         </div>
         <div id="inputDialog" v-if="show">
-            <div class="textbox" v-if="type === 'textbox'">
+            <div class="textbox" v-if="type === 'textbox' || type === 'appointmentTextbox'">
                 <textarea v-model="data"></textarea>
             </div>
             <div class="readingpicker" v-if="type === 'readingpicker'">
@@ -123,6 +123,13 @@
                             <span v-on:click="decreaseLineHeight" class="btn fa fa-minus"></span>
                             <span v-on:click="increaseLineHeight" class="btn fa fa-plus"></span>
                         </li>
+                        <li><span class="fa fa-paragraph">&nbsp;</span>
+                            <span class="sizeBox">
+                                {{ bullettin.fonts.text.paragraphMargin }}
+                            </span>
+                            <span v-on:click="decreaseParagraphMargin" class="btn fa fa-minus"></span>
+                            <span v-on:click="increaseParagraphMargin" class="btn fa fa-plus"></span>
+                        </li>
                     </ul>
                 </li>
                 <li v-if="toolbar.current === 'image'">
@@ -140,6 +147,10 @@
                 </li>
                 <li v-if="toolbar.current === 'tools'">
                     <ul>
+                        <li>
+                            Changes ({{history.length}})
+                            <button v-on:click="historyUndo"><span class="fa fa-undo"></span></button>
+                        </li>
                         <li>
                             <span class="fa fa-calendar"></span>
                             <button v-on:click="addAppointment"><span class="fa fa-plus"></span></button>
@@ -180,15 +191,21 @@
                     border: '1px solid ' + bullettin.colors.border,
                     'background-color': bullettin.colors.color1 
                 }">
-                <span class="action" v-on:click="showInput('sundaypicker', 'bullettin.date')">{{ bullettin.date }}</span> &ndash; <span class="action" v-on:click="showInput('textbox', 'bullettin.title')">{{ bullettin.title }}</span>
+                <span class="action" v-on:click="showInput('sundaypicker', 'bullettin.date')">{{ bullettin.date }}</span>
+                    {{ bullettin.title ? " &ndash; " : "" }}
+                <span class="action" v-on:click="showInput('textbox', 'bullettin.title')">{{ bullettin.title }}</span>
             </h1>
             <img v-if="bullettin.image.enabled"
                 v-bind:class="{ image1: true, action: true, 'float-left': bullettin.image.layout === 'left', 'float-right': bullettin.image.layout === 'right' }"
                 v-on:click="showInput('textbox', 'bullettin.image.src')"
                 v-bind:src="bullettin.image.src"
                 v-bind:style="{ width: bullettin.image.size + '%' }" />
-            <span class="text action" v-bind:style="'line-height:' + bullettin.fonts.text.lineHeight + 'pt; font-family:' + bullettin.fonts.text.family + '; font-size:' + bullettin.fonts.text.size + 'pt'" v-on:click="showInput('textbox', 'bullettin.text')" v-html="md2html(bullettin.text)"></span>
-            <div class="source action" v-on:click="showInput('textbox', 'bullettin.source')">Source: {{ bullettin.source }}</div>
+            <span v-bind:class="'text action ' + 'textMargin' + bullettin.fonts.text.paragraphMargin" v-bind:style="{
+                'line-height': bullettin.fonts.text.lineHeight + 'pt',
+                'font-family': bullettin.fonts.text.family,
+                'font-size': bullettin.fonts.text.size + 'pt'
+            }" v-on:click="showInput('textbox', 'bullettin.text')" v-html="md2html(bullettin.text)"></span>
+            <div class="source action" v-on:click="showInput('textbox', 'bullettin.source')" v-html="txt2html(bullettin.source)"></div>
             <div v-if="bullettin.appointments.length" section class="page-footer">
                 <h2 class="subtitle" v-bind:style="{ 
                     color: bullettin.colors.color2,
@@ -209,18 +226,18 @@
                         <button v-on:click="deleteAppointment(appointment)" class="hideinprint fa-trash-o fa"></button>
                         <button v-on:click="moveAppointmentUp(appointment)" class="hideinprint fa fa-arrow-up"></button>
                         <button v-on:click="moveAppointmentDown(appointment)" class="hideinprint fa fa-arrow-down"></button>
-                        <span class="action" v-on:click="showInput('daypicker', 'epoch', appointment)">{{ appointment.date }}</span> &dash;
-                        <span class="action" v-on:click="showInput('textbox', 'description', appointment)">{{ appointment.description }}</span>
+                        <span class="action appointmentDate" v-on:click="showInput('daypicker', 'epoch', appointment)">{{ appointment.date }}</span> &ndash;
+                        <span class="action" v-on:click="showInput('appointmentTextbox', 'description', appointment)">{{ appointment.description }}</span>
                     </li>
                 </ul>
                 <ul class="footer">
                     <li>If you would like to be added to our email list please send your contact information to:</li>
-                    <li><a href="mailto:infoheidelberg@internationalcatholiccommunity.com">infoheidelberg@internationalcatholiccommunity.com</a></li>
+                    <li><a v-bind:href="'mailto:' + bullettin.newsletter">{{ bullettin.newsletter }}</a></li>
                 </ul>
             </div>
             <ul v-else class="footer">
                 <li>If you would like to be added to our email list please send your contact information to:</li>
-                <li><a href="mailto:infoheidelberg@internationalcatholiccommunity.com">infoheidelberg@internationalcatholiccommunity.com</a></li>
+                <li><a v-bind:href="'mailto:' + bullettin.newsletter">{{ bullettin.newsletter }}</a></li>
             </ul>
         </div>
         <script src="js/main.js"></script>

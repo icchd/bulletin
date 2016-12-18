@@ -1,4 +1,5 @@
 
+var S_TITLE_DATE_FORMAT = "MMMM D, YYYY";
 
 function arraySwapInPlace (A, a, b) {
     /*
@@ -28,7 +29,7 @@ function arraySwapInPlace (A, a, b) {
 
 var m = function () { return moment.apply(this, arguments).locale("en-gb"); }
 
-var markdown = new Remarkable();
+var markdown = new showdown.Converter();
 
 function getNextSunday(sFormat) {
     var days = 0;
@@ -76,7 +77,73 @@ function getJson(sUrl) {
 
 var oBooks = {
     abbrev: {
-         "Genesis": "Gen", "Exodus": "Exod", "Leviticus": "Lev", "Numbers": "Num", "Deuteronomy": "Deut", "Joshua": "Josh", "Judges": "Judg", "Ruth": "Ruth", "1 Samuel": "1 Sam", "2 Samuel": "2 Sam", "1 Kings": "1 Kgs", "2 Kings": "2 Kgs", "1 Chronicles": "1 Chr", "2 Chronicles": "2 Chr", "Ezra": "Ezra", "Nehemiah": "Neh", "Esther": "Esth", "Job": "Job", "Psalms": "Ps(s)", "Proverbs": "Prov", "Ecclesiastes": "Eccl", "Song of Songs": "Song", "Isaiah": "Isa", "Jeremiah": "Jer", "Lamentations": "Lam", "Ezekiel": "Ezek", "Daniel": "Dan", "Hosea": "Hos", "Joel": "Joel", "Amos": "Amos", "Obadiah": "Obad", "Jonah": "Jonah", "Micah": "Mic", "Nahum": "Nah", "Habakkuk": "Hab", "Zephaniah": "Zeph", "Haggai": "Hag", "Zechariah": "Zech", "Malachi": "Mal", "Matthew": "Matt", "Mark": "Mark", "Luke": "Luke", "John": "John", "Acts": "Acts", "Romans": "Rom", "1 Corinthians": "1 Cor", "2 Corinthians": "2 Cor", "Galatians": "Gal", "Ephesians": "Eph", "Philippians": "Phil", "Colossians": "Col", "1 Thessalonians": "1 Thess", "2 Thessalonians": "2 Thess", "1 Timothy": "1 Tim", "2 Timothy": "2 Tim", "Titus": "Titus", "Philemon": "Phlm", "Hebrews": "Heb", "James": "Jas", "1 Peter": "1 Pet", "2 Peter": "2 Pet", "1 John": "1 John", "2 John": "2 John", "3 John": "3 John", "Jude": "Jude", "Revelation": "Rev"
+         "1 Chronicles": "1 Chr",
+         "1 Corinthians": "1 Cor",
+         "1 John": "1 John",
+         "1 Kings": "1 Kgs",
+         "1 Peter": "1 Pet",
+         "1 Samuel": "1 Sam",
+         "1 Thessalonians": "1 Thess",
+         "1 Timothy": "1 Tm",
+         "2 Chronicles": "2 Chr",
+         "2 Corinthians": "2 Cor",
+         "2 John": "2 John",
+         "2 Kings": "2 Kgs",
+         "2 Peter": "2 Pet",
+         "2 Samuel": "2 Sam",
+         "2 Thessalonians": "2 Thess",
+         "2 Timothy": "2 Tm",
+         "3 John": "3 John",
+         "Acts": "Acts",
+         "Amos": "Amos",
+         "Colossians": "Col",
+         "Daniel": "Dan",
+         "Deuteronomy": "Deut",
+         "Ecclesiastes": "Eccl",
+         "Ephesians": "Eph",
+         "Esther": "Esth",
+         "Exodus": "Exod",
+         "Ezekiel": "Ezek",
+         "Ezra": "Ezra",
+         "Galatians": "Gal",
+         "Genesis": "Gen",
+         "Habakkuk": "Hab",
+         "Haggai": "Hag",
+         "Hebrews": "Heb",
+         "Hosea": "Hos",
+         "Isaiah": "Is",
+         "James": "Jas",
+         "Jeremiah": "Jer",
+         "Job": "Job",
+         "Joel": "Joel",
+         "John": "John",
+         "Jonah": "Jonah",
+         "Joshua": "Josh",
+         "Jude": "Jude",
+         "Judges": "Judg",
+         "Lamentations": "Lam",
+         "Leviticus": "Lev",
+         "Luke": "Lk",
+         "Malachi": "Mal",
+         "Mark": "Mark",
+         "Matthew": "Mt",
+         "Micah": "Mic",
+         "Nahum": "Nah",
+         "Nehemiah": "Neh",
+         "Numbers": "Num",
+         "Obadiah": "Obad",
+         "Philemon": "Phlm",
+         "Philippians": "Phil",
+         "Proverbs": "Prov",
+         "Psalms": "Ps(s)",
+         "Revelation": "Rev",
+         "Romans": "Rom",
+         "Ruth": "Ruth",
+         "Sirach": "Sir",
+         "Song of Songs": "Song",
+         "Titus": "Titus",
+         "Zechariah": "Zech",
+         "Zephaniah": "Zeph"
     }
 };
 
@@ -90,6 +157,7 @@ var oBooks = {
  */
 var oInputTypes = {
     textbox: {},
+    appointmentTextbox: {},
     sundaypicker: {},
     daypicker: {},
     readingpicker: {
@@ -191,14 +259,14 @@ var input = new Vue({
             if (input.type === "daypicker") {
                 input.data = m(input.data, "MM/DD/YYYY").subtract(iAmount, "months").format("MM/DD/YYYY");
             } else if (input.type === "sundaypicker") {
-                input.data = m(input.data, "D MMMM YYYY").subtract(iAmount, "days").format("LL");
+                input.data = m(input.data, S_TITLE_DATE_FORMAT).subtract(iAmount, "days").format(S_TITLE_DATE_FORMAT);
             }
         },
         increaseData: function (iAmount) {
             if (input.type === "daypicker") {
                 input.data = m(input.data, "MM/DD/YYYY").add(iAmount, "months").format("MM/DD/YYYY");
             } else if (input.type === "sundaypicker") {
-                input.data = m(input.data, "D MMMM YYYY").add(iAmount, "days").format("LL");
+                input.data = m(input.data, S_TITLE_DATE_FORMAT).add(iAmount, "days").format(S_TITLE_DATE_FORMAT);
             }
         },
         selectSuggestion: function (oSuggestion) {
@@ -236,13 +304,15 @@ function formatAppointment(vAppointment) {
     return {
         epoch: "" + mObj.valueOf(),
         date: mObj.format(sFormat),
-        description: "New Appointment"
+        description: "New Appointment " + app.bullettin.appointments.length
     };
 }
             
 var app = new Vue({
     el: "#app",
     data: {
+        history: [
+        ],
         themes: {
             White: {
                 color1: "#FFF",
@@ -307,7 +377,7 @@ var app = new Vue({
         },
         bullettin: {
             password: "",
-            date: getNextSunday(),
+            date: getNextSunday(S_TITLE_DATE_FORMAT),
             saveAs: getNextSunday("YYYY-MM-DD") + "-bullettin.markdown",
             dateChanged: m().format("YYYY-MM-DD hh:mm:ss +02:00"),
             image: {
@@ -317,12 +387,13 @@ var app = new Vue({
                 size: 50
             },
             title: "Easter Sunday",
-            text: "**Lorem ipsum** dolor sit amet, consectetur adipiscing elit. Curabitur ultricies quam vel elit pulvinar, ac iaculis neque maximus. Nulla vitae sapien metus. Sed bibendum vestibulum elementum. Nullam sagittis in nunc id condimentum. Ut semper interdum mi. Aenean et purus nec tortor convallis porttitor eu non nunc. Nulla facilisi. Maecenas tempor ultricies quam sed imperdiet. Cras fringilla, ante in convallis viverra, urna massa lacinia massa, at rhoncus erat quam at est. Proin ut tincidunt erat. Ut mollis consequat elit, vitae laoreet justo hendrerit sit amet. Proin volutpat venenatis leo at tristique. Aenean ac ornare erat, nec euismod odio. Proin tempor accumsan gravida. Suspendisse sit amet consequat sapien.  Morbi euismod commodo massa, vel elementum urna tincidunt sed. Suspendisse cursus, nunc et imperdiet laoreet, elit erat efficitur diam, ut convallis est purus ac augue. Pellentesque eu dolor aliquet, sodales nisl efficitur, dignissim nisl. Morbi vel ultricies dolor. In facilisis condimentum ultrices. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean volutpat mauris id mi lobortis mattis. Suspendisse eget dapibus odio, eu luctus mauris. Donec vitae cursus ex. Suspendisse id interdum nisl. Fusce vulputate nibh sapien, sed cursus mi euismod vitae.  Nunc mauris mi, placerat eu sem congue, euismod faucibus tellus. Cras pretium augue nunc, sed elementum dui varius et. Proin ut tempor felis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam dictum, velit in suscipit fermentum, leo ligula laoreet dolor, eu semper lorem risus ut sapien. Nunc a accumsan velit, nec tristique augue. Vivamus viverra ipsum est, eu elementum est tempor at. Praesent cursus nunc vel lorem viverra, non luctus lectus lacinia. In at molestie velit, malesuada pretium ex.  Pellentesque eget erat pretium, pretium nulla in, dictum lectus. Aliquam eleifend posuere orci, ac scelerisque leo scelerisque sit amet. Vestibulum ultricies luctus rutrum. Vivamus sit amet vestibulum ex. In gravida magna felis, vel tempus leo condimentum quis. Quisque tellus erat, rhoncus vel euismod at, faucibus at orci. Mauris elementum condimentum odio, id hendrerit lorem blandit sit amet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam massa quam, consequat vel condimentum et, ultrices a tellus. Donec nisi nunc, ullamcorper vitae diam at, maximus imperdiet magna. Suspendisse potenti. Phasellus id ligula enim. Integer molestie rhoncus semper.  Suspendisse potenti. Vestibulum quis lectus sagittis, efficitur erat quis, efficitur quam. Morbi interdum commodo nisi ac iaculis. Vivamus nec viverra lacus. Nam tempor, dui non dapibus sagittis, diam risus porttitor felis, ac elementum est dui ac dolor. Nullam viverra magna quis augue cursus, id pulvinar ex fermentum. Vestibulum at cursus magna. Mauris lobortis arcu in urna placerat, suscipit fermentum nisl imperdiet. Vivamus sit amet odio sed lectus malesuada ultricies eu a augue. Nulla rutrum interdum purus eget vestibulum. Proin a est erat. Nulla ac metus sed justo suscipit ornare quis elementum ex. Fusce cursus molestie libero, id tincidunt eros venenatis ac.",
+ text: "The type of text that you can enter in this box is called **markdown**. Markdown allows you to type rich text using symbols around text to provide meaning. This is a paragraph, because it's followed by a blank line.\n\n **See more examples below!**\n\nThree dashes will generate a horizontal ruler. Make sure there is one empty line before and after the ---.\n \n See? ▼\n \n ---\n\n# Heading 1\n\n## Heading 2\n\n### Heading 3\n\n This is **bold text**, this is *italic*.\n \n This is a paragraph... blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.\n \n This is an inline image: ![](https://placeholdit.imgix.net/~text?txtsize=22&txt=image&w=100&h=100). Inline images start with the symbol `![]` and contain the URL of the image in parentheses.\n\nYou don't have to use the full blown markdown syntax, but you can if you want to. Perhaps for the purpose of this tool, you may just need to tweak copy-pasted text (e.g., by separating it in paragraphs).",
             father: "Welcome Father John",
-            source: "Enter a source",
+            source: "Source line 1 \nSource line 2. (this empty space is for the pencil icon, it's not printed on paper!) ->",
             reading1: "Reading 1",
             reading2: "Reading 2",
             reading3: "Gospel",
+            newsletter: "infoheidelberg@internationalcatholiccommunity.com",
             appointments: [ ],
             colors: {
                color1: "#000",
@@ -333,7 +404,8 @@ var app = new Vue({
                 text: {
                     family: "Georgia",
                     lineHeight: 12,
-                    size: 11
+                    size: 11,
+                    paragraphMargin: 5
                 }
             }
         }
@@ -342,6 +414,9 @@ var app = new Vue({
       'slider-picker': VueColor.Slider
     },
     methods: {
+        changeFontEvent: function () {
+            console.log("Changed" + app.bullettin.fonts.text.family);
+        },
         selectTab: function (sTabName) {
             app.toolbar.current = sTabName;
         },
@@ -355,6 +430,8 @@ var app = new Vue({
             var bEnabled = app.bullettin.image.enabled;
             var sLayout = app.bullettin.image.layout;
             
+            app.historySave("bullettin.image");
+
             if (bEnabled) {
                 switch (sLayout) {
                     case "left":
@@ -373,27 +450,63 @@ var app = new Vue({
             if (app.bullettin.image.size === 0) {
                 return;
             }
+            app.historySave("bullettin.image.size");
             app.bullettin.image.size -= 2.5;
         },
         decreaseImageWidth: function () {
             if (app.bullettin.image.size === 100) {
                 return;
             }
+            app.historySave("bullettin.image.size");
             app.bullettin.image.size += 2.5;
         },
+        decreaseParagraphMargin: function () {
+            var oDecrease = {
+                1: 1,
+                2: 1,
+                5: 2,
+                10: 5,
+                20: 10,
+                30: 20
+            };
+            var iCurrent = app.bullettin.fonts.text.paragraphMargin;
+            if (oDecrease[iCurrent] !== iCurrent) {
+                app.historySave("bullettin.fonts.text.paragraphMargin");
+            }
+            app.bullettin.fonts.text.paragraphMargin = oDecrease[iCurrent];
+        },
+        increaseParagraphMargin: function () {
+            var oIncrease = {
+                1: 2,
+                2: 5,
+                5: 10,
+                10: 20,
+                20: 30,
+                30: 30
+            };
+            var iCurrent = app.bullettin.fonts.text.paragraphMargin;
+            if (oIncrease[iCurrent] !== iCurrent) {
+                app.historySave("bullettin.fonts.text.paragraphMargin");
+            }
+            app.bullettin.fonts.text.paragraphMargin = oIncrease[iCurrent];
+        },
         increaseFontSize: function () {
+            app.historySave("bullettin.fonts.text.size");
             app.bullettin.fonts.text.size+=0.5;
         },
         decreaseFontSize: function () {
             if (app.bullettin.fonts.text.size > 1) {
+                app.historySave("bullettin.fonts.text.size");
                 app.bullettin.fonts.text.size-=0.5;
             }
         },
         increaseLineHeight: function () {
+            app.historySave("bullettin.fonts.text.lineHeight");
             app.bullettin.fonts.text.lineHeight+=0.5;
         },
         decreaseLineHeight: function () {
             if (app.bullettin.fonts.text.lineHeight > 1) {
+                app.historySave("bullettin.fonts.text.lineHeight");
                 app.bullettin.fonts.text.lineHeight-=0.5;
             }
         },
@@ -457,13 +570,15 @@ var app = new Vue({
             
         },
         addAppointment: function () {
+            app.historySave("bullettin.appointments");
             app.bullettin.appointments.push(formatAppointment(m()));
-            app.sortAppointments();
         },
         deleteAllAppointments: function () {
+            app.historySave("bullettin.appointments");
             app.bullettin.appointments = [];
         },
         sortAppointments: function () {
+            app.historySave("bullettin.appointments");
             app.bullettin.appointments = app.bullettin.appointments.sort(
                 function (a, b) { return a.epoch >= b.epoch; }
             );
@@ -477,6 +592,7 @@ var app = new Vue({
                 alert.show("error", "cannot move appointment up");
                 return;
             }
+            app.historySave("bullettin.appointments");
 
             var oPrevAppointment = aBullettinAppointments[iAppointmentPosition - 1];
             arraySwapInPlace(aBullettinAppointments, oAppointment, oPrevAppointment);
@@ -491,11 +607,13 @@ var app = new Vue({
                 alert.show("error", "cannot move appointment down");
                 return;
             }
+            app.historySave("bullettin.appointments");
 
             var oNextAppointment = aBullettinAppointments[iAppointmentPosition + 1];
             arraySwapInPlace(aBullettinAppointments, oAppointment, oNextAppointment);
         },
         deleteAppointment: function (oAppointment) {
+            app.historySave("bullettin.appointments");
             app.bullettin.appointments = app.bullettin.appointments.filter(
                 function (oAppointmentFromList) {
                     return oAppointmentFromList !== oAppointment;
@@ -503,12 +621,16 @@ var app = new Vue({
             );
         },
         md2html: function (sMarkdown) {
-            return markdown.render(sMarkdown);
+            return markdown.makeHtml(sMarkdown);
+        },
+        txt2html: function (sText) {
+            return sText.replace(/\n/g, "<br />");
         },
         setTheme: function (sThemeName) {
             if (!app.themes.hasOwnProperty(sThemeName)) {
                 alert.show("error", sThemeName + " is not a valid theme");
             } else {
+                app.historySave("bullettin.colors");
                 app.bullettin.colors.color1 = app.themes[sThemeName].color1;
                 app.bullettin.colors.color2 = app.themes[sThemeName].color2;
                 app.bullettin.colors.border = app.themes[sThemeName].border;
@@ -540,6 +662,10 @@ var app = new Vue({
                 .then(function (oResponse) {
 
                     try {
+                        app.historySave("bullettin.reading1");
+                        app.historySave("bullettin.reading2");
+                        app.historySave("bullettin.reading3");
+
                         // erase current readings
                         [1,2,3].forEach(function (x) {
                             app.bullettin['reading' + x] = "";
@@ -576,6 +702,7 @@ var app = new Vue({
                 .then(function (oResponse) {
                     try {
                         // got data
+                        app.historySave("bullettin.title");
                         app.bullettin.title = oResponse.Title;
                         alert.show("confirm", "Title updated: '" + oResponse.Title + "'");
                     } catch (e) {
@@ -604,51 +731,103 @@ var app = new Vue({
                     alert.show("error", "Error occurred while getting data for the Sunday");
                 });
         },
-        showInput: function (sType, sPathToData, oOptionalObject) {
-            function getData(sPath) {
-                var oObjToModify = oOptionalObject;
-                if (!oOptionalObject) {
-                    oObjToModify = app;
-                }
-                return sPath
-                    .split(".")
-                    .reduce(function (vPrev, sKey) {
-                        return vPrev[sKey];
-                    }, oObjToModify);
+        saveDataToPath: function (sPath, vData, oOptionalObject) {
+            var oObjToModify = oOptionalObject;
+            if (!oOptionalObject) {
+                oObjToModify = app;
             }
-            function saveData(sPath, vData) {
-                var oObjToModify = oOptionalObject;
-                if (!oOptionalObject) {
-                    oObjToModify = app;
+            var aPath = sPath.split(".");
+            var oDataToUpdate = aPath.reduce(function (vPrev, sKey) {
+                if (typeof vPrev[sKey] === "object") {
+                    return vPrev[sKey];
                 }
-                var aPath = sPath.split(".");
-                var oDataToUpdate = aPath.reduce(function (vPrev, sKey) {
-                    if (typeof vPrev[sKey] === "object") {
-                        return vPrev[sKey];
-                    }
-                    return vPrev;
-                }, oObjToModify);
+                return vPrev;
+            }, oObjToModify);
 
-                oDataToUpdate[aPath.pop()] = vData;
+            oDataToUpdate[aPath.pop()] = vData;
+        },
+        getDataFromPath: function (sPath, oOptionalObject) {
+            var oObjToModify = oOptionalObject;
+            if (!oOptionalObject) {
+                oObjToModify = app;
             }
+            return sPath
+                .split(".")
+                .reduce(function (vPrev, sKey) {
+                    return vPrev[sKey];
+                }, oObjToModify);
+        },
+        historySave: function (sPath, oOptionalObject) {
+            alert.show("success", sPath);
+
+            var vData = app.getDataFromPath(sPath, oOptionalObject);
+
+            if (Object.prototype.toString.call(vData) === "[object Object]"
+                || Object.prototype.toString.call(vData) === "[object Array]" ) {
+                vData = JSON.parse(JSON.stringify(vData));
+            }
+            app.history.push({
+                path: sPath,
+                pathRelativeTo: oOptionalObject || app,
+                value: vData
+            });
+        },
+        historyUndo: function () {
+            if (app.history.length === 0) {
+                return;
+            }
+            var oChange = app.history.pop();
+            if (Object.prototype.toString.call(oChange.value) === "[object Object]") {
+                Object.keys(oChange.value).forEach(function (sKey) {
+                    app.saveDataToPath(
+                        oChange.path + "." + sKey,
+                        oChange.value[sKey],
+                        oChange.pathRelativeTo
+                    );
+                });
+            } else if (Object.prototype.toString.call(oChange.value) === "[object Array]") {
+                // empty array in the change path
+                var aArray = app.getDataFromPath(oChange.path);
+                while (aArray.length) {
+                    aArray.pop();
+                }
+                while (oChange.value.length) {
+                    aArray.push(oChange.value.shift());
+                }
+            } else {
+                app.saveDataToPath(oChange.path, oChange.value, oChange.pathRelativeTo);
+            }
+        },
+        showInput: function (sType, sPathToData, oOptionalObject) {
 
             input.type = sType;
-            input.data = getData(sPathToData);
+            input.data = app.getDataFromPath(sPathToData, oOptionalObject);
 
             if (sType === "textbox"
                 || sType === "sundaypicker"
                 || sType === "readingpicker") {
 
                 input.done = function (sText) {
-                    saveData(sPathToData, sText);
+                    app.historySave(sPathToData, oOptionalObject);
+                    app.saveDataToPath(sPathToData, sText, oOptionalObject);
                 };
-            } else if (sType === "daypicker") {
+            } 
+            else if (sType === "appointmentTextbox") {
+                input.done = function (sText) {
+                    app.historySave("bullettin.appointments");
+                    app.saveDataToPath(sPathToData, sText, oOptionalObject);
+                };
+            }
+            else if (sType === "daypicker") {
 
                 input.done = function (sDate) {
                     var iDate = parseInt(sDate, 10);
                     if (!oOptionalObject) {
                         throw Error("cannot update date object");
                     }
+
+                    app.historySave("bullettin.appointments");
+
                     var oNewAppointment = formatAppointment(m(iDate));
                     Object.keys(oOptionalObject).forEach(function (sCurrentObjKey) {
                         oOptionalObject[sCurrentObjKey] = oNewAppointment[sCurrentObjKey];

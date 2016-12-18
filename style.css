@@ -91,6 +91,37 @@ a, a:hover {
     font-size: 10pt;
 }
 
+.textMargin1 p {
+    display: block;
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+}
+.textMargin2 p {
+    display: block;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+.textMargin5 p {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+.textMargin10 p {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.textMargin20 p {
+    display: block;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+.textMargin30 p {
+    display: block;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
 .subtitle {
     clear: both;
     background: black;
@@ -105,6 +136,7 @@ a, a:hover {
 }
 
 .footer {
+    clear: both;
     border-top: 1px solid black;
     list-style: none;
     margin: 0;
@@ -127,6 +159,9 @@ a, a:hover {
 }
 .info {
     font-size: 2em;
+}
+.appointmentDate {
+    font-weight: bold;
 }
 
 .action:hover {
