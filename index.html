@@ -180,7 +180,7 @@
                     border: '1px solid ' + bullettin.colors.border,
                     'background-color': bullettin.colors.color1 
                 }">
-                <span class="action" v-on:click="showInput('sundaypicker', 'bullettin.date')">{{ bullettin.date }}</span> - <span class="action" v-on:click="showInput('textbox', 'bullettin.title')">{{ bullettin.title }}</span>
+                <span class="action" v-on:click="showInput('sundaypicker', 'bullettin.date')">{{ bullettin.date }}</span> &ndash; <span class="action" v-on:click="showInput('textbox', 'bullettin.title')">{{ bullettin.title }}</span>
             </h1>
             <img v-if="bullettin.image.enabled"
                 v-bind:class="{ image1: true, action: true, 'float-left': bullettin.image.layout === 'left', 'float-right': bullettin.image.layout === 'right' }"
