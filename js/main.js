@@ -758,8 +758,6 @@ var app = new Vue({
                 }, oObjToModify);
         },
         historySave: function (sPath, oOptionalObject) {
-            alert.show("success", sPath);
-
             var vData = app.getDataFromPath(sPath, oOptionalObject);
 
             if (Object.prototype.toString.call(vData) === "[object Object]"
