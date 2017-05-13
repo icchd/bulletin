@@ -698,7 +698,7 @@ var app = new Vue({
                     return sReading;
                 }
             }
-            var sSelectedSunday = m(app.bullettin.date, "D MMMM YYYY").format("YYYY-MM-DD");
+            var sSelectedSunday = m(app.bullettin.date, "MMMM D, YYYY").format("YYYY-MM-DD");
             getJson('https://www.ewtn.com/se/readings/readingsservice.svc/day/' + sSelectedSunday + '/en')
                 .then(function (oResponse) {
 
@@ -738,7 +738,7 @@ var app = new Vue({
                 });
         },
         updateTitleFromSunday: function () {
-            var sSelectedSunday = m(app.bullettin.date, "D MMMM YYYY").format("YYYY-MM-DD");
+            var sSelectedSunday = m(app.bullettin.date, "MMMM D, YYYY").format("YYYY-MM-DD");
             getJson('https://www.ewtn.com/se/readings/readingsservice.svc/day/' + sSelectedSunday + '/en')
                 .then(function (oResponse) {
                     try {
@@ -756,7 +756,7 @@ var app = new Vue({
                 });
         },
         updateThemeFromSunday: function () {
-            var sSelectedSunday = m(app.bullettin.date, "D MMMM YYYY").format("YYYY-MM-DD");
+            var sSelectedSunday = m(app.bullettin.date, "MMMM D, YYYY").format("YYYY-MM-DD");
             getJson('https://www.ewtn.com/se/readings/readingsservice.svc/day/' + sSelectedSunday + '/en')
                 .then(function (oResponse) {
                     try {
