@@ -184,7 +184,7 @@ var oInputTypes = {
                         long: sLong,
                         toString: function () { return sShort; }
                     };
- 
+
                     oBooks.keywords.push({
                         keyword: sLong.toLowerCase(),
                         value: oValue
@@ -307,7 +307,7 @@ function formatAppointment(vAppointment) {
         description: "New Appointment " + app.bullettin.appointments.length
     };
 }
-            
+
 var app = new Vue({
     el: "#app",
     data: {
@@ -414,6 +414,39 @@ var app = new Vue({
       'slider-picker': VueColor.Slider
     },
     methods: {
+        saveToJson: function () {
+            var a = document.createElement("a");
+            var file = new Blob([ JSON.stringify(app.bullettin) ], { type: "text/plain" });
+            a.href = URL.createObjectURL(file);
+            a.download = app.bullettin.saveAs.replace("markdown", "json");
+            a.click();
+        },
+        loadFromJson: function () {
+            var files = this.$refs["upload"].files;
+            if (files.length === 0) {
+                window.alert("Nothing to load");
+                return;
+            }
+            if (files.length !== 1) {
+                window.alert("Please only load 1 file!");
+                return;
+            }
+
+            var file = files[0];
+
+            var reader = new FileReader();
+            reader.onload = function () {
+                try {
+                    var oBullettin = JSON.parse(reader.result);
+                    app.bullettin = oBullettin;
+                    alert.show("confirm", "Bullettin was loaded");
+                } catch (e) {
+                    alert.show("error", "Error occurred while loading the bullettin");
+                    console.log(e);
+                }
+            };
+            reader.readAsText(file);
+        },
         changeFontEvent: function () {
             console.log("Changed" + app.bullettin.fonts.text.family);
         },
@@ -429,7 +462,7 @@ var app = new Vue({
         toggleImage: function () {
             var bEnabled = app.bullettin.image.enabled;
             var sLayout = app.bullettin.image.layout;
-            
+
             app.historySave("bullettin.image");
 
             if (bEnabled) {
@@ -533,19 +566,19 @@ var app = new Vue({
 
             function publishToFacebook() {
                 FB.login(function(){
-                  FB.api("/InternationalCatholicCommunityofHeidelberg?fields=access_token", 'get', function (o) { 
+                  FB.api("/InternationalCatholicCommunityofHeidelberg?fields=access_token", 'get', function (o) {
                     if (!o.access_token) {
                         alert.show("error", "Something went wrong while getting access token. Try again.");
                         return;
                     }
                     var sAccessToken = o.access_token;
                     FB.api(
-                        '/InternationalCatholicCommunityofHeidelberg/feed', 
+                        '/InternationalCatholicCommunityofHeidelberg/feed',
                         'post', {
                             message: 'Our bullettin for Sunday mass on ' + app.bullettin.date + ' is available.',
                             link: 'http://www.google.com', // TODO: point to ICCH post
-                            access_token: sAccessToken 
-                        }, function (oRes) { 
+                            access_token: sAccessToken
+                        }, function (oRes) {
                             if (oRes.error) {
                                 alert.show("error", "An error occurred while publishing the bullettin. Try again.");
                                 return;
@@ -553,7 +586,7 @@ var app = new Vue({
                             alert.show("confirm", "The bullettin was published on Facebook!");
                         });
                   });
-                  
+
                 }, {scope: 'manage_pages,publish_pages'});
             }
 
@@ -567,7 +600,7 @@ var app = new Vue({
             }, function (oError) {
                 alert.show("error", "" + oError);
             });
-            
+
         },
         addAppointment: function () {
             app.historySave("bullettin.appointments");
@@ -709,7 +742,7 @@ var app = new Vue({
                         throw new Error(e);
                         alert.show("error", "Error occurred while getting data for the Sunday");
                     }
-                    
+
                 }, function () {
                     alert.show("error", "Error occurred while getting data for the Sunday");
                 });
@@ -726,7 +759,7 @@ var app = new Vue({
                         throw new Error(e);
                         alert.show("error", "Error occurred while getting data for the Sunday");
                     }
-                    
+
                 }, function () {
                     alert.show("error", "Error occurred while getting data for the Sunday");
                 });
@@ -809,7 +842,7 @@ var app = new Vue({
                     app.historySave(sPathToData, oOptionalObject);
                     app.saveDataToPath(sPathToData, sText, oOptionalObject);
                 };
-            } 
+            }
             else if (sType === "appointmentTextbox") {
                 input.done = function (sText) {
                     app.historySave("bullettin.appointments");

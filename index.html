@@ -66,6 +66,8 @@
             <ul id="toolBar" class="noselect hideinprint">
                 <li class="tabs">
                     <ul>
+                        <li v-bind:class="{ selected: toolbar.current === 'file' }"
+                            v-on:click="selectTab('file')">File</li>
                         <li v-bind:class="{ selected: toolbar.current === 'color' }"
                             v-on:click="selectTab('color')">Color</li>
                         <li v-bind:class="{ selected: toolbar.current === 'font' }"
@@ -74,6 +76,18 @@
                             v-on:click="selectTab('image')">Image</li>
                         <li v-bind:class="{ selected: toolbar.current === 'tools' }"
                             v-on:click="selectTab('tools')">Tools</li>
+                    </ul>
+                </li>
+                <li v-if="toolbar.current === 'file'">
+                    <ul>
+                        <li>
+                            <span class="fa fa-download"></span>
+                            <button v-on:click="saveToJson()">
+                                Save
+                            </button>
+                            &nbsp; <span class="fa fa-upload"></span>
+                            <input ref="upload" type="file" id="input" text="Load" v-on:change="loadFromJson()"></input>
+                        </li>
                     </ul>
                 </li>
                 <li v-if="toolbar.current === 'color'">
