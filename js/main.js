@@ -410,6 +410,14 @@ var app = new Vue({
             }
         }
     },
+    watch: {
+        bullettin: {
+            handler: function (after, before) {
+                app.saveStateToLocalStorage();
+            },
+            deep: true
+        }
+    },
     components: {
       'slider-picker': VueColor.Slider
     },
@@ -803,6 +811,29 @@ var app = new Vue({
                 value: vData
             });
         },
+        loadStateFromLocalStorage: function () {
+            if (window.localStorage) {
+                var sData = window.localStorage.getItem("icchbullettin");
+                if (sData) {
+                    if (confirm("Some data were found from your last session. Do you want to load them and continue working?")) {
+                        try {
+                            app.bullettin = JSON.parse(sData);
+                            alert.show("confirm", "Data recovered from last session");
+                        } catch (e) {
+                            alert.show("error", "Error occurred while trying to load data from last session");
+                        }
+                    } else {
+                        // Delete
+                        window.localStorage.removeItem("icchbullettin", "");
+                    }
+                }
+            }
+        },
+        saveStateToLocalStorage: function () {
+            if (window.localStorage) {
+                window.localStorage.setItem("icchbullettin", JSON.stringify(app.bullettin));
+            }
+        },
         historyUndo: function () {
             if (app.history.length === 0) {
                 return;
@@ -900,3 +931,6 @@ var alert = new Vue({
     }
 });
 
+setTimeout(function () {
+    app.loadStateFromLocalStorage();
+}, 1000);
