@@ -1,4 +1,3 @@
-
 var S_TITLE_DATE_FORMAT = "MMMM D, YYYY";
 
 function arraySwapInPlace (A, a, b) {
@@ -24,7 +23,6 @@ function arraySwapInPlace (A, a, b) {
     }).forEach(function (iPushFrom) {
         A.push(aAitems[iPushFrom]);
     });
-
 };
 
 var m = function () { return moment.apply(this, arguments).locale("en-gb"); }
@@ -308,11 +306,55 @@ function formatAppointment(vAppointment) {
     };
 }
 
+var oBaseBulletin = {
+    password: "",
+    date: getNextSunday(S_TITLE_DATE_FORMAT),
+    saveAs: getNextSunday("YYYY-MM-DD") + "-bulletin.markdown",
+    dateChanged: m().format("YYYY-MM-DD hh:mm:ss +02:00"),
+    image: {
+        enabled: true,
+        src: "https://placeholdit.imgix.net/~text?txtsize=33&txt=Image&w=230&h=230",
+        layout: "left",
+        size: 50
+    },
+    title: "Easter Sunday",
+    text: "The type of text that you can enter in this box is called **markdown**. Markdown allows you to type rich text using symbols around text to provide meaning. This is a paragraph, because it's followed by a blank line.\n\n **See more examples below!**\n\nThree dashes will generate a horizontal ruler. Make sure there is one empty line before and after the ---.\n \n See? ▼\n \n ---\n\n# Heading 1\n\n## Heading 2\n\n### Heading 3\n\n This is **bold text**, this is *italic*.\n \n This is a paragraph... blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.\n \n This is an inline image: ![](https://placeholdit.imgix.net/~text?txtsize=22&txt=image&w=100&h=100). Inline images start with the symbol `![]` and contain the URL of the image in parentheses.\n\nYou don't have to use the full blown markdown syntax, but you can if you want to. Perhaps for the purpose of this tool, you may just need to tweak copy-pasted text (e.g., by separating it in paragraphs).",
+    father: "Welcome Father John",
+    source: "Source line 1 \nSource line 2. (this empty space is for the pencil icon, it's not printed on paper!) ->",
+    reading1: "Reading 1",
+    reading2: "Reading 2",
+    reading3: "Gospel",
+    newsletter: "infoheidelberg@internationalcatholiccommunity.com",
+    appointments: [
+        // {
+        //     epoch: ...,
+        //     date: ...,
+        //     description: ...
+        // };
+    ],
+    colors: {
+        color1: "#000",
+        color2: "#FFF",
+        border: "#FFF"
+    },
+    fonts: {
+        text: {
+            family: "Georgia",
+            lineHeight: 12,
+            size: 11,
+            paragraphMargin: 5
+        }
+    }
+};
+
 var app = new Vue({
     el: "#app",
     data: {
-        history: [
-        ],
+        history: {
+            base: JSON.stringify(oBaseBulletin),
+            changes: [],
+            pointer: -1
+        },
         themes: {
             White: {
                 color1: "#FFF",
@@ -375,40 +417,7 @@ var app = new Vue({
           },
           a: 1
         },
-        bulletin: {
-            password: "",
-            date: getNextSunday(S_TITLE_DATE_FORMAT),
-            saveAs: getNextSunday("YYYY-MM-DD") + "-bulletin.markdown",
-            dateChanged: m().format("YYYY-MM-DD hh:mm:ss +02:00"),
-            image: {
-                enabled: true,
-                src: "https://placeholdit.imgix.net/~text?txtsize=33&txt=Image&w=230&h=230",
-                layout: "left",
-                size: 50
-            },
-            title: "Easter Sunday",
- text: "The type of text that you can enter in this box is called **markdown**. Markdown allows you to type rich text using symbols around text to provide meaning. This is a paragraph, because it's followed by a blank line.\n\n **See more examples below!**\n\nThree dashes will generate a horizontal ruler. Make sure there is one empty line before and after the ---.\n \n See? ▼\n \n ---\n\n# Heading 1\n\n## Heading 2\n\n### Heading 3\n\n This is **bold text**, this is *italic*.\n \n This is a paragraph... blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.\n \n This is an inline image: ![](https://placeholdit.imgix.net/~text?txtsize=22&txt=image&w=100&h=100). Inline images start with the symbol `![]` and contain the URL of the image in parentheses.\n\nYou don't have to use the full blown markdown syntax, but you can if you want to. Perhaps for the purpose of this tool, you may just need to tweak copy-pasted text (e.g., by separating it in paragraphs).",
-            father: "Welcome Father John",
-            source: "Source line 1 \nSource line 2. (this empty space is for the pencil icon, it's not printed on paper!) ->",
-            reading1: "Reading 1",
-            reading2: "Reading 2",
-            reading3: "Gospel",
-            newsletter: "infoheidelberg@internationalcatholiccommunity.com",
-            appointments: [ ],
-            colors: {
-               color1: "#000",
-               color2: "#FFF",
-               border: "#FFF"
-            },
-            fonts: {
-                text: {
-                    family: "Georgia",
-                    lineHeight: 12,
-                    size: 11,
-                    paragraphMargin: 5
-                }
-            }
-        }
+        bulletin: oBaseBulletin
     },
     watch: {
         bulletin: {
@@ -471,8 +480,6 @@ var app = new Vue({
             var bEnabled = app.bulletin.image.enabled;
             var sLayout = app.bulletin.image.layout;
 
-            app.historySave("bulletin.image");
-
             if (bEnabled) {
                 switch (sLayout) {
                     case "left":
@@ -486,20 +493,22 @@ var app = new Vue({
             } else {
                 app.bulletin.image.enabled = true;
             }
+
+            app.historySave("image");
         },
         increaseImageWidth: function () {
             if (app.bulletin.image.size === 0) {
                 return;
             }
-            app.historySave("bulletin.image.size");
             app.bulletin.image.size -= 2.5;
+            app.historySave("image.size");
         },
         decreaseImageWidth: function () {
             if (app.bulletin.image.size === 100) {
                 return;
             }
-            app.historySave("bulletin.image.size");
             app.bulletin.image.size += 2.5;
+            app.historySave("image.size");
         },
         decreaseParagraphMargin: function () {
             var oDecrease = {
@@ -512,9 +521,9 @@ var app = new Vue({
             };
             var iCurrent = app.bulletin.fonts.text.paragraphMargin;
             if (oDecrease[iCurrent] !== iCurrent) {
-                app.historySave("bulletin.fonts.text.paragraphMargin");
+                app.bulletin.fonts.text.paragraphMargin = oDecrease[iCurrent];
+                app.historySave("fonts.text.paragraphMargin");
             }
-            app.bulletin.fonts.text.paragraphMargin = oDecrease[iCurrent];
         },
         increaseParagraphMargin: function () {
             var oIncrease = {
@@ -527,28 +536,28 @@ var app = new Vue({
             };
             var iCurrent = app.bulletin.fonts.text.paragraphMargin;
             if (oIncrease[iCurrent] !== iCurrent) {
-                app.historySave("bulletin.fonts.text.paragraphMargin");
+                app.bulletin.fonts.text.paragraphMargin = oIncrease[iCurrent];
+                app.historySave("fonts.text.paragraphMargin");
             }
-            app.bulletin.fonts.text.paragraphMargin = oIncrease[iCurrent];
         },
         increaseFontSize: function () {
-            app.historySave("bulletin.fonts.text.size");
             app.bulletin.fonts.text.size+=0.5;
+            app.historySave("fonts.text.size");
         },
         decreaseFontSize: function () {
             if (app.bulletin.fonts.text.size > 1) {
-                app.historySave("bulletin.fonts.text.size");
                 app.bulletin.fonts.text.size-=0.5;
+                app.historySave("fonts.text.size");
             }
         },
         increaseLineHeight: function () {
-            app.historySave("bulletin.fonts.text.lineHeight");
             app.bulletin.fonts.text.lineHeight+=0.5;
+            app.historySave("fonts.text.lineHeight");
         },
         decreaseLineHeight: function () {
             if (app.bulletin.fonts.text.lineHeight > 1) {
-                app.historySave("bulletin.fonts.text.lineHeight");
                 app.bulletin.fonts.text.lineHeight-=0.5;
+                app.historySave("fonts.text.lineHeight");
             }
         },
         publishBulletin: function () {
@@ -611,18 +620,18 @@ var app = new Vue({
 
         },
         addAppointment: function () {
-            app.historySave("bulletin.appointments");
             app.bulletin.appointments.push(formatAppointment(m()));
+            app.historySave("appointments");
         },
         deleteAllAppointments: function () {
-            app.historySave("bulletin.appointments");
             app.bulletin.appointments = [];
+            app.historySave("appointments");
         },
         sortAppointments: function () {
-            app.historySave("bulletin.appointments");
             app.bulletin.appointments = app.bulletin.appointments.sort(
                 function (a, b) { return a.epoch >= b.epoch; }
             );
+            app.historySave("appointments");
         },
         moveAppointmentUp: function (oAppointment) {
             var aBulletinAppointments = app.bulletin.appointments;
@@ -633,11 +642,11 @@ var app = new Vue({
                 alert.show("error", "cannot move appointment up");
                 return;
             }
-            app.historySave("bulletin.appointments");
 
             var oPrevAppointment = aBulletinAppointments[iAppointmentPosition - 1];
             arraySwapInPlace(aBulletinAppointments, oAppointment, oPrevAppointment);
 
+            app.historySave("appointments");
         },
         moveAppointmentDown: function (oAppointment) {
             var aBulletinAppointments = app.bulletin.appointments;
@@ -648,18 +657,20 @@ var app = new Vue({
                 alert.show("error", "cannot move appointment down");
                 return;
             }
-            app.historySave("bulletin.appointments");
 
             var oNextAppointment = aBulletinAppointments[iAppointmentPosition + 1];
             arraySwapInPlace(aBulletinAppointments, oAppointment, oNextAppointment);
+
+            app.historySave("appointments");
         },
         deleteAppointment: function (oAppointment) {
-            app.historySave("bulletin.appointments");
             app.bulletin.appointments = app.bulletin.appointments.filter(
                 function (oAppointmentFromList) {
                     return oAppointmentFromList !== oAppointment;
                 }
             );
+
+            app.historySave("appointments");
         },
         md2html: function (sMarkdown) {
             return markdown.makeHtml(sMarkdown);
@@ -671,10 +682,10 @@ var app = new Vue({
             if (!app.themes.hasOwnProperty(sThemeName)) {
                 alert.show("error", sThemeName + " is not a valid theme");
             } else {
-                app.historySave("bulletin.colors");
                 app.bulletin.colors.color1 = app.themes[sThemeName].color1;
                 app.bulletin.colors.color2 = app.themes[sThemeName].color2;
                 app.bulletin.colors.border = app.themes[sThemeName].border;
+                app.historySave("colors");
             }
         },
         updateReadingFromSunday: function () {
@@ -703,10 +714,6 @@ var app = new Vue({
                 .then(function (oResponse) {
 
                     try {
-                        app.historySave("bulletin.reading1");
-                        app.historySave("bulletin.reading2");
-                        app.historySave("bulletin.reading3");
-
                         // erase current readings
                         [1,2,3].forEach(function (x) {
                             app.bulletin['reading' + x] = "";
@@ -729,6 +736,10 @@ var app = new Vue({
                         alert.show("confirm",
                             "Updated readings: " + [sReading1, sReading2, sReading3].join(", ")
                         );
+
+                        app.historySave("reading1");
+                        app.historySave("reading2");
+                        app.historySave("reading3");
                     } catch (e) {
                         throw new Error(e);
                         alert.show("error", "Error occurred while getting data for the Sunday");
@@ -743,9 +754,10 @@ var app = new Vue({
                 .then(function (oResponse) {
                     try {
                         // got data
-                        app.historySave("bulletin.title");
                         app.bulletin.title = oResponse.Title;
                         alert.show("confirm", "Title updated: '" + oResponse.Title + "'");
+
+                        app.historySave("title");
                     } catch (e) {
                         throw new Error(e);
                         alert.show("error", "Error occurred while getting data for the Sunday");
@@ -798,18 +810,73 @@ var app = new Vue({
                     return vPrev[sKey];
                 }, oObjToModify);
         },
-        historySave: function (sPath, oOptionalObject) {
-            var vData = app.getDataFromPath(sPath, oOptionalObject);
+        historySave: function (sPath) {
+            var vData = app.getDataFromPath("bulletin." + sPath);
 
             if (Object.prototype.toString.call(vData) === "[object Object]"
                 || Object.prototype.toString.call(vData) === "[object Array]" ) {
                 vData = JSON.parse(JSON.stringify(vData));
             }
-            app.history.push({
-                path: sPath,
-                pathRelativeTo: oOptionalObject || app,
+
+            // must discard any change before the history pointer
+            var iPopTimes = app.history.changes.length - (app.history.pointer  + 1);
+            while (iPopTimes-- > 0) {
+                app.history.changes.pop();
+            }
+
+            app.history.changes.push({
+                path: sPath,  // relative to app
                 value: vData
             });
+
+            app.history.pointer++;
+        },
+        historyUndo: function () {
+            if (app.history.pointer === -1) {
+                // last change was already undone;
+                return;
+            }
+            app.history.pointer--;
+            app.historyReplayUntil(app.history.pointer);
+        },
+        historyRedo: function () {
+            if (app.history.changes.length - 1 === app.history.pointer) {
+                // cannot redo (topmost change was already redone)
+                return;
+            }
+            app.history.pointer++;
+            app.historyReplayUntil(app.history.pointer);
+        },
+        historyReplayUntil: function (iReplayUntilIdx) {
+            var oReplay = JSON.parse(app.history.base);
+
+            app.history.changes.filter(function (oChange, iIdx) {
+                return iIdx <= iReplayUntilIdx;
+            }).forEach(function (oChange, iIdx) {
+
+                if (Object.prototype.toString.call(oChange.value) === "[object Object]") {
+                    Object.keys(oChange.value).forEach(function (sKey) {
+                        app.saveDataToPath(
+                            oChange.path + "." + sKey,
+                            oChange.value[sKey],
+                            oReplay
+                        );
+                    });
+                } else if (Object.prototype.toString.call(oChange.value) === "[object Array]") {
+                    // empty array in the change path
+                    var aArray = app.getDataFromPath(oChange.path, oReplay);
+                    while (aArray.length) {
+                        aArray.pop();
+                    }
+                    oChange.value.forEach(function (vValue) {
+                        aArray.push(vValue);
+                    });
+                } else {
+                    app.saveDataToPath(oChange.path, oChange.value, oReplay);
+                }
+            });
+
+            app.bulletin = oReplay;
         },
         loadStateFromLocalStorage: function () {
             if (window.localStorage) {
@@ -834,33 +901,7 @@ var app = new Vue({
                 window.localStorage.setItem("icchbulletin", JSON.stringify(app.bulletin));
             }
         },
-        historyUndo: function () {
-            if (app.history.length === 0) {
-                return;
-            }
-            var oChange = app.history.pop();
-            if (Object.prototype.toString.call(oChange.value) === "[object Object]") {
-                Object.keys(oChange.value).forEach(function (sKey) {
-                    app.saveDataToPath(
-                        oChange.path + "." + sKey,
-                        oChange.value[sKey],
-                        oChange.pathRelativeTo
-                    );
-                });
-            } else if (Object.prototype.toString.call(oChange.value) === "[object Array]") {
-                // empty array in the change path
-                var aArray = app.getDataFromPath(oChange.path);
-                while (aArray.length) {
-                    aArray.pop();
-                }
-                while (oChange.value.length) {
-                    aArray.push(oChange.value.shift());
-                }
-            } else {
-                app.saveDataToPath(oChange.path, oChange.value, oChange.pathRelativeTo);
-            }
-        },
-        showInput: function (sType, sPathToData, oOptionalObject) {
+        showInput: function (sType, sPathToData, oOptionalObject, sOptionalObjectPath /* for history save */) {
 
             input.type = sType;
             input.data = app.getDataFromPath(sPathToData, oOptionalObject);
@@ -870,14 +911,14 @@ var app = new Vue({
                 || sType === "readingpicker") {
 
                 input.done = function (sText) {
-                    app.historySave(sPathToData, oOptionalObject);
                     app.saveDataToPath(sPathToData, sText, oOptionalObject);
+                    app.historySave((sOptionalObjectPath || sPathToData).replace(/^bulletin[.]/, ""));
                 };
             }
             else if (sType === "appointmentTextbox") {
                 input.done = function (sText) {
-                    app.historySave("bulletin.appointments");
                     app.saveDataToPath(sPathToData, sText, oOptionalObject);
+                    app.historySave("appointments");
                 };
             }
             else if (sType === "daypicker") {
@@ -888,12 +929,11 @@ var app = new Vue({
                         throw Error("cannot update date object");
                     }
 
-                    app.historySave("bulletin.appointments");
-
                     var oNewAppointment = formatAppointment(m(iDate));
                     Object.keys(oOptionalObject).forEach(function (sCurrentObjKey) {
                         oOptionalObject[sCurrentObjKey] = oNewAppointment[sCurrentObjKey];
                     });
+                    app.historySave("appointments");
                 };
             }
 
