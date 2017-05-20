@@ -445,9 +445,9 @@ var app = new Vue({
             var reader = new FileReader();
             reader.onload = function () {
                 try {
-                    var oBullettin = JSON.parse(reader.result);
-                    app.bulletin = oBullettin;
-                    alert.show("confirm", "Bullettin was loaded");
+                    var oBulletin = JSON.parse(reader.result);
+                    app.bulletin = oBulletin;
+                    alert.show("confirm", "Bulletin was loaded");
                 } catch (e) {
                     alert.show("error", "Error occurred while loading the bulletin");
                     console.log(e);
@@ -551,7 +551,7 @@ var app = new Vue({
                 app.bulletin.fonts.text.lineHeight-=0.5;
             }
         },
-        publishBullettin: function () {
+        publishBulletin: function () {
             // first make sure the bulletin is published
 
             function sendPublishRequest() {
@@ -625,9 +625,9 @@ var app = new Vue({
             );
         },
         moveAppointmentUp: function (oAppointment) {
-            var aBullettinAppointments = app.bulletin.appointments;
-            var nAppointments = aBullettinAppointments.length;
-            var iAppointmentPosition = aBullettinAppointments.indexOf(oAppointment);
+            var aBulletinAppointments = app.bulletin.appointments;
+            var nAppointments = aBulletinAppointments.length;
+            var iAppointmentPosition = aBulletinAppointments.indexOf(oAppointment);
 
             if (iAppointmentPosition === 0) {
                 alert.show("error", "cannot move appointment up");
@@ -635,14 +635,14 @@ var app = new Vue({
             }
             app.historySave("bulletin.appointments");
 
-            var oPrevAppointment = aBullettinAppointments[iAppointmentPosition - 1];
-            arraySwapInPlace(aBullettinAppointments, oAppointment, oPrevAppointment);
+            var oPrevAppointment = aBulletinAppointments[iAppointmentPosition - 1];
+            arraySwapInPlace(aBulletinAppointments, oAppointment, oPrevAppointment);
 
         },
         moveAppointmentDown: function (oAppointment) {
-            var aBullettinAppointments = app.bulletin.appointments;
-            var nAppointments = aBullettinAppointments.length;
-            var iAppointmentPosition = aBullettinAppointments.indexOf(oAppointment);
+            var aBulletinAppointments = app.bulletin.appointments;
+            var nAppointments = aBulletinAppointments.length;
+            var iAppointmentPosition = aBulletinAppointments.indexOf(oAppointment);
 
             if (iAppointmentPosition === nAppointments - 1) {
                 alert.show("error", "cannot move appointment down");
@@ -650,8 +650,8 @@ var app = new Vue({
             }
             app.historySave("bulletin.appointments");
 
-            var oNextAppointment = aBullettinAppointments[iAppointmentPosition + 1];
-            arraySwapInPlace(aBullettinAppointments, oAppointment, oNextAppointment);
+            var oNextAppointment = aBulletinAppointments[iAppointmentPosition + 1];
+            arraySwapInPlace(aBulletinAppointments, oAppointment, oNextAppointment);
         },
         deleteAppointment: function (oAppointment) {
             app.historySave("bulletin.appointments");
