@@ -304,7 +304,7 @@ function formatAppointment(vAppointment) {
     return {
         epoch: "" + mObj.valueOf(),
         date: mObj.format(sFormat),
-        description: "New Appointment " + app.bullettin.appointments.length
+        description: "New Appointment " + app.bulletin.appointments.length
     };
 }
 
@@ -375,10 +375,10 @@ var app = new Vue({
           },
           a: 1
         },
-        bullettin: {
+        bulletin: {
             password: "",
             date: getNextSunday(S_TITLE_DATE_FORMAT),
-            saveAs: getNextSunday("YYYY-MM-DD") + "-bullettin.markdown",
+            saveAs: getNextSunday("YYYY-MM-DD") + "-bulletin.markdown",
             dateChanged: m().format("YYYY-MM-DD hh:mm:ss +02:00"),
             image: {
                 enabled: true,
@@ -411,7 +411,7 @@ var app = new Vue({
         }
     },
     watch: {
-        bullettin: {
+        bulletin: {
             handler: function (after, before) {
                 app.saveStateToLocalStorage();
             },
@@ -424,9 +424,9 @@ var app = new Vue({
     methods: {
         saveToJson: function () {
             var a = document.createElement("a");
-            var file = new Blob([ JSON.stringify(app.bullettin) ], { type: "text/plain" });
+            var file = new Blob([ JSON.stringify(app.bulletin) ], { type: "text/plain" });
             a.href = URL.createObjectURL(file);
-            a.download = app.bullettin.saveAs.replace("markdown", "json");
+            a.download = app.bulletin.saveAs.replace("markdown", "json");
             a.click();
         },
         loadFromJson: function () {
@@ -446,60 +446,60 @@ var app = new Vue({
             reader.onload = function () {
                 try {
                     var oBullettin = JSON.parse(reader.result);
-                    app.bullettin = oBullettin;
+                    app.bulletin = oBullettin;
                     alert.show("confirm", "Bullettin was loaded");
                 } catch (e) {
-                    alert.show("error", "Error occurred while loading the bullettin");
+                    alert.show("error", "Error occurred while loading the bulletin");
                     console.log(e);
                 }
             };
             reader.readAsText(file);
         },
         changeFontEvent: function () {
-            console.log("Changed" + app.bullettin.fonts.text.family);
+            console.log("Changed" + app.bulletin.fonts.text.family);
         },
         selectTab: function (sTabName) {
             app.toolbar.current = sTabName;
         },
         updateColor1: function (oColor) {
-            app.bullettin.colors.color1 = oColor.hex;
+            app.bulletin.colors.color1 = oColor.hex;
         },
         updateColor2: function (oColor) {
-            app.bullettin.colors.color2 = oColor.hex;
+            app.bulletin.colors.color2 = oColor.hex;
         },
         toggleImage: function () {
-            var bEnabled = app.bullettin.image.enabled;
-            var sLayout = app.bullettin.image.layout;
+            var bEnabled = app.bulletin.image.enabled;
+            var sLayout = app.bulletin.image.layout;
 
-            app.historySave("bullettin.image");
+            app.historySave("bulletin.image");
 
             if (bEnabled) {
                 switch (sLayout) {
                     case "left":
-                        app.bullettin.image.layout = "right";
+                        app.bulletin.image.layout = "right";
                         break;
                     case "right":
-                        app.bullettin.image.layout = "left";
-                        app.bullettin.image.enabled = false;
+                        app.bulletin.image.layout = "left";
+                        app.bulletin.image.enabled = false;
                         break;
                 }
             } else {
-                app.bullettin.image.enabled = true;
+                app.bulletin.image.enabled = true;
             }
         },
         increaseImageWidth: function () {
-            if (app.bullettin.image.size === 0) {
+            if (app.bulletin.image.size === 0) {
                 return;
             }
-            app.historySave("bullettin.image.size");
-            app.bullettin.image.size -= 2.5;
+            app.historySave("bulletin.image.size");
+            app.bulletin.image.size -= 2.5;
         },
         decreaseImageWidth: function () {
-            if (app.bullettin.image.size === 100) {
+            if (app.bulletin.image.size === 100) {
                 return;
             }
-            app.historySave("bullettin.image.size");
-            app.bullettin.image.size += 2.5;
+            app.historySave("bulletin.image.size");
+            app.bulletin.image.size += 2.5;
         },
         decreaseParagraphMargin: function () {
             var oDecrease = {
@@ -510,11 +510,11 @@ var app = new Vue({
                 20: 10,
                 30: 20
             };
-            var iCurrent = app.bullettin.fonts.text.paragraphMargin;
+            var iCurrent = app.bulletin.fonts.text.paragraphMargin;
             if (oDecrease[iCurrent] !== iCurrent) {
-                app.historySave("bullettin.fonts.text.paragraphMargin");
+                app.historySave("bulletin.fonts.text.paragraphMargin");
             }
-            app.bullettin.fonts.text.paragraphMargin = oDecrease[iCurrent];
+            app.bulletin.fonts.text.paragraphMargin = oDecrease[iCurrent];
         },
         increaseParagraphMargin: function () {
             var oIncrease = {
@@ -525,34 +525,34 @@ var app = new Vue({
                 20: 30,
                 30: 30
             };
-            var iCurrent = app.bullettin.fonts.text.paragraphMargin;
+            var iCurrent = app.bulletin.fonts.text.paragraphMargin;
             if (oIncrease[iCurrent] !== iCurrent) {
-                app.historySave("bullettin.fonts.text.paragraphMargin");
+                app.historySave("bulletin.fonts.text.paragraphMargin");
             }
-            app.bullettin.fonts.text.paragraphMargin = oIncrease[iCurrent];
+            app.bulletin.fonts.text.paragraphMargin = oIncrease[iCurrent];
         },
         increaseFontSize: function () {
-            app.historySave("bullettin.fonts.text.size");
-            app.bullettin.fonts.text.size+=0.5;
+            app.historySave("bulletin.fonts.text.size");
+            app.bulletin.fonts.text.size+=0.5;
         },
         decreaseFontSize: function () {
-            if (app.bullettin.fonts.text.size > 1) {
-                app.historySave("bullettin.fonts.text.size");
-                app.bullettin.fonts.text.size-=0.5;
+            if (app.bulletin.fonts.text.size > 1) {
+                app.historySave("bulletin.fonts.text.size");
+                app.bulletin.fonts.text.size-=0.5;
             }
         },
         increaseLineHeight: function () {
-            app.historySave("bullettin.fonts.text.lineHeight");
-            app.bullettin.fonts.text.lineHeight+=0.5;
+            app.historySave("bulletin.fonts.text.lineHeight");
+            app.bulletin.fonts.text.lineHeight+=0.5;
         },
         decreaseLineHeight: function () {
-            if (app.bullettin.fonts.text.lineHeight > 1) {
-                app.historySave("bullettin.fonts.text.lineHeight");
-                app.bullettin.fonts.text.lineHeight-=0.5;
+            if (app.bulletin.fonts.text.lineHeight > 1) {
+                app.historySave("bulletin.fonts.text.lineHeight");
+                app.bulletin.fonts.text.lineHeight-=0.5;
             }
         },
         publishBullettin: function () {
-            // first make sure the bullettin is published
+            // first make sure the bulletin is published
 
             function sendPublishRequest() {
                 return new Promise(function (fnDone, fnError) {
@@ -566,9 +566,9 @@ var app = new Vue({
                             }
                         }
                     };
-                    request.open("POST", "https://icch-api.herokuapp.com/bullettin", true);
+                    request.open("POST", "https://icch-api.herokuapp.com/bulletin", true);
                     request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-                    request.send(JSON.stringify(app.bullettin));
+                    request.send(JSON.stringify(app.bulletin));
                 });
             }
 
@@ -583,15 +583,15 @@ var app = new Vue({
                     FB.api(
                         '/InternationalCatholicCommunityofHeidelberg/feed',
                         'post', {
-                            message: 'Our bullettin for Sunday mass on ' + app.bullettin.date + ' is available.',
+                            message: 'Our bulletin for Sunday mass on ' + app.bulletin.date + ' is available.',
                             link: 'http://www.google.com', // TODO: point to ICCH post
                             access_token: sAccessToken
                         }, function (oRes) {
                             if (oRes.error) {
-                                alert.show("error", "An error occurred while publishing the bullettin. Try again.");
+                                alert.show("error", "An error occurred while publishing the bulletin. Try again.");
                                 return;
                             }
-                            alert.show("confirm", "The bullettin was published on Facebook!");
+                            alert.show("confirm", "The bulletin was published on Facebook!");
                         });
                   });
 
@@ -611,21 +611,21 @@ var app = new Vue({
 
         },
         addAppointment: function () {
-            app.historySave("bullettin.appointments");
-            app.bullettin.appointments.push(formatAppointment(m()));
+            app.historySave("bulletin.appointments");
+            app.bulletin.appointments.push(formatAppointment(m()));
         },
         deleteAllAppointments: function () {
-            app.historySave("bullettin.appointments");
-            app.bullettin.appointments = [];
+            app.historySave("bulletin.appointments");
+            app.bulletin.appointments = [];
         },
         sortAppointments: function () {
-            app.historySave("bullettin.appointments");
-            app.bullettin.appointments = app.bullettin.appointments.sort(
+            app.historySave("bulletin.appointments");
+            app.bulletin.appointments = app.bulletin.appointments.sort(
                 function (a, b) { return a.epoch >= b.epoch; }
             );
         },
         moveAppointmentUp: function (oAppointment) {
-            var aBullettinAppointments = app.bullettin.appointments;
+            var aBullettinAppointments = app.bulletin.appointments;
             var nAppointments = aBullettinAppointments.length;
             var iAppointmentPosition = aBullettinAppointments.indexOf(oAppointment);
 
@@ -633,14 +633,14 @@ var app = new Vue({
                 alert.show("error", "cannot move appointment up");
                 return;
             }
-            app.historySave("bullettin.appointments");
+            app.historySave("bulletin.appointments");
 
             var oPrevAppointment = aBullettinAppointments[iAppointmentPosition - 1];
             arraySwapInPlace(aBullettinAppointments, oAppointment, oPrevAppointment);
 
         },
         moveAppointmentDown: function (oAppointment) {
-            var aBullettinAppointments = app.bullettin.appointments;
+            var aBullettinAppointments = app.bulletin.appointments;
             var nAppointments = aBullettinAppointments.length;
             var iAppointmentPosition = aBullettinAppointments.indexOf(oAppointment);
 
@@ -648,14 +648,14 @@ var app = new Vue({
                 alert.show("error", "cannot move appointment down");
                 return;
             }
-            app.historySave("bullettin.appointments");
+            app.historySave("bulletin.appointments");
 
             var oNextAppointment = aBullettinAppointments[iAppointmentPosition + 1];
             arraySwapInPlace(aBullettinAppointments, oAppointment, oNextAppointment);
         },
         deleteAppointment: function (oAppointment) {
-            app.historySave("bullettin.appointments");
-            app.bullettin.appointments = app.bullettin.appointments.filter(
+            app.historySave("bulletin.appointments");
+            app.bulletin.appointments = app.bulletin.appointments.filter(
                 function (oAppointmentFromList) {
                     return oAppointmentFromList !== oAppointment;
                 }
@@ -671,10 +671,10 @@ var app = new Vue({
             if (!app.themes.hasOwnProperty(sThemeName)) {
                 alert.show("error", sThemeName + " is not a valid theme");
             } else {
-                app.historySave("bullettin.colors");
-                app.bullettin.colors.color1 = app.themes[sThemeName].color1;
-                app.bullettin.colors.color2 = app.themes[sThemeName].color2;
-                app.bullettin.colors.border = app.themes[sThemeName].border;
+                app.historySave("bulletin.colors");
+                app.bulletin.colors.color1 = app.themes[sThemeName].color1;
+                app.bulletin.colors.color2 = app.themes[sThemeName].color2;
+                app.bulletin.colors.border = app.themes[sThemeName].border;
             }
         },
         updateReadingFromSunday: function () {
@@ -698,18 +698,18 @@ var app = new Vue({
                     return sReading;
                 }
             }
-            var sSelectedSunday = m(app.bullettin.date, "MMMM D, YYYY").format("YYYY-MM-DD");
+            var sSelectedSunday = m(app.bulletin.date, "MMMM D, YYYY").format("YYYY-MM-DD");
             getJson('https://www.ewtn.com/se/readings/readingsservice.svc/day/' + sSelectedSunday + '/en')
                 .then(function (oResponse) {
 
                     try {
-                        app.historySave("bullettin.reading1");
-                        app.historySave("bullettin.reading2");
-                        app.historySave("bullettin.reading3");
+                        app.historySave("bulletin.reading1");
+                        app.historySave("bulletin.reading2");
+                        app.historySave("bulletin.reading3");
 
                         // erase current readings
                         [1,2,3].forEach(function (x) {
-                            app.bullettin['reading' + x] = "";
+                            app.bulletin['reading' + x] = "";
                         });
                         // get the first reading
                         var oReading1 = getReading(oResponse, "Reading 1");
@@ -723,9 +723,9 @@ var app = new Vue({
                         var sReading2 = abbrevReading(oReading2.Citations[0].Reference);
                         var sReading3 = abbrevReading(oReading3.Citations[0].Reference);
 
-                        app.bullettin.reading1 = sReading1;
-                        app.bullettin.reading2 = sReading2;
-                        app.bullettin.reading3 = sReading3;
+                        app.bulletin.reading1 = sReading1;
+                        app.bulletin.reading2 = sReading2;
+                        app.bulletin.reading3 = sReading3;
                         alert.show("confirm",
                             "Updated readings: " + [sReading1, sReading2, sReading3].join(", ")
                         );
@@ -738,13 +738,13 @@ var app = new Vue({
                 });
         },
         updateTitleFromSunday: function () {
-            var sSelectedSunday = m(app.bullettin.date, "MMMM D, YYYY").format("YYYY-MM-DD");
+            var sSelectedSunday = m(app.bulletin.date, "MMMM D, YYYY").format("YYYY-MM-DD");
             getJson('https://www.ewtn.com/se/readings/readingsservice.svc/day/' + sSelectedSunday + '/en')
                 .then(function (oResponse) {
                     try {
                         // got data
-                        app.historySave("bullettin.title");
-                        app.bullettin.title = oResponse.Title;
+                        app.historySave("bulletin.title");
+                        app.bulletin.title = oResponse.Title;
                         alert.show("confirm", "Title updated: '" + oResponse.Title + "'");
                     } catch (e) {
                         throw new Error(e);
@@ -756,7 +756,7 @@ var app = new Vue({
                 });
         },
         updateThemeFromSunday: function () {
-            var sSelectedSunday = m(app.bullettin.date, "MMMM D, YYYY").format("YYYY-MM-DD");
+            var sSelectedSunday = m(app.bulletin.date, "MMMM D, YYYY").format("YYYY-MM-DD");
             getJson('https://www.ewtn.com/se/readings/readingsservice.svc/day/' + sSelectedSunday + '/en')
                 .then(function (oResponse) {
                     try {
@@ -813,25 +813,25 @@ var app = new Vue({
         },
         loadStateFromLocalStorage: function () {
             if (window.localStorage) {
-                var sData = window.localStorage.getItem("icchbullettin");
+                var sData = window.localStorage.getItem("icchbulletin");
                 if (sData) {
                     if (confirm("Some data were found from your last session. Do you want to load them and continue working?")) {
                         try {
-                            app.bullettin = JSON.parse(sData);
+                            app.bulletin = JSON.parse(sData);
                             alert.show("confirm", "Data recovered from last session");
                         } catch (e) {
                             alert.show("error", "Error occurred while trying to load data from last session");
                         }
                     } else {
                         // Delete
-                        window.localStorage.removeItem("icchbullettin", "");
+                        window.localStorage.removeItem("icchbulletin", "");
                     }
                 }
             }
         },
         saveStateToLocalStorage: function () {
             if (window.localStorage) {
-                window.localStorage.setItem("icchbullettin", JSON.stringify(app.bullettin));
+                window.localStorage.setItem("icchbulletin", JSON.stringify(app.bulletin));
             }
         },
         historyUndo: function () {
@@ -876,7 +876,7 @@ var app = new Vue({
             }
             else if (sType === "appointmentTextbox") {
                 input.done = function (sText) {
-                    app.historySave("bullettin.appointments");
+                    app.historySave("bulletin.appointments");
                     app.saveDataToPath(sPathToData, sText, oOptionalObject);
                 };
             }
@@ -888,7 +888,7 @@ var app = new Vue({
                         throw Error("cannot update date object");
                     }
 
-                    app.historySave("bullettin.appointments");
+                    app.historySave("bulletin.appointments");
 
                     var oNewAppointment = formatAppointment(m(iDate));
                     Object.keys(oOptionalObject).forEach(function (sCurrentObjKey) {

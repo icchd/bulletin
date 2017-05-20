@@ -116,7 +116,7 @@
                 <li v-if="toolbar.current === 'font'">
                     <ul>
                         <li><span class="fa fa-font">&nbsp;</span>
-                            <select v-model="bullettin.fonts.text.family">
+                            <select v-model="bulletin.fonts.text.family">
                                 <option value="Verdana">Verdana</option>
                                 <option value="Tahoma">Tahoma</option>
                                 <option value="Georgia">Georgia</option>
@@ -125,21 +125,21 @@
                                 <option value="Sans-Serif">Sans-Serif</option>
                             </select>
                             <span class="sizeBox">
-                                {{ bullettin.fonts.text.size }}pt
+                                {{ bulletin.fonts.text.size }}pt
                             </span>
                             <span v-on:click="decreaseFontSize" class="btn fa fa-minus"></span>
                             <span v-on:click="increaseFontSize" class="btn fa fa-plus"></span>
                         </li>
                         <li><span class="fa fa-text-height">&nbsp;</span>
                             <span class="sizeBox">
-                                {{ bullettin.fonts.text.lineHeight }}
+                                {{ bulletin.fonts.text.lineHeight }}
                             </span>
                             <span v-on:click="decreaseLineHeight" class="btn fa fa-minus"></span>
                             <span v-on:click="increaseLineHeight" class="btn fa fa-plus"></span>
                         </li>
                         <li><span class="fa fa-paragraph">&nbsp;</span>
                             <span class="sizeBox">
-                                {{ bullettin.fonts.text.paragraphMargin }}
+                                {{ bulletin.fonts.text.paragraphMargin }}
                             </span>
                             <span v-on:click="decreaseParagraphMargin" class="btn fa fa-minus"></span>
                             <span v-on:click="increaseParagraphMargin" class="btn fa fa-plus"></span>
@@ -177,7 +177,7 @@
                         </li>
                         <li>
                             Publish:
-                            <input class="publishPassword" v-model="bullettin.password" placeholder="Pass" type="password"></input>
+                            <input class="publishPassword" v-model="bulletin.password" placeholder="Pass" type="password"></input>
                             <button v-on:click="publishBullettin"><span class="fa fa-check"></span></button>
                         </li>
                     </ul>
@@ -195,36 +195,36 @@
             <div class="readings">
                 <h1>Today's readings:</h1>
                 <p class="ref">
-                    <span class="action" v-on:click="showInput('readingpicker', 'bullettin.reading1')">{{ bullettin.reading1 }}</span> |
-                    <span class="action" v-on:click="showInput('readingpicker', 'bullettin.reading2')">{{ bullettin.reading2 }}</span> |
-                    <span class="action" v-on:click="showInput('readingpicker', 'bullettin.reading3')">{{ bullettin.reading3 }}</span>
-                <p class="welcome action" v-on:click="showInput('textbox', 'bullettin.father')">{{ bullettin.father }}</p>
+                    <span class="action" v-on:click="showInput('readingpicker', 'bulletin.reading1')">{{ bulletin.reading1 }}</span> |
+                    <span class="action" v-on:click="showInput('readingpicker', 'bulletin.reading2')">{{ bulletin.reading2 }}</span> |
+                    <span class="action" v-on:click="showInput('readingpicker', 'bulletin.reading3')">{{ bulletin.reading3 }}</span>
+                <p class="welcome action" v-on:click="showInput('textbox', 'bulletin.father')">{{ bulletin.father }}</p>
             </div>
             <h1 class="title" v-bind:style="{
-                    color: bullettin.colors.color2, 
-                    border: '1px solid ' + bullettin.colors.border,
-                    'background-color': bullettin.colors.color1 
+                    color: bulletin.colors.color2, 
+                    border: '1px solid ' + bulletin.colors.border,
+                    'background-color': bulletin.colors.color1 
                 }">
-                <span class="action" v-on:click="showInput('sundaypicker', 'bullettin.date')">{{ bullettin.date }}</span>
-                    {{ bullettin.title ? " &ndash; " : "" }}
-                <span class="action" v-on:click="showInput('textbox', 'bullettin.title')">{{ bullettin.title }}</span>
+                <span class="action" v-on:click="showInput('sundaypicker', 'bulletin.date')">{{ bulletin.date }}</span>
+                    {{ bulletin.title ? " &ndash; " : "" }}
+                <span class="action" v-on:click="showInput('textbox', 'bulletin.title')">{{ bulletin.title }}</span>
             </h1>
-            <img v-if="bullettin.image.enabled"
-                v-bind:class="{ image1: true, action: true, 'float-left': bullettin.image.layout === 'left', 'float-right': bullettin.image.layout === 'right' }"
-                v-on:click="showInput('textbox', 'bullettin.image.src')"
-                v-bind:src="bullettin.image.src"
-                v-bind:style="{ width: bullettin.image.size + '%' }" />
-            <span v-bind:class="'text action ' + 'textMargin' + bullettin.fonts.text.paragraphMargin" v-bind:style="{
-                'line-height': bullettin.fonts.text.lineHeight + 'pt',
-                'font-family': bullettin.fonts.text.family,
-                'font-size': bullettin.fonts.text.size + 'pt'
-            }" v-on:click="showInput('textbox', 'bullettin.text')" v-html="md2html(bullettin.text)"></span>
-            <div class="source action" v-on:click="showInput('textbox', 'bullettin.source')" v-html="txt2html(bullettin.source)"></div>
-            <div v-if="bullettin.appointments.length" section class="page-footer">
+            <img v-if="bulletin.image.enabled"
+                v-bind:class="{ image1: true, action: true, 'float-left': bulletin.image.layout === 'left', 'float-right': bulletin.image.layout === 'right' }"
+                v-on:click="showInput('textbox', 'bulletin.image.src')"
+                v-bind:src="bulletin.image.src"
+                v-bind:style="{ width: bulletin.image.size + '%' }" />
+            <span v-bind:class="'text action ' + 'textMargin' + bulletin.fonts.text.paragraphMargin" v-bind:style="{
+                'line-height': bulletin.fonts.text.lineHeight + 'pt',
+                'font-family': bulletin.fonts.text.family,
+                'font-size': bulletin.fonts.text.size + 'pt'
+            }" v-on:click="showInput('textbox', 'bulletin.text')" v-html="md2html(bulletin.text)"></span>
+            <div class="source action" v-on:click="showInput('textbox', 'bulletin.source')" v-html="txt2html(bulletin.source)"></div>
+            <div v-if="bulletin.appointments.length" section class="page-footer">
                 <h2 class="subtitle" v-bind:style="{ 
-                    color: bullettin.colors.color2,
-                    'background-color': bullettin.colors.color1,
-                    border: '1px solid ' + bullettin.colors.border
+                    color: bulletin.colors.color2,
+                    'background-color': bulletin.colors.color1,
+                    border: '1px solid ' + bulletin.colors.border
                 }">NEWS</h2>
                 <div class="hideinprint">
                     <button v-on:click="addAppointment"><span class="fa fa-plus"> Add</span></button>
@@ -236,7 +236,7 @@
                     </button>
                 </div>
                 <ul class="info">
-                    <li v-for="appointment in bullettin.appointments">
+                    <li v-for="appointment in bulletin.appointments">
                         <button v-on:click="deleteAppointment(appointment)" class="hideinprint fa-trash-o fa"></button>
                         <button v-on:click="moveAppointmentUp(appointment)" class="hideinprint fa fa-arrow-up"></button>
                         <button v-on:click="moveAppointmentDown(appointment)" class="hideinprint fa fa-arrow-down"></button>
@@ -246,12 +246,12 @@
                 </ul>
                 <ul class="footer">
                     <li>If you would like to be added to our email list please send your contact information to:</li>
-                    <li><a v-bind:href="'mailto:' + bullettin.newsletter">{{ bullettin.newsletter }}</a></li>
+                    <li><a v-bind:href="'mailto:' + bulletin.newsletter">{{ bulletin.newsletter }}</a></li>
                 </ul>
             </div>
             <ul v-else class="footer">
                 <li>If you would like to be added to our email list please send your contact information to:</li>
-                <li><a v-bind:href="'mailto:' + bullettin.newsletter">{{ bullettin.newsletter }}</a></li>
+                <li><a v-bind:href="'mailto:' + bulletin.newsletter">{{ bulletin.newsletter }}</a></li>
             </ul>
         </div>
         <script src="js/main.js"></script>
