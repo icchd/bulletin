@@ -610,7 +610,7 @@ var app = new Vue({
                         '/InternationalCatholicCommunityofHeidelberg/feed',
                         'post', {
                             message: 'Our bulletin for ' + app.bulletin.title + ' is available',
-                            link: S_BULLETIN_FACEBOOK_LINK_BASE + getSaveAs("html"),
+                            link: sPath,
                             access_token: sAccessToken
                         }, function (oRes) {
                             if (oRes.error) {
