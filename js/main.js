@@ -1,4 +1,5 @@
 var S_TITLE_DATE_FORMAT = "MMMM D, YYYY";
+
 var S_HEROKU_ENDPOINT = "http://icch-api.herokuapp.com/bulletin";
 var S_BULLETIN_FACEBOOK_LINK_BASE = "http://www.international-catholic-community-heidelberg.com/" ;
 
@@ -635,7 +636,7 @@ var app = new Vue({
 
                     // oResponse.path === /2017-06-18-bulletin.markdown
                     var sFacebookLink = S_BULLETIN_FACEBOOK_LINK_BASE + "/bulletins" + oResponse.path.replace("markdown", "html");
-                    // publishToFacebook(sFacebookLink);
+                    publishToFacebook(sFacebookLink);
                 }
             }, function (oError) {
                 alert.show("error", "" + oError);
