@@ -1,4 +1,5 @@
 var S_TITLE_DATE_FORMAT = "MMMM D, YYYY";
+var S_HEROKU_ENDPOINT = "http://icch-api.herokuapp.com/bulletin";
 
 function arraySwapInPlace (A, a, b) {
     /*
@@ -575,7 +576,7 @@ var app = new Vue({
                             }
                         }
                     };
-                    request.open("POST", "https://icch-api.herokuapp.com/bulletin", true);
+                    request.open("POST", S_HEROKU_ENDPOINT, true);
                     request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
                     request.send(JSON.stringify(app.bulletin));
                 });
@@ -592,8 +593,8 @@ var app = new Vue({
                     FB.api(
                         '/InternationalCatholicCommunityofHeidelberg/feed',
                         'post', {
-                            message: 'Our bulletin for Sunday mass on ' + app.bulletin.date + ' is available.',
-                            link: 'http://www.google.com', // TODO: point to ICCH post
+                            message: 'Our bulletin for ' + app.bulletin.title + ' is available',
+                            link: 'http://www.international-catholic-community-heidelberg.com/bulletin/',
                             access_token: sAccessToken
                         }, function (oRes) {
                             if (oRes.error) {
