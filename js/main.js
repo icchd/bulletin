@@ -319,7 +319,7 @@ function slugify(text) {
 }
 
 function getSaveAs (sExtension) {
-    return getNextSunday("YYY-MM-DD") + "-" + slugify(app.title) + "." + sExtension;
+    return getNextSunday("YYY-MM-DD") + "-" + slugify(app.bulletin.title) + "." + sExtension;
 }
 
 var oBaseBulletin = {
