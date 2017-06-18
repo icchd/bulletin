@@ -1,5 +1,6 @@
 var S_TITLE_DATE_FORMAT = "MMMM D, YYYY";
 var S_HEROKU_ENDPOINT = "http://icch-api.herokuapp.com/bulletin";
+var S_BULLETIN_FACEBOOK_LINK_BASE = "http://www.international-catholic-community-heidelberg.com/" ;
 
 function arraySwapInPlace (A, a, b) {
     /*
@@ -307,10 +308,24 @@ function formatAppointment(vAppointment) {
     };
 }
 
+
+function slugify(text) {
+  return text.toString().toLowerCase()
+    .replace(/\s+/g, '-')           // Replace spaces with -
+    .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+    .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+    .replace(/^-+/, '')             // Trim - from start of text
+    .replace(/-+$/, '');            // Trim - from end of text
+}
+
+function getSaveAs (sExtension) {
+    return getNextSunday("YYY-MM-DD") + "-" + slugify(app.title) + "." + sExtension;
+}
+
 var oBaseBulletin = {
     password: "",
     date: getNextSunday(S_TITLE_DATE_FORMAT),
-    saveAs: getNextSunday("YYYY-MM-DD") + "-bulletin.markdown",
+    // saveAs: getNextSunday("YYYY-MM-DD") + "-bulletin.markdown",
     dateChanged: m().format("YYYY-MM-DD hh:mm:ss +02:00"),
     image: {
         enabled: true,
@@ -436,7 +451,7 @@ var app = new Vue({
             var a = document.createElement("a");
             var file = new Blob([ JSON.stringify(app.bulletin) ], { type: "text/plain" });
             a.href = URL.createObjectURL(file);
-            a.download = app.bulletin.saveAs.replace("markdown", "json");
+            a.download = getSaveAs("json");
             a.click();
         },
         loadFromJson: function () {
@@ -582,7 +597,7 @@ var app = new Vue({
                 });
             }
 
-            function publishToFacebook() {
+            function publishToFacebook(sPath) {
                 FB.login(function(){
                   FB.api("/InternationalCatholicCommunityofHeidelberg?fields=access_token", 'get', function (o) {
                     if (!o.access_token) {
@@ -594,7 +609,7 @@ var app = new Vue({
                         '/InternationalCatholicCommunityofHeidelberg/feed',
                         'post', {
                             message: 'Our bulletin for ' + app.bulletin.title + ' is available',
-                            link: 'http://www.international-catholic-community-heidelberg.com/bulletin/',
+                            link: S_BULLETIN_FACEBOOK_LINK_BASE + getSaveAs("html"),
                             access_token: sAccessToken
                         }, function (oRes) {
                             if (oRes.error) {
@@ -608,12 +623,19 @@ var app = new Vue({
                 }, {scope: 'manage_pages,publish_pages'});
             }
 
+            // important: API takes bulletin from here
+            app.bulletin.saveAs = getSaveAs("markdown");
+
             sendPublishRequest().then(function (oResponse) {
                 if (!oResponse.success) {
                     alert.show("error", oResponse.message);
                     return;
                 } else {
                     alert.show("confirm", oResponse.message);
+
+                    // oResponse.path === /2017-06-18-bulletin.markdown
+                    var sFacebookLink = S_BULLETIN_FACEBOOK_LINK_BASE + "/bulletins" + oResponse.path.replace("markdown", "html");
+                    // publishToFacebook(sFacebookLink);
                 }
             }, function (oError) {
                 alert.show("error", "" + oError);
