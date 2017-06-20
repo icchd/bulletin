@@ -662,7 +662,7 @@ var app = new Vue({
                 var sFacebookLink = S_BULLETIN_FACEBOOK_LINK_BASE + "/bulletins" + oResponse.path.replace("markdown", "html");
 
                 // waiting for the link to be ready...
-                whenLinkAvailable(sFacebookLink, 30000, 1).then(function () {
+                app.whenLinkAvailable(sFacebookLink, 30000, 1).then(function () {
 
                     // TODO
                     // console.log("Publishing to facebook");
