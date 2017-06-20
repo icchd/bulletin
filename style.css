@@ -411,3 +411,9 @@ a, a:hover {
     -moz-transition: opacity .25s ease-in-out;
     -webkit-transition: opacity .25s ease-in-out;
 }
+
+.progressBar {
+    border-radius: 3px;
+    padding: 2px;
+    background: #FFF;
+}

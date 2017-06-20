@@ -50,6 +50,17 @@ function getJson(sUrl) {
             fnResolve(app._urlCache[sUrl]);
         });
     }
+
+    return httpRequest(sUrl).then(function (request) {
+        var data = JSON.parse(request.responseText);
+        app._urlCache[sUrl] = data;
+        fnResolve(data);
+    }, function (requestOrUndefined) {
+        console.log("Error during http GET to " + sUrl);
+    });
+}
+
+function httpRequest (sUrl) {
     return new Promise(function (fnResolve, fnReject) {
         var request = new XMLHttpRequest();
         request.open('GET', sUrl, true);
@@ -57,12 +68,13 @@ function getJson(sUrl) {
         request.onload = function() {
             if (request.status >= 200 && request.status < 400) {
                 // Success!
-                var data = JSON.parse(request.responseText);
-                app._urlCache[sUrl] = data;
-                fnResolve(data);
+                fnResolve(request);
+                // var data = JSON.parse(request.responseText);
+                // app._urlCache[sUrl] = data;
+                // fnResolve(data);
             } else {
                 // We reached our target server, but it returned an error
-                fnReject();
+                fnReject(request);
             }
         };
 
@@ -72,6 +84,7 @@ function getJson(sUrl) {
         };
 
         request.send();
+
     });
 }
 
@@ -410,7 +423,8 @@ var app = new Vue({
             }
         },
         toolbar: {
-            current: "color"
+            current: "tools",
+            publishEnabled: true
         },
         colors: {
           hex: '#194d33',
@@ -580,6 +594,8 @@ var app = new Vue({
         publishBulletin: function () {
             // first make sure the bulletin is published
 
+            app.toolbar.publishEnabled = false;
+
             function sendPublishRequest() {
                 return new Promise(function (fnDone, fnError) {
                     var request = new XMLHttpRequest();
@@ -599,29 +615,35 @@ var app = new Vue({
             }
 
             function publishToFacebook(sPath) {
-                FB.login(function(){
-                  FB.api("/InternationalCatholicCommunityofHeidelberg?fields=access_token", 'get', function (o) {
-                    if (!o.access_token) {
-                        alert.show("error", "Something went wrong while getting access token. Try again.");
-                        return;
-                    }
-                    var sAccessToken = o.access_token;
-                    FB.api(
-                        '/InternationalCatholicCommunityofHeidelberg/feed',
-                        'post', {
-                            message: 'Our bulletin for ' + app.bulletin.title + ' is available',
-                            link: sPath,
-                            access_token: sAccessToken
-                        }, function (oRes) {
-                            if (oRes.error) {
-                                alert.show("error", "An error occurred while publishing the bulletin. Try again.");
-                                return;
-                            }
-                            alert.show("confirm", "The bulletin was published on Facebook!");
-                        });
-                  });
+                return new Promise(function (fnDone) {
+                    FB.login(function(){
+                      FB.api("/InternationalCatholicCommunityofHeidelberg?fields=access_token", 'get', function (o) {
+                        if (!o.access_token) {
+                            alert.show("error", "Something went wrong while getting access token. Try again.");
+                            fnDone();
+                            return;
+                        }
+                        var sAccessToken = o.access_token;
+                        FB.api(
+                            '/InternationalCatholicCommunityofHeidelberg/feed',
+                            'post', {
+                                message: 'Our bulletin for ' + app.bulletin.title + ' is available',
+                                link: sPath,
+                                access_token: sAccessToken
+                            }, function (oRes) {
+                                if (oRes.error) {
+                                    alert.show("error", "An error occurred while publishing the bulletin. Try again.");
+                                    fnDone();
+                                    return;
+                                }
+                                alert.show("confirm", "The bulletin was published on Facebook!");
+                                fnDone();
+                            });
+                      });
 
-                }, {scope: 'manage_pages,publish_pages'});
+                    }, {scope: 'manage_pages,publish_pages'});
+
+                });
             }
 
             // important: API takes bulletin from here
@@ -630,18 +652,62 @@ var app = new Vue({
             sendPublishRequest().then(function (oResponse) {
                 if (!oResponse.success) {
                     alert.show("error", oResponse.message);
+                    app.toolbar.publishEnabled = false;
                     return;
-                } else {
-                    alert.show("confirm", oResponse.message);
-
-                    // oResponse.path === /2017-06-18-bulletin.markdown
-                    var sFacebookLink = S_BULLETIN_FACEBOOK_LINK_BASE + "/bulletins" + oResponse.path.replace("markdown", "html");
-                    publishToFacebook(sFacebookLink);
                 }
+
+                alert.show("confirm", oResponse.message);
+
+                // oResponse.path === /2017-06-18-bulletin.markdown
+                var sFacebookLink = S_BULLETIN_FACEBOOK_LINK_BASE + "/bulletins" + oResponse.path.replace("markdown", "html");
+
+                // waiting for the link to be ready...
+                whenLinkAvailable(sFacebookLink, 30000, 1).then(function () {
+
+                    // TODO
+                    // console.log("Publishing to facebook");
+                    return publishToFacebook(sFacebookLink);
+
+                }, function () {
+
+                    // TODO
+                    // show error message
+                    alert.show("error", "Cannot publish to facebook (too many attempts)");
+                    return Promise.resolve();
+
+                }).then(function () {
+
+                    app.toolbar.publishEnabled = false;
+                });
             }, function (oError) {
+                app.toolbar.publishEnabled = false;
                 alert.show("error", "" + oError);
             });
+        },
+        whenLinkAvailable: function (sUrlInTheSameDomain, iTryEveryMillis, iTryTimes) {
+            return new Promise(function (fnResolve, fnReject) {
 
+                setTimeout(function () {
+                    fnResolve();
+                }, iTryEveryMillis);
+
+                /// [httpRequest(sUrlInTheSameDomain)].reduce(function (oCurrentPromise, oNextPromise) {
+                ///     return oCurrentPromise.then(function () {
+                ///         // done -> resolve!
+                ///     }, function () {
+                ///         return oNextPromise.then(function () {
+                ///             return httpRequest(sUrlInTheSameDomain);
+                ///         });
+                ///     });
+                /// }, Promise.reject());
+                ///
+                ///
+                /// .then(function () {
+                ///
+                /// }, function () {
+                ///
+                /// });
+            });
         },
         addAppointment: function () {
             app.bulletin.appointments.push(formatAppointment(m()));
