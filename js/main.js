@@ -656,7 +656,7 @@ var app = new Vue({
             sendPublishRequest()
                 .then(function (oResponse) {
                     // Website published!
-                    alert.show("confirm", oResponse.message);
+                    alert.show("confirm", "Bulletin was published to the website");
 
                     // oResponse.path === /2017-06-18-bulletin.markdown
                     return S_BULLETIN_FACEBOOK_LINK_BASE + "/bulletins" + oResponse.path.replace("markdown", "html");
@@ -684,7 +684,7 @@ var app = new Vue({
         whenLinkAvailable: function (sUrlInTheSameDomain, iTryEveryMillis, iTryTimes) {
 
             function wait() {
-                alert("confirm", "Preparing Facebook sharing, please wait...");
+                alert.show("confirm", "Preparing Facebook sharing, please wait...");
                 return new Promise(function (fnResolve, fnReject) {
                     setTimeout(function () {
                         fnResolve();
