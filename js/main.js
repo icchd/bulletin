@@ -659,7 +659,7 @@ var app = new Vue({
             }
 
             // important: API takes bulletin from here
-            app.bulletin.saveAs = app.toolbagetSaveAs("markdown");
+            app.bulletin.saveAs = getSaveAs("markdown");
 
             publishToWebsite()
                 .catch(function (oError) {
