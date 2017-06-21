@@ -426,7 +426,8 @@ var app = new Vue({
             current: "tools",
             publishEnabled: true,
             publishIcchChecked: true,
-            publishFacebookChecked: false
+            publishFacebookChecked: true,
+            bullettinGithubHtmlLink: null
         },
         colors: {
           hex: '#194d33',
@@ -455,6 +456,7 @@ var app = new Vue({
     watch: {
         bulletin: {
             handler: function (after, before) {
+                app.toolbar.bullettinGithubHtmlLink = S_BULLETIN_FACEBOOK_LINK_BASE + "/bulletins/" + getSaveAs("html");
                 app.saveStateToLocalStorage();
             },
             deep: true
@@ -657,9 +659,7 @@ var app = new Vue({
             }
 
             // important: API takes bulletin from here
-            app.bulletin.saveAs = getSaveAs("markdown");
-
-            var sHtmlLink = S_BULLETIN_FACEBOOK_LINK_BASE + "/bulletins/" + app.bulletin.saveAs.replace("markdown", "html");
+            app.bulletin.saveAs = app.toolbagetSaveAs("markdown");
 
             publishToWebsite()
                 .catch(function (oError) {
@@ -672,8 +672,8 @@ var app = new Vue({
                         return Promise.resolve();
                     }
 
-                    return app.whenLinkAvailable(sHtmlLink, 15000, 10)
-                        .then(publishToFacebook.bind(null, sHtmlLink))
+                    return app.whenLinkAvailable(app.toolbar.bullettinGithubHtmlLink, 15000, 10)
+                        .then(publishToFacebook.bind(null, app.toolbar.bullettinGithubHtmlLink))
                         .then(function () {
                             alert.show("confirm", "Bulletin published to Facebook page!");
                             return true;
