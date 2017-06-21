@@ -668,7 +668,7 @@ var app = new Vue({
                     return Promise.reject();
                 })
                 .then(function () {
-                    if (!app.toolbar.publishFacebook) {
+                    if (!app.toolbar.publishFacebookChecked) {
                         return Promise.resolve();
                     }
 
