@@ -1,7 +1,7 @@
 var S_TITLE_DATE_FORMAT = "MMMM D, YYYY";
 
 var S_HEROKU_ENDPOINT = "http://icch-api.herokuapp.com/bulletin";
-var S_BULLETIN_FACEBOOK_LINK_BASE = "http://www.international-catholic-community-heidelberg.com/" ;
+var S_BULLETIN_FACEBOOK_LINK_BASE = "http://www.international-catholic-community-heidelberg.com" ;
 
 function arraySwapInPlace (A, a, b) {
     /*
