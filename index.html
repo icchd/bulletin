@@ -179,7 +179,9 @@
                         <li>
                             Publish:
                             <input v-if="toolbar.publishEnabled" class="publishPassword" v-model="bulletin.password" placeholder="Pass" type="password"></input>
-                            <button v-if="toolbar.publishEnabled" v-on:click="publishBulletin"><span class="fa fa-check"></span></button>
+                            <input v-model="toolbar.publishIcchChecked" :checked="toolbar.publishEnabled && toolbar.publishIcchChecked" type="checkbox"/><label for="publishIcch"><img src="images/icch.png" /></label>
+                            <input v-model="toolbar.publishFacebookChecked" :checked="toolbar.publishEnabled && toolbar.publishFacebookChecked" type="checkbox"/><label for="publishFacebook"><img src="images/fb.png" /></label>
+                            <button :disabled="!toolbar.publishFacebookChecked && !toolbar.publishIcchChecked" v-if="toolbar.publishEnabled" v-on:click="publishBulletin">Go</span></button>
                             <img v-if="!toolbar.publishEnabled" class="progressBar" src="images/progress.gif" />
                         </li>
                     </ul>

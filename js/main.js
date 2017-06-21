@@ -424,7 +424,9 @@ var app = new Vue({
         },
         toolbar: {
             current: "tools",
-            publishEnabled: true
+            publishEnabled: true,
+            publishIcchChecked: true,
+            publishFacebookChecked: false
         },
         colors: {
           hex: '#194d33',
@@ -596,7 +598,10 @@ var app = new Vue({
 
             app.toolbar.publishEnabled = false;
 
-            function sendPublishRequest() {
+            function publishToWebsite() {
+                if (!app.toolbar.publishIcchChecked) {
+                    return Promise.resolve();
+                }
                 return new Promise(function (fnDone, fnError) {
                     var request = new XMLHttpRequest();
                     request.onreadystatechange = function () {
@@ -608,6 +613,7 @@ var app = new Vue({
                                     return;
                                 }
 
+                                alert.show("confirm", "Bulletin was published to the website");
                                 fnDone(oResponse);
 
                             } catch (oError) {
@@ -653,21 +659,21 @@ var app = new Vue({
             // important: API takes bulletin from here
             app.bulletin.saveAs = getSaveAs("markdown");
 
-            sendPublishRequest()
-                .then(function (oResponse) {
-                    // Website published!
-                    alert.show("confirm", "Bulletin was published to the website");
+            var sHtmlLink = S_BULLETIN_FACEBOOK_LINK_BASE + "/bulletins/" + app.bulletin.saveAs.replace("markdown", "html");
 
-                    // oResponse.path === /2017-06-18-bulletin.markdown
-                    return S_BULLETIN_FACEBOOK_LINK_BASE + "/bulletins" + oResponse.path.replace("markdown", "html");
-                }, function (oError) {
+            publishToWebsite()
+                .catch(function (oError) {
                     // Cannot publish to Github
                     alert.show("error", "Cannot publish to website: " + oError);
                     return Promise.reject();
                 })
-                .then(function (sFacebookLink) {
-                    return app.whenLinkAvailable(sFacebookLink, 15000, 10)
-                        .then(publishToFacebook.bind(null, sFacebookLink))
+                .then(function () {
+                    if (!app.toolbar.publishFacebook) {
+                        return Promise.resolve();
+                    }
+
+                    return app.whenLinkAvailable(sHtmlLink, 15000, 10)
+                        .then(publishToFacebook.bind(null, sHtmlLink))
                         .then(function () {
                             alert.show("confirm", "Bulletin published to Facebook page!");
                             return true;
