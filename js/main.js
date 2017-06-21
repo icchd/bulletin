@@ -666,13 +666,15 @@ var app = new Vue({
                     return Promise.reject();
                 })
                 .then(function (sFacebookLink) {
-                    app.whenLinkAvailable(sFacebookLink, 10000, 10)
+                    return app.whenLinkAvailable(sFacebookLink, 10000, 10)
                         .then(publishToFacebook.bind(null, sFacebookLink))
                         .then(function () {
                             alert.show("confirm", "Bulletin published to Facebook page!");
+                            return true;
                         })
                         .catch(function (sError) {
                             alert.show("error", sError || "An error occurred while publishing the bulletin to Facebook");
+                            return true;
                         });
                 })
                 .then(function () {
