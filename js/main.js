@@ -659,37 +659,32 @@ var app = new Vue({
                     alert.show("confirm", oResponse.message);
 
                     // oResponse.path === /2017-06-18-bulletin.markdown
-                    var sFacebookLink = S_BULLETIN_FACEBOOK_LINK_BASE + "/bulletins" + oResponse.path.replace("markdown", "html");
-
-                    // waiting for the link to be ready...
-                    // return app.whenLinkAvailable(sFacebookLink, 10000, 10).then(function () {
-                    //     return publishToFacebook(sFacebookLink).then(function () {
-                    //         return { published: true };
-                    //     }, function (sError) {
-                    //         return Promise.resolve({ published: false, reason: sError });
-                    //     });
-                    // }, function () {
-                    //     return Promise.resolve({ published: false, reason: "Cannot publish to facebook (too many attempts)"});
-                    // })
-                    // .then(function (oFacebookPublishResult) {
-                    // });
-                    return app.whenLinkAvailable(sFacebookLink, 10000, 10)
-                        .then(publishToFacebook.bind(null, sFacebookLink))
-                        .catch(function (sError) {
-                            alert.show("error", sError);
-                            return Promise.resolve();
-                        });
+                    return S_BULLETIN_FACEBOOK_LINK_BASE + "/bulletins" + oResponse.path.replace("markdown", "html");
                 }, function (oError) {
                     // Cannot publish to Github
                     alert.show("error", "Cannot publish to website: " + oError);
+                    return Promise.reject();
+                })
+                .then(function (sFacebookLink) {
+                    app.whenLinkAvailable(sFacebookLink, 10000, 10)
+                        .then(publishToFacebook.bind(null, sFacebookLink))
+                        .then(function () {
+                            alert.show("confirm", "Bulletin published to Facebook page!");
+                        })
+                        .catch(function (sError) {
+                            alert.show("error", sError);
+                        });
                 })
                 .then(function () {
+                    app.toolbar.publishEnabled = false;
+                }, function () {
                     app.toolbar.publishEnabled = false;
                 });
         },
         whenLinkAvailable: function (sUrlInTheSameDomain, iTryEveryMillis, iTryTimes) {
 
             function wait() {
+                alert("confirm", "Preparing Facebook sharing, please wait...");
                 return new Promise(function (fnResolve, fnReject) {
                     setTimeout(function () {
                         fnResolve();
