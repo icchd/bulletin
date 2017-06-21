@@ -672,7 +672,7 @@ var app = new Vue({
                             alert.show("confirm", "Bulletin published to Facebook page!");
                         })
                         .catch(function (sError) {
-                            alert.show("error", sError);
+                            alert.show("error", sError || "An error occurred while publishing the bulletin to Facebook");
                         });
                 })
                 .then(function () {
