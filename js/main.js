@@ -602,7 +602,14 @@ var app = new Vue({
                     request.onreadystatechange = function () {
                         if (request.readyState === XMLHttpRequest.DONE) {
                             try {
-                                fnDone(JSON.parse(request.responseText));
+                                var oResponse = JSON.parse(request.responseText);
+                                if (!oResponse.success) {
+                                    fnError(oResponse.message);
+                                    return;
+                                }
+
+                                fnDone(oResponse);
+
                             } catch (oError) {
                                 fnError(oError);
                             }
@@ -615,12 +622,11 @@ var app = new Vue({
             }
 
             function publishToFacebook(sPath) {
-                return new Promise(function (fnDone) {
+                return new Promise(function (fnResolve, fnReject) {
                     FB.login(function(){
                       FB.api("/InternationalCatholicCommunityofHeidelberg?fields=access_token", 'get', function (o) {
                         if (!o.access_token) {
-                            alert.show("error", "Something went wrong while getting access token. Try again.");
-                            fnDone();
+                            fnReject("Something went wrong while getting access token.");
                             return;
                         }
                         var sAccessToken = o.access_token;
@@ -632,12 +638,10 @@ var app = new Vue({
                                 access_token: sAccessToken
                             }, function (oRes) {
                                 if (oRes.error) {
-                                    alert.show("error", "An error occurred while publishing the bulletin. Try again.");
-                                    fnDone();
+                                    fnReject("An error occurred while publishing the bulletin. Try again.");
                                     return;
                                 }
-                                alert.show("confirm", "The bulletin was published on Facebook!");
-                                fnDone();
+                                fnResolve();
                             });
                       });
 
@@ -649,64 +653,72 @@ var app = new Vue({
             // important: API takes bulletin from here
             app.bulletin.saveAs = getSaveAs("markdown");
 
-            sendPublishRequest().then(function (oResponse) {
-                if (!oResponse.success) {
-                    alert.show("error", oResponse.message);
-                    app.toolbar.publishEnabled = false;
-                    return;
-                }
+            sendPublishRequest()
+                .then(function (oResponse) {
+                    // Website published!
+                    alert.show("confirm", oResponse.message);
 
-                alert.show("confirm", oResponse.message);
+                    // oResponse.path === /2017-06-18-bulletin.markdown
+                    var sFacebookLink = S_BULLETIN_FACEBOOK_LINK_BASE + "/bulletins" + oResponse.path.replace("markdown", "html");
 
-                // oResponse.path === /2017-06-18-bulletin.markdown
-                var sFacebookLink = S_BULLETIN_FACEBOOK_LINK_BASE + "/bulletins" + oResponse.path.replace("markdown", "html");
-
-                // waiting for the link to be ready...
-                app.whenLinkAvailable(sFacebookLink, 30000, 1).then(function () {
-
-                    // TODO
-                    // console.log("Publishing to facebook");
-                    return publishToFacebook(sFacebookLink);
-
-                }, function () {
-
-                    // TODO
-                    // show error message
-                    alert.show("error", "Cannot publish to facebook (too many attempts)");
-                    return Promise.resolve();
-
-                }).then(function () {
-
+                    // waiting for the link to be ready...
+                    // return app.whenLinkAvailable(sFacebookLink, 10000, 10).then(function () {
+                    //     return publishToFacebook(sFacebookLink).then(function () {
+                    //         return { published: true };
+                    //     }, function (sError) {
+                    //         return Promise.resolve({ published: false, reason: sError });
+                    //     });
+                    // }, function () {
+                    //     return Promise.resolve({ published: false, reason: "Cannot publish to facebook (too many attempts)"});
+                    // })
+                    // .then(function (oFacebookPublishResult) {
+                    // });
+                    return app.whenLinkAvailable(sFacebookLink, 10000, 10)
+                        .then(publishToFacebook.bind(null, sFacebookLink))
+                        .catch(function (sError) {
+                            alert.show("error", sError);
+                            return Promise.resolve();
+                        });
+                }, function (oError) {
+                    // Cannot publish to Github
+                    alert.show("error", "Cannot publish to website: " + oError);
+                })
+                .then(function () {
                     app.toolbar.publishEnabled = false;
                 });
-            }, function (oError) {
-                app.toolbar.publishEnabled = false;
-                alert.show("error", "" + oError);
-            });
         },
         whenLinkAvailable: function (sUrlInTheSameDomain, iTryEveryMillis, iTryTimes) {
+
+            function wait() {
+                return new Promise(function (fnResolve, fnReject) {
+                    setTimeout(function () {
+                        fnResolve();
+                    }, iTryEveryMillis);
+                });
+            }
+
             return new Promise(function (fnResolve, fnReject) {
 
-                setTimeout(function () {
-                    fnResolve();
-                }, iTryEveryMillis);
+                Array(iTryTimes * 2).fill().reduce(function (oCurrentPromise) {
+                   if (oCurrentPromise === true) {
+                       return Promise.resolve(true);
+                   }
+                   return oCurrentPromise.then(function (bDone) {
+                       if (bDone) {
+                           return bDone; // we are done
+                       }
 
-                /// [httpRequest(sUrlInTheSameDomain)].reduce(function (oCurrentPromise, oNextPromise) {
-                ///     return oCurrentPromise.then(function () {
-                ///         // done -> resolve!
-                ///     }, function () {
-                ///         return oNextPromise.then(function () {
-                ///             return httpRequest(sUrlInTheSameDomain);
-                ///         });
-                ///     });
-                /// }, Promise.reject());
-                ///
-                ///
-                /// .then(function () {
-                ///
-                /// }, function () {
-                ///
-                /// });
+                       // timer expired
+                       return httpRequest(sUrlInTheSameDomain);
+                   }, wait);
+
+                }, Promise.resolve()).then(function (oResponse) {
+                    if (oResponse) {
+                        fnResolve(oResponse);
+                    } else {
+                        fnReject();
+                    }
+                });
             });
         },
         addAppointment: function () {
