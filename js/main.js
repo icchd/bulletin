@@ -666,7 +666,7 @@ var app = new Vue({
                     return Promise.reject();
                 })
                 .then(function (sFacebookLink) {
-                    return app.whenLinkAvailable(sFacebookLink, 10000, 10)
+                    return app.whenLinkAvailable(sFacebookLink, 15000, 10)
                         .then(publishToFacebook.bind(null, sFacebookLink))
                         .then(function () {
                             alert.show("confirm", "Bulletin published to Facebook page!");
@@ -678,9 +678,9 @@ var app = new Vue({
                         });
                 })
                 .then(function () {
-                    app.toolbar.publishEnabled = false;
+                    app.toolbar.publishEnabled = true;
                 }, function () {
-                    app.toolbar.publishEnabled = false;
+                    app.toolbar.publishEnabled = true;
                 });
         },
         whenLinkAvailable: function (sUrlInTheSameDomain, iTryEveryMillis, iTryTimes) {
@@ -709,7 +709,7 @@ var app = new Vue({
                        return httpRequest(sUrlInTheSameDomain);
                    }, wait);
 
-                }, Promise.resolve()).then(function (oResponse) {
+                }, wait()).then(function (oResponse) {
                     if (oResponse) {
                         fnResolve(oResponse);
                     } else {
