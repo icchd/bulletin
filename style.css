@@ -160,6 +160,9 @@ a, a:hover {
 .info {
     font-size: 2em;
 }
+.info p {
+    display: inline;
+}
 .appointmentDate {
     font-weight: bold;
 }

@@ -245,7 +245,7 @@
                         <button v-on:click="moveAppointmentUp(appointment)" class="hideinprint fa fa-arrow-up"></button>
                         <button v-on:click="moveAppointmentDown(appointment)" class="hideinprint fa fa-arrow-down"></button>
                         <span class="action appointmentDate" v-on:click="showInput('daypicker', 'epoch', appointment, 'bulletin.appointments')">{{ appointment.date }}</span> &ndash;
-                        <span class="action" v-on:click="showInput('appointmentTextbox', 'description', appointment, 'bulletin.appointments')">{{ appointment.description }}</span>
+                        <span class="action" v-on:click="showInput('appointmentTextbox', 'description', appointment, 'bulletin.appointments')" v-html="md2html(appointment.description)"></span>
                     </li>
                 </ul>
                 <ul class="footer">
