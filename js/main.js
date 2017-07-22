@@ -156,6 +156,7 @@ var oBooks = {
          "Sirach": "Sir",
          "Song of Songs": "Song",
          "Titus": "Titus",
+         "Wisdom": "Wis",
          "Zechariah": "Zech",
          "Zephaniah": "Zeph"
     }
