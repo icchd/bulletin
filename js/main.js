@@ -626,6 +626,10 @@ var app = new Vue({
                     };
                     request.open("POST", S_HEROKU_ENDPOINT, true);
                     request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+
+                    // add html link
+                    app.bulletin.htmlLink = app.toolbar.bullettinGithubHtmlLink;
+
                     request.send(JSON.stringify(app.bulletin));
                 });
             }
