@@ -611,9 +611,6 @@ var app = new Vue({
             app.toolbar.publishEnabled = false;
 
             function publishToWebsite() {
-                if (!app.bulletin.publish.icch) {
-                    return Promise.resolve();
-                }
                 return new Promise(function (fnDone, fnError) {
                     var request = new XMLHttpRequest();
                     request.onreadystatechange = function () {
@@ -625,7 +622,6 @@ var app = new Vue({
                                     return;
                                 }
 
-                                alert.show("confirm", "Bulletin was published to the website");
                                 fnDone(oResponse);
 
                             } catch (oError) {
@@ -644,21 +640,11 @@ var app = new Vue({
             app.bulletin.saveAs = getSaveAs("markdown");
 
             publishToWebsite()
-                .catch(function (oError) {
-                    // Cannot publish to Github
-                    alert.show("error", "Cannot publish to website: " + oError);
-                    return Promise.reject();
-                })
                 .then(function () {
-                    if (!app.bulletin.publish.facebook) {
-                        return Promise.resolve();
-                    }
-
-                    // publish to facebook independently
-                })
-                .then(function () {
+                    alert.show("confirm", "Bulletin was published");
                     app.toolbar.publishEnabled = true;
-                }, function () {
+                }, function (oError) {
+                    alert.show("error", "Cannot publish bulletin: " + oError);
                     app.toolbar.publishEnabled = true;
                 });
         },
