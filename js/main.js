@@ -375,6 +375,11 @@ var oBaseBulletin = {
             size: 11,
             paragraphMargin: 5
         }
+    },
+    publish: {
+        icch: true,
+        facebook: true,
+        facebookMessage: "",
     }
 };
 
@@ -426,8 +431,6 @@ var app = new Vue({
         toolbar: {
             current: "tools",
             publishEnabled: true,
-            publishIcchChecked: true,
-            publishFacebookChecked: true,
             bullettinGithubHtmlLink: null
         },
         colors: {
@@ -602,7 +605,7 @@ var app = new Vue({
             app.toolbar.publishEnabled = false;
 
             function publishToWebsite() {
-                if (!app.toolbar.publishIcchChecked) {
+                if (!app.bulletin.publish.icch) {
                     return Promise.resolve();
                 }
                 return new Promise(function (fnDone, fnError) {
@@ -634,35 +637,6 @@ var app = new Vue({
                 });
             }
 
-            function publishToFacebook(sPath) {
-                return new Promise(function (fnResolve, fnReject) {
-                    FB.login(function(){
-                      FB.api("/InternationalCatholicCommunityofHeidelberg?fields=access_token", 'get', function (o) {
-                        if (!o.access_token) {
-                            fnReject("Something went wrong while getting access token.");
-                            return;
-                        }
-                        var sAccessToken = o.access_token;
-                        FB.api(
-                            '/InternationalCatholicCommunityofHeidelberg/feed',
-                            'post', {
-                                message: 'Our bulletin for ' + app.bulletin.title + ' is available',
-                                link: sPath,
-                                access_token: sAccessToken
-                            }, function (oRes) {
-                                if (oRes.error) {
-                                    fnReject("An error occurred while publishing the bulletin. Try again.");
-                                    return;
-                                }
-                                fnResolve();
-                            });
-                      });
-
-                    }, {scope: 'manage_pages,publish_pages'});
-
-                });
-            }
-
             // important: API takes bulletin from here
             app.bulletin.saveAs = getSaveAs("markdown");
 
@@ -673,20 +647,11 @@ var app = new Vue({
                     return Promise.reject();
                 })
                 .then(function () {
-                    if (!app.toolbar.publishFacebookChecked) {
+                    if (!app.bulletin.publish.facebook) {
                         return Promise.resolve();
                     }
 
-                    return app.whenLinkAvailable(app.toolbar.bullettinGithubHtmlLink, 15000, 10)
-                        .then(publishToFacebook.bind(null, app.toolbar.bullettinGithubHtmlLink))
-                        .then(function () {
-                            alert.show("confirm", "Bulletin published to Facebook page!");
-                            return true;
-                        })
-                        .catch(function (sError) {
-                            alert.show("error", sError || "An error occurred while publishing the bulletin to Facebook");
-                            return true;
-                        });
+                    // publish to facebook independently
                 })
                 .then(function () {
                     app.toolbar.publishEnabled = true;

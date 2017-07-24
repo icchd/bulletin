@@ -420,3 +420,9 @@ a, a:hover {
     padding: 2px;
     background: #FFF;
 }
+
+.img-disabled {
+    filter: gray;
+    -webkit-filter: grayscale(1); 
+    filter: grayscale(1);
+}

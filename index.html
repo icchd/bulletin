@@ -12,26 +12,6 @@
         <script src="js/vue-color.min.js"></script>
     </head>
     <body style="-webkit-print-color-adjust:exact;">
-        <!-- begin of facebook sdk -->
-        <script>
-          window.fbAsyncInit = function() {
-            FB.init({
-              appId      : '1866817903604683',
-              xfbml      : true,
-              version    : 'v2.8'
-            });
-            FB.AppEvents.logPageView();
-          };
-
-          (function(d, s, id){
-             var js, fjs = d.getElementsByTagName(s)[0];
-             if (d.getElementById(id)) {return;}
-             js = d.createElement(s); js.id = id;
-             js.src = "//connect.facebook.net/en_US/sdk.js";
-             fjs.parentNode.insertBefore(js, fjs);
-           }(document, 'script', 'facebook-jssdk'));
-        </script>
-        <!-- end of facebook sdk -->
         <div id="messageToasts" v-if="messages.length">
             <div v-for="message in messages" v-bind:class="'messageToast ' + message.type + ' show-' + message.display">
                 {{ message.text }}
@@ -179,8 +159,15 @@
                         <li>
                             Publish:
                             <input v-if="toolbar.publishEnabled" class="publishPassword" v-model="bulletin.password" placeholder="Pass" type="password"></input>
-                            <input v-model="toolbar.publishIcchChecked" :checked="toolbar.publishEnabled && toolbar.publishIcchChecked" type="checkbox"/><label for="publishIcch"><a :href="toolbar.bullettinGithubHtmlLink" target="_blank"><img src="images/icch.png" /></a></label>
-                            <input v-model="toolbar.publishFacebookChecked" :checked="toolbar.publishEnabled && toolbar.publishFacebookChecked" type="checkbox"/><label for="publishFacebook"><img src="images/fb.png" /></label>
+                            <input v-model="bulletin.publish.icch" :checked="toolbar.publishEnabled && bulletin.publish.icch" type="checkbox"/><label for="publishIcch"><a :href="toolbar.bullettinGithubHtmlLink" target="_blank"><img src="images/icch.png" /></a></label>
+                            <input v-model="bulletin.publish.facebook" :checked="toolbar.publishEnabled && bulletin.publish.facebook" type="checkbox"/>
+                                <label for="publishFacebook">
+                                    <img v-on:click="showInput('textbox', 'bulletin.publish.facebookMessage')" 
+                                        v-bind:class="{
+                                            'action': true,
+                                            'img-disabled': (bulletin.publish.facebookMessage.length === 0)
+                                        }" src="images/fb.png" />
+                                </label>
                             <button :disabled="!toolbar.publishFacebookChecked && !toolbar.publishIcchChecked" v-if="toolbar.publishEnabled" v-on:click="publishBulletin">Go</span></button>
                             <img v-if="!toolbar.publishEnabled" class="progressBar" src="images/progress.gif" />
                         </li>
