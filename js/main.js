@@ -334,7 +334,7 @@ function slugify(text) {
 }
 
 function getSaveAs (sExtension) {
-    return getNextSunday("YYYY-MM-DD") + "-" + slugify(app.bulletin.title) + "." + sExtension;
+    return m(app.bulletin.date, S_TITLE_DATE_FORMAT).format("YYYY-MM-DD") + "-" + slugify(app.bulletin.title) + "." + sExtension;
 }
 
 var oBaseBulletin = {
@@ -380,6 +380,7 @@ var oBaseBulletin = {
         icch: true,
         facebook: true,
         facebookMessage: "",
+        htmlLink: null
     }
 };
 
@@ -430,8 +431,7 @@ var app = new Vue({
         },
         toolbar: {
             current: "tools",
-            publishEnabled: true,
-            bullettinGithubHtmlLink: null
+            publishEnabled: true
         },
         colors: {
           hex: '#194d33',
@@ -460,7 +460,7 @@ var app = new Vue({
     watch: {
         bulletin: {
             handler: function (after, before) {
-                app.toolbar.bullettinGithubHtmlLink = S_BULLETIN_FACEBOOK_LINK_BASE + "/bulletins/" + getSaveAs("html");
+                app.bulletin.publish.htmlLink = S_BULLETIN_FACEBOOK_LINK_BASE + "/bulletins/" + getSaveAs("html");
                 app.saveStateToLocalStorage();
             },
             deep: true
@@ -635,9 +635,6 @@ var app = new Vue({
                     };
                     request.open("POST", S_HEROKU_ENDPOINT, true);
                     request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-
-                    // add html link
-                    app.bulletin.htmlLink = app.toolbar.bullettinGithubHtmlLink;
 
                     request.send(JSON.stringify(app.bulletin));
                 });

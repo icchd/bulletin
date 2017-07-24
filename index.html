@@ -159,7 +159,7 @@
                         <li>
                             Publish:
                             <input v-if="toolbar.publishEnabled" class="publishPassword" v-model="bulletin.password" placeholder="Pass" type="password"></input>
-                            <input v-model="bulletin.publish.icch" :checked="toolbar.publishEnabled && bulletin.publish.icch" type="checkbox"/><label for="publishIcch"><a :href="toolbar.bullettinGithubHtmlLink" target="_blank"><img src="images/icch.png" /></a></label>
+                            <input v-model="bulletin.publish.icch" :checked="toolbar.publishEnabled && bulletin.publish.icch" type="checkbox"/><label for="publishIcch"><a :href="bulletin.publish.htmlLink" target="_blank"><img src="images/icch.png" /></a></label>
                             <input v-model="bulletin.publish.facebook" :checked="toolbar.publishEnabled && bulletin.publish.facebook" type="checkbox"/>
                                 <label for="publishFacebook">
                                     <img v-on:click="showInput('textbox', 'bulletin.publish.facebookMessage')" 
