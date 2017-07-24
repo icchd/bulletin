@@ -168,7 +168,7 @@
                                             'img-disabled': (bulletin.publish.facebookMessage.length === 0)
                                         }" src="images/fb.png" />
                                 </label>
-                            <button :disabled="!toolbar.publishFacebookChecked && !toolbar.publishIcchChecked" v-if="toolbar.publishEnabled" v-on:click="publishBulletin">Go</span></button>
+                            <button :disabled="!bulletin.publish.facebook && !bulletin.publish.icch" v-if="toolbar.publishEnabled" v-on:click="publishBulletin">Go</span></button>
                             <img v-if="!toolbar.publishEnabled" class="progressBar" src="images/progress.gif" />
                         </li>
                     </ul>
