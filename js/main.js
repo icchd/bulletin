@@ -494,6 +494,12 @@ var app = new Vue({
             reader.onload = function () {
                 try {
                     var oBulletin = JSON.parse(reader.result);
+                    Object.keys(oBaseBulletin).forEach(function (sKey) {
+                        // copy defaults from base bulletin in case of upgrades
+                        if (!oBulletin.hasOwnProperty(sKey)) {
+                            oBulletin[sKey] = oBaseBulletin[sKey];
+                        }
+                    });
                     app.bulletin = oBulletin;
                     alert.show("confirm", "Bulletin was loaded");
                 } catch (e) {
