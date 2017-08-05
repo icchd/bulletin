@@ -1,1 +1,39 @@
-{"date":"July 30, 2017","dateChanged":"2017-07-22 05:12:05 +02:00","image":{"enabled":true,"src":"http://liturgy.slu.edu/16OrdA072317/images/MainImage.jpg","layout":"left","size":50},"title":"Test","text":"Test bulletin","father":"Welcome Father Peter","source":"Source: John Foley, SJ - http://liturgy.slu.edu/16OrdA072317/reflections_foley.html","reading1":"1 Kgs 3:5, 7-12","reading2":"Rom 8:28-30","reading3":"Mt 13:44-52","newsletter":"infoheidelberg@internationalcatholiccommunity.com","appointments":[],"colors":{"color1":"#3BBD00","color2":"#FFF","border":"#FFF"},"fonts":{"text":{"family":"Georgia","lineHeight":13,"size":12,"paragraphMargin":5}},"saveAs":"2017-07-30-test.markdown","publish":{"icch":true,"facebook":true,"facebookMessage":"Our bulletin is available!\n\nCheck it out.","htmlLink":"http://www.international-catholic-community-heidelberg.com/bulletins/2017-07-30-test.html"}}
+{
+   "source" : "Source: John Foley, SJ - http://liturgy.slu.edu/16OrdA072317/reflections_foley.html",
+   "newsletter" : "infoheidelberg@internationalcatholiccommunity.com",
+   "publish" : {
+      "facebook" : true,
+      "icch" : true,
+      "facebookMessage" : "Our bulletin is available!\n\nCheck it out.",
+      "htmlLink" : "http://www.international-catholic-community-heidelberg.com/bulletins/2017-07-30-test.html"
+   },
+   "reading3" : "Mt 13:44-52",
+   "dateChanged" : "2017-07-22 05:12:05 +02:00",
+   "colors" : {
+      "color2" : "#FFF",
+      "border" : "#FFF",
+      "color1" : "#3BBD00"
+   },
+   "title" : "Test",
+   "image" : {
+      "enabled" : true,
+      "size" : 50,
+      "src" : "http://liturgy.slu.edu/16OrdA072317/images/MainImage.jpg",
+      "layout" : "left"
+   },
+   "reading1" : "1 Kgs 3:5, 7-12",
+   "appointments" : [],
+   "father" : "Welcome Father Peter",
+   "fonts" : {
+      "text" : {
+         "size" : 12,
+         "family" : "Georgia",
+         "lineHeight" : 13,
+         "paragraphMargin" : 5
+      }
+   },
+   "text" : "Test bulletin",
+   "reading2" : "Rom 8:28-30",
+   "date" : "July 30, 2017",
+   "saveAs" : "2017-07-30-test.markdown"
+}
