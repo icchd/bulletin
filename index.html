@@ -66,7 +66,10 @@
                                 Save
                             </button>
                             &nbsp; <span class="fa fa-upload"></span>
-                            <input ref="upload" type="file" id="input" text="Load" v-on:change="loadFromJson()"></input>
+                            <input ref="upload" type="file" id="input" text="Load" v-on:change="loadFromJsonFile()"></input>
+                            JSON
+                            <input id="jsonBulletin" type="text" />
+                            <button v-on:click="loadFromJsonClicked()">Load</button>
                         </li>
                     </ul>
                 </li>

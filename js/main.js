@@ -430,7 +430,7 @@ var app = new Vue({
             }
         },
         toolbar: {
-            current: "tools",
+            current: "file",
             publishEnabled: true
         },
         colors: {
@@ -477,7 +477,27 @@ var app = new Vue({
             a.download = getSaveAs("json");
             a.click();
         },
-        loadFromJson: function () {
+        loadFromJson: function (sJson) {
+            try {
+                var oBulletin = JSON.parse(sJson);
+                Object.keys(oBaseBulletin).forEach(function (sKey) {
+                    // copy defaults from base bulletin in case of upgrades
+                    if (!oBulletin.hasOwnProperty(sKey)) {
+                        oBulletin[sKey] = oBaseBulletin[sKey];
+                    }
+                });
+                app.bulletin = oBulletin;
+                alert.show("confirm", "Bulletin was loaded");
+            } catch (e) {
+                alert.show("error", "Error occurred while loading the bulletin");
+                console.log(e);
+            }
+        },
+        loadFromJsonClicked: function () {
+            var sJson = document.getElementById("jsonBulletin").value;
+            app.loadFromJson(sJson);
+        },
+        loadFromJsonFile: function () {
             var files = this.$refs["upload"].files;
             if (files.length === 0) {
                 window.alert("Nothing to load");
@@ -492,20 +512,7 @@ var app = new Vue({
 
             var reader = new FileReader();
             reader.onload = function () {
-                try {
-                    var oBulletin = JSON.parse(reader.result);
-                    Object.keys(oBaseBulletin).forEach(function (sKey) {
-                        // copy defaults from base bulletin in case of upgrades
-                        if (!oBulletin.hasOwnProperty(sKey)) {
-                            oBulletin[sKey] = oBaseBulletin[sKey];
-                        }
-                    });
-                    app.bulletin = oBulletin;
-                    alert.show("confirm", "Bulletin was loaded");
-                } catch (e) {
-                    alert.show("error", "Error occurred while loading the bulletin");
-                    console.log(e);
-                }
+                app.loadFromJson(reader.result);
             };
             reader.readAsText(file);
         },
