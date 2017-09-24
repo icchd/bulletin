@@ -1,6 +1,7 @@
 var S_TITLE_DATE_FORMAT = "MMMM D, YYYY";
 
-var S_HEROKU_ENDPOINT = "http://icch-api.herokuapp.com/bulletin";
+// var S_API_ENDPOINT = "http://icch-api.herokuapp.com/bulletin";
+var S_API_ENDPOINT = "https://icch-api-icch-api.a3c1.starter-us-west-1.openshiftapps.com/bulletin";
 var S_BULLETIN_FACEBOOK_LINK_BASE = "http://www.international-catholic-community-heidelberg.com" ;
 
 function arraySwapInPlace (A, a, b) {
@@ -636,7 +637,7 @@ var app = new Vue({
                             }
                         }
                     };
-                    request.open("POST", S_HEROKU_ENDPOINT, true);
+                    request.open("POST", S_API_ENDPOINT, true);
                     request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
 
                     request.send(JSON.stringify(app.bulletin));
