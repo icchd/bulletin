@@ -1,0 +1,50 @@
+{
+   "date": "November 12, 2017",
+   "dateChanged": "2017-11-11 03:43:31 +02:00",
+   "image": {
+      "enabled": true,
+      "src": "http://diglib.library.vanderbilt.edu/cdri/jpeg/Mafa062.jpg",
+      "layout": "left",
+      "size": 50
+   },
+   "title": "Thirty-Second Sunday in Ordinary Time",
+   "text": "In November, as the leaves fall from the trees, as the days become shorter and darker, and as we observe All Souls Day and Veterans Day, it is only natural to think about things that are of abiding value: life itself, our faith, family members present and past, the self-sacrifice of our military veterans. The same movement is afoot in the readings we hear at mass in these days: as the rhythm of the Church year draws toward its conclusion the scriptures at mass lead us to reflect on the most fundamental matters of life, ultimately bringing us to a reflection on the mystery of death, judgment and eternal life.\n\nTo this end, this Sunday we are presented with an interesting series of readings that begin in the wisdom literature of the Old Testament. In the book of Wisdom, also called the Wisdom of Solomon, we find an exhortation to seek the gift of wisdom and to practice it faithfully. We hear: “wisdom…is readily perceived by those who love her, and found by those who seek her.” Later the inspired author adds: “taking thought of wisdom is the perfection of prudence, and whoever for her sake keeps vigil shall quickly be free from care” (Wis 6:12, 14-15).\n\nFirst, this passage tells us that the sort of wisdom needed to make one’s way through life is not out of reach for anyone—we have no excuse for failing to pursue it. Next it tells us that when we live according to the principles of wisdom we will be free from unnecessary concerns; that is, when a truly wise person faces life and its challenges they are filed with hope and are at peace. Though they “walk through the valley of the shadow of death, they fear no evil” (Ps 23:4).\n\nThe second reading, from Saint Paul’s First Letter to the Thessalonians, continues this same theme. Since the Thessalonians like many early Christians expected Christ to return before the present generation had passed they were concerned that some of their loved ones had already died. Paul tells them not be shaken since whenever Christ returns both the living and the dead will share in the resurrection. A healthy dose of Paul’s Christian wisdom and the hope that stems from it served to shore-up the Thessalonians’ worried spirits.\n\nThe reflection on wisdom and Christian life continues in the Gospel, in the account of the wise and the foolish virgins. Together with the parable of the talents which we will hear next Sunday, this passage serves as the preface to the powerful and frightening last judgement scene of Matthew’s Gospel, which we will hear at mass in two weeks’ time, on the feast of Christ the King.\n\nThe ten virgins, five wise and five foolish, are attendants at a wedding banquet, responsible to greet the groom when he arrives. When the groom arrives much later than expected and it is already evening, the five foolish virgins are left without enough oil for their lamps. The five virgins who brought extra oil represent those who have heard the call of the Lord to faith and who have responded in a wise manner, preparing themselves for the task at hand. Their prudence and foresight in bringing extra oil served them well, and is intended to be an admonition to all hearing the parable to imitate their alertness and wisdom.\n\nAs we live out these pensive days of late autumn and look ahead to Advent, let us prepare ourselves by seeking the gift of wisdom so as to have no fear of death or judgement, and to live ever more joyfully the life we have at present, in firm hope of the life to come.",
+   "father": "Welcome Father Peter",
+   "source": "Source - Father Edward Mazich, O.S.B., http://www.saintvincentarchabbey.org/news_print?id=3504\nJESUS MAFA. The Ten Young Women, from Art in the Christian Tradition, a project of the Vanderbilt Divinity Library, Nashville, TN. http://diglib.library.vanderbilt.edu/act-imagelink.pl?RC=48394 [retrieved November 11, 2017]",
+   "reading1": "Wis 6:12-16",
+   "reading2": "1 Thess 4:13-18",
+   "reading3": "Mt 25:1-13",
+   "newsletter": "infoheidelberg@internationalcatholiccommunity.com",
+   "appointments": [
+      {
+         "epoch": "1511046000000",
+         "date": "19 November",
+         "description": "Please take note that we celebrate **Mass On Sunday, November 19 at 11am** together with the German Community of St. Philipp Neri to celebrate the annual Elisabethfest. This is a great opportunity to foster relations with our neighbouring fellow faithful and we thus encourage ourselves to be there in our numbers. Some parts of the mass will be in English as well so do not worry about being left out :-)"
+      },
+      {
+         "epoch": "1510441200000",
+         "date": "12 November",
+         "description": "The Rosary Group (meets every Sunday before Mass, 12:30) would like to let us know that while one of the general intentions of their prayers is for vocations to the priesthood and religious life, they are happy to include in their prayers other intentions brought to them by any member of the community. Contact persons: Silvia & Ana"
+      }
+   ],
+   "colors": {
+      "color1": "#3BBD00",
+      "color2": "#FFF",
+      "border": "#FFF"
+   },
+   "fonts": {
+      "text": {
+         "family": "Georgia",
+         "lineHeight": 11.5,
+         "size": 11,
+         "paragraphMargin": 5
+      }
+   },
+   "publish": {
+      "icch": true,
+      "facebook": true,
+      "facebookMessage": "Our bulletin is now online! Have fun reading and see you tomorrow.\n\nWishing you all a lovely weekend.",
+      "htmlLink": "http://www.international-catholic-community-heidelberg.com/bulletins/2017-11-12-thirty-second-sunday-in-ordinary-time.html"
+   },
+   "saveAs": "2017-11-12-thirty-second-sunday-in-ordinary-time.markdown"
+}
