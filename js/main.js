@@ -351,7 +351,7 @@ var oBaseBulletin = {
     },
     title: "Easter Sunday",
     text: "The type of text that you can enter in this box is called **markdown**. Markdown allows you to type rich text using symbols around text to provide meaning. This is a paragraph, because it's followed by a blank line.\n\n **See more examples below!**\n\nThree dashes will generate a horizontal ruler. Make sure there is one empty line before and after the ---.\n \n See? ▼\n \n ---\n\n# Heading 1\n\n## Heading 2\n\n### Heading 3\n\n This is **bold text**, this is *italic*.\n \n This is a paragraph... blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah.\n \n This is an inline image: ![](https://placeholdit.imgix.net/~text?txtsize=22&txt=image&w=100&h=100). Inline images start with the symbol `![]` and contain the URL of the image in parentheses.\n\nYou don't have to use the full blown markdown syntax, but you can if you want to. Perhaps for the purpose of this tool, you may just need to tweak copy-pasted text (e.g., by separating it in paragraphs).",
-    father: "Welcome Father John",
+    father: "Welcome Father Peter",
     source: "Source line 1 \nSource line 2. (this empty space is for the pencil icon, it's not printed on paper!) ->",
     reading1: "Reading 1",
     reading2: "Reading 2",
