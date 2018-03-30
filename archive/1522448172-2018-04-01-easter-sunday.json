@@ -1,0 +1,50 @@
+{
+   "date": "April 1, 2018",
+   "dateChanged": "2018-03-30 11:03:42 +02:00",
+   "image": {
+      "enabled": true,
+      "src": "https://images.pexels.com/photos/161078/cross-symbol-christian-faith-faith-161078.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+      "layout": "left",
+      "size": 45
+   },
+   "title": "Easter Sunday",
+   "text": "**The Easter Proclamation**\n\nRejoice, heavenly powers! Sing, choirs of angels! \nExult, all creation around God's throne! \nJesus Christ, our King is risen! \nSound the trumpet of salvation!\n\nRejoice, O earth, in shining splendor, \nradiant in the brightness of your King! \nChrist has conquered! Glory fills you! \nDarkness vanishes forever!\n\nRejoice, O Mother Church! Exult in glory! \nThe risen Savior shines upon you! \nLet this place resound with joy, \nechoing the mighty song of all God's people! (...)\n\nThis is the night when Christians everywhere, \nwashed clean of sin \nand freed from all defilement, \nare restored to grace and grow together in holiness.\n\nThis is the night when Jesus Christ \nbroke the chains of death \nand rose triumphant from the grave.\n\nWhat good would life have been to us, \nhad Christ not come as our Redeemer?\n\nFather, how wonderful your care for us! \nHow boundless your merciful love! \nTo ransom a slave \nyou gave away your Son.\n\nO happy fault, O necessary sin of Adam, \nwhich gained for us so great a Redeemer!\n\nMost blessed of all nights, chosen by God \nto see Christ rising from the dead!\n\nOf this night scripture says: \n\"The night will be as clear as day; \nit will become my light, my joy.\"\n\nThe power of this holy night \ndispels all evil, washes guilt away, \nrestores lost innocence, brings mourners joy; \nit casts out hatred, brings us peace, \nand humbles earthly pride.\n\nNight truly blessed when heaven is wedded to earth \nand we are reconciled with God! (...)\n\nMay the morning Star which never sets \nfind this flame still burning: \nChrist, that Morning Star, who came back from the dead, \nand shed his peaceful light on us all, \nyour Son who lives and reigns for ever and ever. \nAmen.\n",
+   "father": "Welcome Father Peter",
+   "source": "Source: Excerpts from the Exsultet, proclaimed during Easter Vigil.",
+   "reading1": "Acts 10:34a, 37-43",
+   "reading2": "Col 3:1-4 or 1 Cor 5:6b-8",
+   "reading3": "Jn 20:1-9 or Mk 16:1-7 or Lk 24:13-35",
+   "newsletter": "infoheidelberg@internationalcatholiccommunity.com",
+   "appointments": [
+      {
+         "epoch": "1522533600000",
+         "date": "1 April",
+         "description": "***Christ is Risen!*** To all of you, a very happy and blessed Easter!\nOn this occasion, mass moves to the main church (instead of the chapel at the back) and starts at 13:00 as usual. After Mass, let's continue to celebrate the Resurrection with an **Easter Social Gathering**! If possible, bring something edible to share with the community."
+      },
+      {
+         "epoch": "1522620000000",
+         "date": "2 April",
+         "description": "There is no Mass in English on **\"Easter Monday\"**, but you can join a solemn Mass on this holiday in about every parish in Heidelberg. A list can be found in the \"Stadtkirche Heideberg\" bulletin or online at http://www.stadtkirche-heidelberg.de/html/veranst/gottesdienste612.html."
+      }
+   ],
+   "colors": {
+      "color1": "#2D8645",
+      "color2": "#E5DFB3",
+      "border": "#FFF"
+   },
+   "fonts": {
+      "text": {
+         "family": "Georgia",
+         "lineHeight": 14,
+         "size": 12,
+         "paragraphMargin": 5
+      }
+   },
+   "publish": {
+      "icch": true,
+      "facebook": true,
+      "facebookMessage": "\"This is the day the Lord has made; let us rejoice and be glad.\"\nDear friends, our bulletin for this Sunday of Easter is now available online. \nJoin us in celebrating the Resurrection of the Lord at Mass (13:00) and with an Easter Social Gathering afterwards!",
+      "htmlLink": "http://www.international-catholic-community-heidelberg.com/bulletins/2018-04-01-easter-sunday.html"
+   },
+   "saveAs": "2018-04-01-easter-sunday.markdown"
+}
