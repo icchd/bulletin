@@ -55,7 +55,7 @@ function getJson(sUrl) {
     return httpRequest(sUrl).then(function (request) {
         var data = JSON.parse(request.responseText);
         app._urlCache[sUrl] = data;
-        fnResolve(data);
+        return data;
     }, function (requestOrUndefined) {
         console.log("Error during http GET to " + sUrl);
     });
