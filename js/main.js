@@ -1,8 +1,21 @@
 var S_TITLE_DATE_FORMAT = "MMMM D, YYYY";
 
-// var S_API_ENDPOINT = "http://icch-api.herokuapp.com/bulletin";
-var S_API_ENDPOINT = "https://icch-api-icch-api.a3c1.starter-us-west-1.openshiftapps.com/bulletin";
 var S_BULLETIN_FACEBOOK_LINK_BASE = "http://www.international-catholic-community-heidelberg.com" ;
+
+var O_APIS = [
+    {
+        "name": "Cloudno.de",
+        "endpoint": "http://icch-api.cloudno.de/bulletin"
+    },
+    {
+        "name": "Heroku",
+        "endpoint": "http://icch-api.herokuapp.com/bulletin"
+    },
+    {
+        "name": "OpenShift",
+        "endpoint": "https://icch-api-icch-api.a3c1.starter-us-west-1.openshiftapps.com/bulletin"
+    }
+];
 
 function arraySwapInPlace (A, a, b) {
     /*
@@ -42,11 +55,11 @@ function getNextSunday(sFormat) {
 }
 
 // http://youmightnotneedjquery.com/
-function getJson(sUrl) {
+function getJson(sUrl, bSkipCache) {
     if (!app._urlCache) {
         app._urlCache = {};
     }
-    if (app._urlCache[sUrl]) {
+    if (app._urlCache[sUrl] && !bSkipCache) {
         return new Promise(function (fnResolve) {
             fnResolve(app._urlCache[sUrl]);
         });
@@ -432,7 +445,10 @@ var app = new Vue({
         },
         toolbar: {
             current: "file",
-            publishEnabled: true
+            publishEnabled: true,
+            publishStatus: "",
+            apis: O_APIS,
+            api: O_APIS[0].endpoint
         },
         colors: {
           hex: '#194d33',
@@ -613,6 +629,17 @@ var app = new Vue({
                 app.historySave("fonts.text.lineHeight");
             }
         },
+        checkPublishBulletinStatus: function () {
+            app.toolbar.publishStatus = "checking...";
+            getJson(app.toolbar.api.replace("/bulletin", "/status"), true)
+                .then(function (oResult) {
+                    if (oResult) {
+                        app.toolbar.publishStatus = oResult.bulletin.facebook;
+                    } else {
+                        app.toolbar.publishStatus = "error";
+                    }
+                });
+        },
         publishBulletin: function () {
             // first make sure the bulletin is published
 
@@ -637,7 +664,7 @@ var app = new Vue({
                             }
                         }
                     };
-                    request.open("POST", S_API_ENDPOINT, true);
+                    request.open("POST", app.toolbar.api, true);
                     request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
 
                     request.send(JSON.stringify(app.bulletin));
