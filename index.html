@@ -56,6 +56,8 @@
                             v-on:click="selectTab('image')">Image</li>
                         <li v-bind:class="{ selected: toolbar.current === 'tools' }"
                             v-on:click="selectTab('tools')">Tools</li>
+                        <li v-bind:class="{ selected: toolbar.current === 'publish' }"
+                            v-on:click="selectTab('publish')">Publish</li>
                     </ul>
                 </li>
                 <li v-if="toolbar.current === 'file'">
@@ -159,8 +161,16 @@
                             <button v-on:click="updateTitleFromSunday()">Title</button>
                             <button v-on:click="updateThemeFromSunday()">Theme</button>
                         </li>
+                    </ul>
+                </li>
+                <li v-if="toolbar.current === 'publish'">
+                    <ul>
                         <li>
-                            Publish:
+                            API Service:
+                            <select v-model="toolbar.api">
+                                <option v-for="api in toolbar.apis" :value="api.endpoint">{{api.name}}</option>
+                            </select>
+                            Password:
                             <input v-if="toolbar.publishEnabled" class="publishPassword" v-model="bulletin.password" placeholder="Pass" type="password"></input>
                             <input v-model="bulletin.publish.icch" :checked="toolbar.publishEnabled && bulletin.publish.icch" type="checkbox"/><label for="publishIcch"><a :href="bulletin.publish.htmlLink" target="_blank"><img src="images/icch.png" /></a></label>
                             <input v-model="bulletin.publish.facebook" :checked="toolbar.publishEnabled && bulletin.publish.facebook" type="checkbox"/>
@@ -173,6 +183,9 @@
                                 </label>
                             <button :disabled="!bulletin.publish.facebook && !bulletin.publish.icch" v-if="toolbar.publishEnabled" v-on:click="publishBulletin">Go</span></button>
                             <img v-if="!toolbar.publishEnabled" class="progressBar" src="images/progress.gif" />
+                            Status:
+                            {{toolbar.publishStatus}}
+                            <button v-on:click="checkPublishBulletinStatus">Check</button>
                         </li>
                     </ul>
                 </li>
