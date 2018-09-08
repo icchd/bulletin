@@ -1,0 +1,50 @@
+{
+   "date": "September 9, 2018",
+   "dateChanged": "2018-09-08 04:25:39 +02:00",
+   "image": {
+      "enabled": true,
+      "src": "https://upload.wikimedia.org/wikipedia/commons/5/58/Gioacchino_Assereto_-_Christ_healing_the_blind_man.jpg",
+      "layout": "left",
+      "size": 52.5
+   },
+   "title": "Twenty-third Sunday in Ordinary Time",
+   "text": "*Then will the eyes of the blind be opened, \nthe ears of the deaf be cleared; \nthen will the lame leap like a stag, \nthen the tongue of the mute [mogilalos] will sing.*\n(Is 35:5-6)\n\n### The Mute Will Sing\n\nWhen the words quoted above were first spoken by Isaiah of Jerusalem, the immediate reference was the hoped-for return and restoration of Israel after the Babylonian Exile. By the time of Jesus, those words were understood as pointing to the further restoration of Israel in the messianic age. Indeed, when the messengers from the jailed Baptist ask Jesus if he is the \"one who is to come,\" Jesus' indirect answer takes the form of an allusion to this passage of Isaiah: \"Go and tell John what you have seen and heard: the blind regain their sight, the lame walk, lepers are cleansed, the deaf hear\" (Luke 7:22). They ask who he is; he responds by telling what time it is. Implication: if the end- time healings are happening, maybe the end-time agent, the Messiah, is indeed present among them.\n\nThis passage from Isaiah 35, then, is the perfect First Reading to prepare us to understand Mark's account of Jesus healing the deaf-mute of Decapolis. Mark's choice of a rare word to describe the man's speech impediment, “*mogilalos*” (“mute, incapable of speech”), demonstrates that he wants us to remember Isaiah 35 when we read his account of this healing. That word appears only twice in the whole Bible: in the passage from Isaiah quoted above (Isa 35:6, Greek version) and in this account of Mark.\nThis narrative is a parade example of the way all the evangelists view the accounts of Jesus’ healing, that is, from two perspectives: (1) they describe Jesus’ healing the physically disabled, and (2) they also symbolize the power of the risen Lord to heal from spiritual blindness, lameness, deafness, and muteness. Mark's context helps us understand both of these dimensions. The cue to look for the symbolic dimension in this Sunday's Gospel (healing from spiritual deafness and muteness) comes in the next chapter, at Mk 8:17-18, where Jesus asks his disciples, “Are your hearts hardened? Do you have eyes and not see, ears and not hear?” This is followed immediately by the healing of blind Bartimaeus.\n\nPersons who are born deaf rarely learn to speak, and then only with great difficulty. It is not hard to catch Mark's application of this experience to the life of faith. The summons to the life of faith usually comes through a word that is heard. Proper hearing of that word requires healing from spiritual deafness, being freed up to receive the message fully and deeply. That reception, in turn, enables us to communicate to others what we have heard. It is difficult to speak unless we hear.\n\nThe reading from James (Second Reading) focuses not so much on the hearing of faith as on faithful seeing. James warns against *prosopolempsia* (root sense: “face-reception,” i.e., taking people according to their *prosopon*, “face”). The example James gives is that of giving a well-dressed visitor special treatment while neglecting a poorly dressed person, forgetting the beatitude about the poor. That, he implies, is a symptom of spiritual blindness.\n\nThere is probably no time in our life when we should not ask for the healing of the blindness of our hearts. It is likely, too, that any time is a good one to ask the risen Lord to bless us with the prayer, “Ephphatha” (“Be opened!”). The better we can hear the Gospel, the better we can speak it.",
+   "father": "Welcome Father Peter",
+   "source": "Source of reflection: Dennis Hamm SJ, http://liturgy.slu.edu/23OrdB090918/theword_hamm.html\nSource of image: Gioacchino Assereto \"Christ healing the blind man\" (WikiCommons)",
+   "reading1": "Is 35:4-7A",
+   "reading2": "Jas 2:1-5",
+   "reading3": "Mk 7:31-37",
+   "newsletter": "infoheidelberg@internationalcatholiccommunity.com",
+   "appointments": [
+      {
+         "epoch": "1536444000000",
+         "date": "9 September",
+         "description": "We celebrate the **5th anniversary** of ICCH! Please join us after Mass for a parish picnic & BBQ. Bring a dish to share if you can, but above all, bring your time and joy to this celebration!"
+      },
+      {
+         "epoch": "1537048800000",
+         "date": "16 September",
+         "description": "Our next opportunity to receive the **Sacrament of Reconciliation**, after Mass."
+      }
+   ],
+   "colors": {
+      "color1": "#9D0000",
+      "color2": "#FFF",
+      "border": "#FFF"
+   },
+   "fonts": {
+      "text": {
+         "family": "Georgia",
+         "lineHeight": 12,
+         "size": 11,
+         "paragraphMargin": 5
+      }
+   },
+   "publish": {
+      "icch": true,
+      "facebook": true,
+      "facebookMessage": "Dear friends, this Sunday we will celebrate 5 years of ICCH! Please do join us in this joyful moment for a parish picnic and barbecue.\nDishes for the potluck buffet and spontaneous help are what you could contribute besides the most important: your time and joy ;-)\nFind our current bulletin accordingly on the website.",
+      "htmlLink": "http://www.international-catholic-community-heidelberg.com/bulletins/2018-09-09-twenty-third-sunday-in-ordinary-time.html"
+   },
+   "saveAs": "2018-09-09-twenty-third-sunday-in-ordinary-time.markdown"
+}
