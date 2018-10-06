@@ -1,0 +1,55 @@
+{
+   "date": "October 7, 2018",
+   "dateChanged": "2018-10-06 02:24:01 +02:00",
+   "image": {
+      "enabled": true,
+      "src": "https://www.maxpixel.net/static/photo/1x/Wedding-Bible-Marriage-Ring-Love-Catholic-2586762.jpg",
+      "layout": "left",
+      "size": 55
+   },
+   "title": "27th Sunday in Ordinary Time",
+   "text": "***If we love one another, \nGod remains in us\nand his love is brought to perfection in us.***\n\n(*verse from the Gospel acclamation*)\n\n\n---\n\n\nHow often have we heard it said, “It’s all about relationships.”\n\nToday’s First Reading from Genesis is just that: ‘all about relationships.’\n\nBeing alone, unconnected or disconnected tears at the heart of a God who creates for us fitting companions along life’s journey. \n\nThe reading begins with the wonder and beauty of creation, the natural world where things are called by name and graced with a dignity and integrity all their own.  The human’s relationship to nature was to be filled with reverence, respect and awe at the rhythms of the seasons and of the patterns in the animal world.\n\nIn the second part of the reading, the importance of fulfilling relationships is illustrated when God creates human companions to nourish and sustain one another.  These companions can be women, men, children, family members, life partners, spouses, neighbors, and co-workers.  It is with these that we share a bond forged from honesty, loyalty, respect and faithfulness over time.  These qualities make for ‘right relationships.’\n\nWoven into the tapestry of all relationships is the love that holds it all together.  We have very few definitions of who God/the Holy One is, but one that does stand out in that ‘God is Love.” If love permeates our relationships with our companions along life’s journey, than we believe that we are joined in love and joined in God; this love, this connection is the reason for which we have been fashioned.",
+   "father": "Welcome Father Peter",
+   "source": "Reflection by Sister Anne-Louise Nadeau, https://www.sndden.org/gospel-reflections/twenty-seventh-sunday-in-ordinary-time/\nImage: creative commons, Max Pixel",
+   "reading1": "Gn 2:18-24",
+   "reading2": "Heb 2:9-11",
+   "reading3": "Mk 10:2-16",
+   "newsletter": "infoheidelberg@internationalcatholiccommunity.com",
+   "appointments": [
+      {
+         "epoch": "1538863200000",
+         "date": "7 October",
+         "description": "After Mass, two activities: \nFirst, immediately after the final blessing and song, quickly come to the front and let's take our annual **parish photo** please! Come in your finest clothes or your messiest hairstyle, as long as you're all in the picture ;-)\n"
+      },
+      {
+         "epoch": "1538863200000",
+         "date": "7 October",
+         "description": "After this, join us for this month's **social gathering**! Bring a dish to share with the community if possible, or help the socials team with setting/ cleaning up."
+      },
+      {
+         "epoch": "1539468000000",
+         "date": "14 October",
+         "description": "Opportunity to receive the Sacrament of Penance and Reconciliation after Mass."
+      }
+   ],
+   "colors": {
+      "color1": "#D2B379",
+      "color2": "#FFF",
+      "border": "#FFF"
+   },
+   "fonts": {
+      "text": {
+         "family": "Georgia",
+         "lineHeight": 13.5,
+         "size": 12,
+         "paragraphMargin": 5
+      }
+   },
+   "publish": {
+      "icch": true,
+      "facebook": true,
+      "facebookMessage": "Dear friends, be invited to our monthly social gathering tomorrow after Mass! Bring a dish if you can or help the socials team in setting up from 12:30 on - we'll appreciate it.\nImmediately after the Mass, we'll also take the annual photo of the whole congregation.\n\nFurthermore, find our bulletin for tomorrow on the website.\n",
+      "htmlLink": "http://www.international-catholic-community-heidelberg.com/bulletins/2018-10-07-27th-sunday-in-ordinary-time.html"
+   },
+   "saveAs": "2018-10-07-27th-sunday-in-ordinary-time.markdown"
+}
