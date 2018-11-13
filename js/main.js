@@ -10,10 +10,6 @@ var O_APIS = [
     {
         "name": "Heroku",
         "endpoint": "http://icch-api.herokuapp.com/bulletin"
-    },
-    {
-        "name": "OpenShift",
-        "endpoint": "https://icch-api-icch-api.a3c1.starter-us-west-1.openshiftapps.com/bulletin"
     }
 ];
 
