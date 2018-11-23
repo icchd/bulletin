@@ -1,0 +1,45 @@
+{
+   "date": "November 25, 2018",
+   "dateChanged": "2018-11-22 11:58:23 +02:00",
+   "image": {
+      "enabled": true,
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/00058_christ_pantocrator_mosaic_hagia_sophia_656x800.jpg/523px-00058_christ_pantocrator_mosaic_hagia_sophia_656x800.jpg",
+      "layout": "left",
+      "size": 45
+   },
+   "title": "Solemnity of Christ the King",
+   "text": "In the Gospel Reading, Christ is being held by Pilate, who has him in his power. In the next part of the story, as we know, Christ is on the cross: poor, dishonored, in pain, and dying.\n\nChrist’s willingness to accept these afflictions sets the standard for all Christians, and it turns all worldly standards upside down. What most people reject as the worst things in life turns out in Christ’s crucifixion to be the prize-winning goods. On the cross Christ makes manifest that real winning is what looks to the world like losing. And vice versa too, of course. There is something small and unworthy about a life lived totally at ease.\n\nThat is why Paul says that all things work together for good for those who love God—all things (Rom. 8:28). Our sins are included in that “all things,” not just our suffering. When Paul pleaded with God to take away right then a sin of Paul’s that Paul was impatient with, God told him, “My grace is sufficient for you.” (2 Cor.12:9)\nBut now notice in the Second Reading the very different picture of Christ and of the standard of excellence for Christ’s people. \n\nThe Second Reading shows us Christ not as poor, dishonored, and suffering but as the king of kings, the most powerful and honored of all rulers. And it shows us, Christ’s people, in the same way: not as afflicted with Christ-like suffering, but glorious in Christ’s kingdom. In that picture, all Christ’s people are honored priests for God, and they are also freed from their sin— not some of their sins, but all of them.\n\nSo which of these two pictures—of Christ, of Christ’s people—should set the standard for us, the goal at which we aim?\n\nThe answer, of course, is “Both of them!” \n \nThere is a time for suffering, when all worldly values and all earthly desires are turned upside down, a time when we struggle with sin and suffering. But there is also a time when things turn right-side up again and then all struggle ends.\n\nAt that time, each one of Christ’s people will say of every affliction, “That was then; this is now!” Only that now, when all sin and suffering falls away, is an everlasting now. And the cross is the way to it.",
+   "father": "Welcome Father Peter",
+   "source": "Source of reflection: Eleonore Stump, St. Louis University - http://liturgy.slu.edu/ChristKingB112518/reflections_stump.html\nSource of image: \"Christ Pantocrator\" (Hagia Sophia, Istanbul), Wikimedia Commons",
+   "reading1": "Dn 7:13-14",
+   "reading2": "Rv 1:5-8",
+   "reading3": "Jn 18:33B-37",
+   "newsletter": "infoheidelberg@internationalcatholiccommunity.com",
+   "appointments": [
+      {
+         "epoch": "1543705200000",
+         "date": "2 December",
+         "description": "On the first Sunday of Advent, it's time for our last social gathering of the year: Spend some time over food and talks with your fellow parishioners. If possible, bring a dish to share or help with set-up/clean-up."
+      }
+   ],
+   "colors": {
+      "color1": "#2D3C86",
+      "color2": "#FFF",
+      "border": "#FFF"
+   },
+   "fonts": {
+      "text": {
+         "family": "Georgia",
+         "lineHeight": 13.5,
+         "size": 12,
+         "paragraphMargin": 5
+      }
+   },
+   "publish": {
+      "icch": true,
+      "facebook": true,
+      "facebookMessage": "Dear friends, our bulletin for this Sunday - Solemnity of Our Lord Jesus Christ King of the Universe - is now accessible on our website. Enjoy reading it and have a great weekend!",
+      "htmlLink": "http://www.international-catholic-community-heidelberg.com/bulletins/2018-11-25-solemnity-of-christ-the-king.html"
+   },
+   "saveAs": "2018-11-25-solemnity-of-christ-the-king.markdown"
+}
