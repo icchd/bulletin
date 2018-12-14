@@ -1,0 +1,50 @@
+{
+   "date": "December 16, 2018",
+   "dateChanged": "2018-12-14 11:23:36 +02:00",
+   "image": {
+      "enabled": true,
+      "src": "https://www.embeddedfaith.org/uploads/2/3/8/1/23813505/7147930_orig.png?314",
+      "layout": "left",
+      "size": 45
+   },
+   "title": "Third Sunday of Advent",
+   "text": "How does anyone get away with exhorting others to rejoice? If you are feeling down, does it really help for someone to come along and say, “Cheer up”? And yet, without pausing to assess the mood and attitude of assembled worshipers, the Church makes bold to exhort people on the Third Sunday of Advent, ready or not, to rejoice. (...)\n\nTo make it perfectly clear that Advent is a preparation for the celebration of a gift that is, in great part, already realized, the Church punctuates this season with the joyful note of Gaudete Sunday, named after the Latin word heading the second reading, quoted above. (...)\n\nWhen Paul exhorts his Philippians to rejoice, he is in a captivity of his own, in Roman custody while they try to figure out what kind of “king” and “kingdom” he is promoting on their turf. Like others who have been able to deal prayerfully with the enforced solitude of incarceration, he is able to urge rejoicing on much the same basis as Zephaniah's surviving Judahites (First Reading): he has come to know the presence of the Lord. It is not wishful thinking but personal testimony that stands behind his pep talk:\n\n*Have no anxiety at all, but in everything, by prayer and petition, with thanksgiving, make your requests known to God. Then the peace of God that surpasses all understanding will guard your hearts and minds in Christ Jesus.* (Second Reading)\n\nClimaxing these readings comes the episode from Luke, the prophetic challenge of John the Baptizer. (...) Preaching good news was first of all Isaiah's way of talking about the coming of God in power, when “all flesh shall see the salvation of God.” The Baptist made it clear that the coming of God in the person of Jesus would mean good news to those whose lives were “fruitful” in ways that show repentance … and bad news to those whose lives did not produce such fruit. When questioned by the crowds as to what precisely “fruitful” living entailed, he replied concretely: don't cheat, don't extort, don't falsely accuse, be content with your wages, and share food and clothing.\n\nAnd how is that good news? To paraphrase again: Under the reign of God, your life and what you do with it matter. Whatever your role — tax collector, soldier, butcher, baker — live it justly, and the world will be a better place and your destiny will be not the trash heap but the granary.\n\nAt the end of the day, the liturgy's exhortation to rejoice has little to do with mood and much to do with waking up to the good news of the incarnation. The way of life revealed in Jesus is both consoling and demanding. While most of us do not face exile or imprisonment, we do face the challenges of living justly and sharing with the needy...",
+   "father": "Welcome Father Peter",
+   "source": "Source of reflection (shortened): Dennis Hamm, SJ, on http://liturgy.slu.edu/3AdvC121618/theword_hamm.html\nSource of image: creative commons by www.embeddedfaith.or",
+   "reading1": "Zeph 3:14-18A",
+   "reading2": "Phil 4:4-7",
+   "reading3": "Lk 3:10-18",
+   "newsletter": "infoheidelberg@internationalcatholiccommunity.com",
+   "appointments": [
+      {
+         "epoch": "1544914800000",
+         "date": "16 December",
+         "description": "We are invited to receive the **Sacrament of Penance and Reconciliation**, after Mass. Another opportunity for confessions will be next Sunday, **December 23**, after Mass as well."
+      },
+      {
+         "epoch": "1545692400000",
+         "date": "25 December",
+         "description": "Mass on **Christmas Day** starts at 1 pm. We will not have Mass in English on Dec 24 or 26 - find information about the various services taking place in the German speaking communities on those days in the City Church bulletin, available online (www.stadtkirche-heidelberg.de) or in print in each Catholic church. "
+      }
+   ],
+   "colors": {
+      "color1": "#BF40BD",
+      "color2": "#FFF",
+      "border": "#FFF"
+   },
+   "fonts": {
+      "text": {
+         "family": "Georgia",
+         "lineHeight": 13.5,
+         "size": 12,
+         "paragraphMargin": 5
+      }
+   },
+   "publish": {
+      "icch": true,
+      "facebook": true,
+      "facebookMessage": "Dear friends, rejoice! ;-) Our bulletin for the Third Sunday of Advent, aka Gaudete Sunday, is now available online.\nThis Sunday and next, make use of the opportunity to receive the Sacrament of Penance and Reconciliation - right after Mass.",
+      "htmlLink": "http://www.international-catholic-community-heidelberg.com/bulletins/2018-12-16-third-sunday-of-advent.html"
+   },
+   "saveAs": "2018-12-16-third-sunday-of-advent.markdown"
+}
