@@ -1,0 +1,60 @@
+{
+   "date": "December 23, 2018",
+   "dateChanged": "2018-12-22 11:34:54 +02:00",
+   "image": {
+      "enabled": true,
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Antependium_Stra%C3%9Fburg_c1410_makffm_6810_image02.jpg/412px-Antependium_Stra%C3%9Fburg_c1410_makffm_6810_image02.jpg",
+      "layout": "left",
+      "size": 35
+   },
+   "title": "Fourth Sunday of Advent",
+   "text": "*You, Bethlehem-Ephrathah,\ntoo small to be among the clans of Judah, …\nthe Lord will give [you] up, until the time\nwhen she who is to give birth has given birth.* (First reading)\n\nLight had already come from that darkness, of course. King David traced his origins to Bethlehem, centuries before. And of course, Jesus was to be born in the same town. This strange, wide place in the road could produce Kings?\n\nIt is the same way within our souls. Our darkness and our emptiness are where Jesus is to be born on Christmas. The places in us that are gloomy, angry, or jealous, these form our darkness. The friends who leave us behind, they have a high, family time while we feel so alone—this is where the child will be born.\n\nWatch Mary hasten to her cousin’s house, a long trip, on foot, over dirt and sand and rocks, under the hot, hot sun (*Gospel*). She does not have a need to be coddled and queenly in order to bring forth The Holy One. She does not spend a second worrying whether the way is too hard. Her soul somehow knows about the soft light that will shine from within her. Everything else is in second place.\n\nMaybe emptiness can speak humbly from within us too. For a minute or two we could quit trying so hard to make everything alright in our admittedly arduous worlds.\n\nLet go and let God. That way we will get to know the one whose “origin is from of old” (*First Reading*). We might even let him take up his home in us. He can make himself whatever size is needed for our souls.\n\nWhat better Christmas could there be?\n \n\n ---\n\n## We wish all of you a blessed and peaceful Christmas!\n\nAt ICCH, we will have two additional masses during Christmas Time: The Nativity of the Lord will be celebrated on Dec 25 at 13:00. We will also have mass on the Octave Day of Christmas, January 1, being the Solemnity of Mary Mother of God, starting at the same usual time.\n\nThere will be no Christmas Vigil on Dec 24, nor mass on the \"second day of Christmas\", Dec 26 (a holy day of obligation in Germany). There are however a number of masses and other services on these days in the German-speaking communities in the City Church of Heidelberg - Information on these can be found online at https://www.stadtkirche-heidelberg.de/html/veranst/gottesdienste612.html",
+   "father": "Welcome Father Peter",
+   "source": "Source: Excerpt from a reflection by John Foley SJ, on http://liturgy.slu.edu/4AdvC122318/reflections_foley.html \nImage: Tapestry \"Visitation\", c. 1410. John the Baptist kneels to Jesus, who blesses him.",
+   "reading1": "Mi 5:1-4A",
+   "reading2": "Heb 10:5-10",
+   "reading3": "Lk 1:39-45",
+   "newsletter": "infoheidelberg@internationalcatholiccommunity.com",
+   "appointments": [
+      {
+         "epoch": "1545521226969",
+         "date": "23 December",
+         "description": "Opportunity to receive the **Sacrament of Penance and Reconciliation** after Mass.\n"
+      },
+      {
+         "epoch": "1545692400000",
+         "date": "25 December",
+         "description": "Mass for the **Nativity of the Lord** starts at 13:00. We are happy to also have a baptism during it!"
+      },
+      {
+         "epoch": "1546124400000",
+         "date": "30 December",
+         "description": "Sunday mass (Holy Family) takes place as usual."
+      },
+      {
+         "epoch": "1546297200000",
+         "date": "1 January 2019",
+         "description": "Additional mass at ICCH for the **Solemnity of Mary, Mother of God / Octave Day of Christmas**, as well at 13:00."
+      }
+   ],
+   "colors": {
+      "color1": "#4055BF",
+      "color2": "#FFF",
+      "border": "#FFF"
+   },
+   "fonts": {
+      "text": {
+         "family": "Georgia",
+         "lineHeight": 13.5,
+         "size": 12,
+         "paragraphMargin": 5
+      }
+   },
+   "publish": {
+      "icch": true,
+      "facebook": true,
+      "facebookMessage": "Dear friends, Christmas is almost here!\nYou can find our bulletin for the Fourth of Advent and Christmas Week on our website now. Enjoy reading it - and have a look at the \"news\" section for information about masses at ICCH during Christmas Time. We also take a little break over the holidays and will send out the next bulletin in two weeks.\nFor those still wishing to receive the Sacrament of Reconciliation before Christmas, another opportunity is offered after Mass this 23rd of December.\n\nWishing you lots of blessings, joy and peace!\n",
+      "htmlLink": "http://www.international-catholic-community-heidelberg.com/bulletins/2018-12-23-fourth-sunday-of-advent.html"
+   },
+   "saveAs": "2018-12-23-fourth-sunday-of-advent.markdown"
+}
