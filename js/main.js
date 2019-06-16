@@ -9,6 +9,16 @@ var O_APIS = [
     }
 ];
 
+function getQueryParam (sParamName) {
+    var sQueryParam = window.location.search.split(/[?&]/g).filter(function (sParamNameValue) {
+        return sParamNameValue.indexOf(sParamName + "=") === 0;
+    }).map(function (sParamNameValue) { return decodeURIComponent(sParamNameValue.split("=")[1]); })[0];
+
+    return sQueryParam
+        ? sQueryParam
+        : null;
+}
+
 function arraySwapInPlace (A, a, b) {
     /*
      * Utility function to swap two elements of an array in place.
@@ -969,6 +979,14 @@ var app = new Vue({
 
             app.bulletin = oReplay;
         },
+        loadStateFromJsonPath: function (sPath) {
+            getJson(sPath)
+                .then(function (oJson) {
+                    app.bulletin = oJson;
+                }, function (sError) {
+                    alert.show("error", "Cannot load data from " + sPath + ": " + sError);
+                });
+        },
         loadStateFromLocalStorage: function () {
             if (window.localStorage) {
                 var sData = window.localStorage.getItem("icchbulletin");
@@ -1033,6 +1051,8 @@ var app = new Vue({
     }
 });
 
+var jsonQueryParam = getQueryParam("jsonpath");
+
 var alert = new Vue({
     el: "#messageToasts",
     data: {
@@ -1062,6 +1082,12 @@ var alert = new Vue({
     }
 });
 
-setTimeout(function () {
-    app.loadStateFromLocalStorage();
-}, 1000);
+if (!jsonQueryParam) {
+    setTimeout(function () {
+        app.loadStateFromLocalStorage();
+    }, 1000);
+} else {
+    setTimeout(function () {
+        app.loadStateFromJsonPath(jsonQueryParam);
+    }, 1);
+}
