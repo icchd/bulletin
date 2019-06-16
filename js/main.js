@@ -6,10 +6,6 @@ var O_APIS = [
     {
         "name": "Cloudno.de",
         "endpoint": "http://icch-api.cloudno.de/bulletin"
-    },
-    {
-        "name": "Heroku",
-        "endpoint": "http://icch-api.herokuapp.com/bulletin"
     }
 ];
 
