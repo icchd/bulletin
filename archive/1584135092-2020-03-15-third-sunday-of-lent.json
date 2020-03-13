@@ -1,0 +1,39 @@
+{
+   "date": "March 15, 2020",
+   "dateChanged": "2020-03-13 09:47:21 +02:00",
+   "image": {
+      "enabled": true,
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Duerer-Prayer.jpg/409px-Duerer-Prayer.jpg",
+      "layout": "left",
+      "size": 50
+   },
+   "title": "Third Sunday of Lent",
+   "text": "**We are sad to inform you that all Masses in Heidelberg will be suspended from this Sunday, March 15, until further notice in order to help preventing the further spread of Coronavirus.** \n\nWe will keep you updated by newsletter and on our website. Let's pray for each other and all those affected!\n\n---\n\n### A Coronavirus Prayer\n\nJesus Christ, you traveled through towns and villages “curing every disease and illness.” At your command, the sick were made well. Come to our aid now, in the midst of the global spread of the coronavirus, that we may experience your healing love.\n\nHeal those who are sick with the virus. May they regain their strength and health through quality medical care.\n\nHeal us from our fear, which prevents nations from working together and neighbors from helping one another.\n\nHeal us from our pride, which can make us claim invulnerability to a disease that knows no borders.\n\nJesus Christ, healer of all, stay by our side in this time of uncertainty and sorrow.\n\nBe with those who have died from the virus. May they be at rest with you in your eternal peace.\n\nBe with the families of those who are sick or have died. As they worry and grieve, defend them from illness and despair. May they know your peace.\n\nBe with the doctors, nurses, researchers and all medical professionals who seek to heal and help those affected and who put themselves at risk in the process. May they know your protection and peace.\n\nBe with the leaders of all nations. Give them the foresight to act with charity and true concern for the well-being of the people they are meant to serve. Give them the wisdom to invest in long-term solutions that will help prepare for or prevent future outbreaks. May they know your peace, as they work together to achieve it on earth.\n\nWhether we are home or abroad, surrounded by many people suffering from this illness or only a few, Jesus Christ, stay with us as we endure and mourn, persist and prepare. In place of our anxiety, give us your peace.\n\nJesus Christ, heal us.\n\n\n",
+   "father": "",
+   "source": "Source of prayer: Kerry Weber, America Magazine, https://www.americamagazine.org/faith/2020/03/02/coronavirus-prayer\nSource of image: Albrecht Dürer, \"Praying Hands\" (1508), https://de.wikipedia.org/wiki/Datei:Duerer-Prayer.jpg",
+   "reading1": "Ex 17:3-7",
+   "reading2": "Rom 5:1-2, 5-8",
+   "reading3": "Jn 4:5-42",
+   "newsletter": "infoheidelberg@internationalcatholiccommunity.com",
+   "appointments": [],
+   "colors": {
+      "color1": "#2D5886",
+      "color2": "#FFF",
+      "border": "#FFF"
+   },
+   "fonts": {
+      "text": {
+         "family": "Georgia",
+         "lineHeight": 12,
+         "size": 11,
+         "paragraphMargin": 5
+      }
+   },
+   "publish": {
+      "icch": true,
+      "facebook": true,
+      "facebookMessage": "Dear friends, Lent without any masses feels hard to do... Prayer, however, isn't limited to our churches and services. Maybe the \"Coronavirus Prayer\" shared in our newsletter can help us find words in the middle of this crisis. Stay blessed!",
+      "htmlLink": "http://www.international-catholic-community-heidelberg.com/bulletins/2020-03-15-third-sunday-of-lent.html"
+   },
+   "saveAs": "2020-03-15-third-sunday-of-lent.markdown"
+}
