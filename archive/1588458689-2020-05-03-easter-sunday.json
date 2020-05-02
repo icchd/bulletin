@@ -1,0 +1,45 @@
+{
+   "date": "May 3, 2020",
+   "dateChanged": "2020-05-02 11:39:03 +02:00",
+   "image": {
+      "enabled": true,
+      "src": "https://dominicanes.files.wordpress.com/2016/09/christ-good-shepherd.jpg",
+      "layout": "left",
+      "size": 42.5
+   },
+   "title": "Easter Sunday",
+   "text": "###The Good Shepherd\n\nThe most comforting of the Psalms begins with the line, “The Lord is my shepherd.” It ends with this line: “Goodness and mercy shall follow me all the days of my life.”\n\nGoodness and mercy, in the person of the good shepherd, have to *follow* the sheep, because it is lost and the shepherd is heading out to seek it. That sheep is leading the way, and that is why it is lost. A shepherd is the one who knows the way and ought to be leading, but this shepherd has to follow because that one sheep got out ahead of the shepherd and so got astray.\n\nIn the Gospel Reading, Jesus says that his sheep *follow* him. Those who belong to him know his voice and so they are willing to follow him and let him lead the way.\n\nOf course, the sheep don’t know the voice of the shepherd unless they know the shepherd. The difference, then, between being one of the lost sheep who have to be followed by the shepherd and being one of the faithful sheep who are led by the shepherd is a matter of knowing the shepherd.\n\nNow the shepherd is a person. And knowing a person is a matter of personal relationship, with all the risks and vulnerabilities that personal relationship entails.\n\nSo the faithful sheep are in a personal relationship with their shepherd and love him. That is why these sheep know the voice of the shepherd and follow him.\n\nHere is the good news, then. Whether a person is faithful or lost, he will be surrounded by the love of the good shepherd. Either the shepherd will lead him, or the shepherd will follow after him to find him when he is astray.\n\nAnd so St. Patrick’s prayer is right: Christ before me, Christ behind me. And, either way, Christ with me.\n\n",
+   "father": "",
+   "source": "Reflection by Eleonore Stump, St. Louis University, https://liturgy.slu.edu/4EasterA050320/reflections_stump.html\nImage: Icon of Christ the Good Shepherd ",
+   "reading1": "Acts 2:14A, 36-41",
+   "reading2": "1 Pt 2:20B-25",
+   "reading3": "Jn 10:1-10",
+   "newsletter": "infoheidelberg@internationalcatholiccommunity.com",
+   "appointments": [
+      {
+         "epoch": "1588456800000",
+         "date": "3 May",
+         "description": "You might have heard that church services will no longer be generally suspended in our state from the beginning of next week on. However, only in the next days will the details on when exactly and under which conditions **public services** can be **resumed** be discussed within the Archdioces of Freiburg, and thus in the City Church of Heidelberg. We will of course keep you updated."
+      }
+   ],
+   "colors": {
+      "color1": "#2D5886",
+      "color2": "#FFF",
+      "border": "#FFF"
+   },
+   "fonts": {
+      "text": {
+         "family": "Georgia",
+         "lineHeight": 13.5,
+         "size": 12,
+         "paragraphMargin": 5
+      }
+   },
+   "publish": {
+      "icch": true,
+      "facebook": true,
+      "facebookMessage": "Dear friends,\n\nplease find online our bulletin for May 3 on this Sunday's readings which evoke images of the Good Shepherd and his sheep.\n\nYou might have heard that restrictions of public church services are being slowly lifted, at a different pace throughout Germany. For the Catholic City Church of Heidelberg, details on the WHEN and HOW of public mass will be discussed with the Archdiocese of Freiburg in the coming week. Only then will the City Church decide on which steps toward any kind of public services can be taken in its churches during the next weeks. We will keep you updated!",
+      "htmlLink": "http://www.international-catholic-community-heidelberg.com/bulletins/2020-05-03-easter-sunday.html"
+   },
+   "saveAs": "2020-05-03-easter-sunday.markdown"
+}
