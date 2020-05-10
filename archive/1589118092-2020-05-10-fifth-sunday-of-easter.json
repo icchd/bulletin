@@ -1,0 +1,39 @@
+{
+   "date": "May 10, 2020",
+   "dateChanged": "2020-05-10 03:30:21 +02:00",
+   "image": {
+      "enabled": true,
+      "src": "https://images.kath-musterhausen.de/im/img/_KrGYSQLbSrXmS-LWn6dWszEWevIb8BL_Ev2b8BQ5fOgbKCAYKvEbKj3aIHd5d/f,j/s,x,200,y,130/gotteslob_corona.jpg",
+      "layout": "left",
+      "size": 45
+   },
+   "title": "Fifth Sunday of Easter",
+   "text": "Dear friends,\nA very happy Sunday to you all!\n\nAs promised in the last weeks, we'd like to update you on the **current regulations concerning public church services**. As of next weekend, i.e. May 16/17, prayer services and masses in Heidelberg will be resumed. This, of course, will only happen to a very limited extent and under rather strict regulations to begin with. Parishes that want to celebrate any kind of service with any public must first hand in a \"safety concept\", stating limitations in numbers, detailed ways to keep people safe, modes for inscription (!) etc. Not all churches are able to do so, and as rules for the celebration and distribution of the Eucharist are even more limiting, there will be only very few celebrations of Holy Mass throughout the city, while other churches will invite for the Liturgy of the Word. Thus, for the foreseeable future church life remains very different from what we were used to before. Read more about the slow step-by-step return to public church services on the City Church website (in German): https://stadtkirche-heidelberg.de/html/aktuell/aktuell_aktuell_u.html?artikel=125523&cb-id=12140862&m=73851\n \nAs numbers for attendance are limited, and some might not even feel safe attending, many of us might not even make it to any of these. Please know that many of the live-streams started in the last weeks are still on for that reason. Furthermore, **Sunday obligation stays suspended in our diocese** (and all others around) until further notice.\n\nAs for ICCH, the team will be discussing possibilities for having any kind of Sunday service in the days to come, and we will let you know if or how this can happen. As our church St. Michael is not among those the City Church is currently preparing for use, we as a community would have to work out, hand in, and control the aforementioned hygiene & safety concept on our own - a fact that makes it unrealistic for us to even consider starting as early as next week.\n\nWe will, of course, let you know about any progress concerning ICCH in our weekly newsletter, and hope to be able to include the city-wide church schedule in next week's mail.\n\nUntil then, stay blessed, stay safe, and lift up our community in your prayers!\n\nKind regards,\nyour ICCH Communications Team",
+   "father": "",
+   "source": "Source of image: Peter Wegener, for Stadtkirche Heidelberg, https://stadtkirche-heidelberg.de/html/aktuell/aktuell_aktuell_u.html?artikel=125523&cb-id=12140862&m=73851",
+   "reading1": "Acts 6:1-7",
+   "reading2": "1 Pt 2:4-9",
+   "reading3": "Jn 14:1-12",
+   "newsletter": "infoheidelberg@internationalcatholiccommunity.com",
+   "appointments": [],
+   "colors": {
+      "color1": "#79C5D2",
+      "color2": "#2D4986",
+      "border": "#FFF"
+   },
+   "fonts": {
+      "text": {
+         "family": "Georgia",
+         "lineHeight": 13.5,
+         "size": 12,
+         "paragraphMargin": 5
+      }
+   },
+   "publish": {
+      "icch": true,
+      "facebook": true,
+      "facebookMessage": "Dear friends,\nchurch services in Heidelberg will be resumed, slowly and under strict regulations, from next weekend (May 16/17 on). For ICCH, we yet have to reflect on possible concepts. Read more about this in our weekly newsletter, published now on our website. Have a blessed Sunday!",
+      "htmlLink": "http://www.international-catholic-community-heidelberg.com/bulletins/2020-05-10-fifth-sunday-of-easter.html"
+   },
+   "saveAs": "2020-05-10-fifth-sunday-of-easter.markdown"
+}
