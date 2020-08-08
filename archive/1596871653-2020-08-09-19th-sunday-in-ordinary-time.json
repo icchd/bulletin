@@ -1,0 +1,45 @@
+{
+   "date": "August 9, 2020",
+   "dateChanged": "2020-08-07 11:13:32 +02:00",
+   "image": {
+      "enabled": true,
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Brooklyn_Museum_-_Saint_Peter_Walks_on_the_Sea_%28Saint_Pierre_marche_sur_la_mer%29_-_James_Tissot_-_overall.jpg/387px-Brooklyn_Museum_-_Saint_Peter_Walks_on_the_Sea_%28Saint_Pierre_marche_sur_la_mer%29_-_James_Tissot_-_overall.jpg",
+      "layout": "left",
+      "size": 42.5
+   },
+   "title": "19th Sunday in Ordinary Time",
+   "text": "###Walking on Water\n\nIn the Second Reading, Paul enumerates the many blessings God gave his people in the time of the Law and the Prophets: the adoption as children of God, covenants, commandments and an order of worship. They had God’s promises, and the promise of glory was among them. But Paul makes the list of these blessings with great sorrow, as he says, because it is hard for him to see any of the promised good things in the current state of God’s people.\n\nIt can certainly seem to a Christian as if the same list and the same sorrow are suitable for Christians now.\n\nChristians are also promised adoption as children of God. They have a covenant, a new covenant, with God, and a new worship to go with it. They are promised glory too, the glory of holiness and union with the Lord. \n\nBut, for Christians now as for God’s people then, it is often very difficult to see the fulfillment of these promises in one’s own life. Does anyone have even one day in which he feels that his life has shown the fruit of these promises on that day?\n\nSo, for every Christian, there is a sorrow of the sort Paul expressed, because the sins and failures of one’s life can seem so hard to square with the promises of God. Where is the adoption and the glory?\n\nWhat are God’s people to do in this condition and its sorrow?\n\nThe Gospel gives us a picture for an answer: as long as he has faith and doesn’t look down, Peter comes to the Lord, walking on water.\n\nNo matter how sorrowful a person’s failures, he can nonetheless come to the Lord. Doing so may feel like walking without any solid ground under foot. But faith is a kind of walking on water, too, isn’t it? As long as one doesn’t look down, as long as one keeps his eyes fixed on Jesus in faith, even walking on nothing in order to come to him is possible. All the promises of God are fulfilled in Him.",
+   "father": "Welcome Father Mathew",
+   "source": "Source of reflection: Eleonore Stump, Saint Louis University, https://liturgy.slu.edu/19OrdA080920/reflections_stump.html\nSource of image: James Tissot, \"Saint Peter Walks on the Sea\" (between 1886-1894), https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_Saint_Peter_Walks_on_the_Sea_(Saint_Pierre_marche_sur_la_mer)_-_James_Tissot_-_overall.jpg",
+   "reading1": "1 Kgs 19:9a, 11-13a",
+   "reading2": "Rom 9:1-5",
+   "reading3": "Mt 14:22-23",
+   "newsletter": "infoheidelberg@internationalcatholiccommunity.com",
+   "appointments": [
+      {
+         "epoch": "1596924000000",
+         "date": "9 August",
+         "description": "Opportunity to receive the **Sacrament of Reconciliation** is offered this Sunday and next (Aug 16) after Mass for an hour. Following COVID hygiene regulations, confessions will *not* take place in the confessional at church, but in the parish office just next to the church."
+      }
+   ],
+   "colors": {
+      "color1": "#19324D",
+      "color2": "#B3D9E5",
+      "border": "#FFF"
+   },
+   "fonts": {
+      "text": {
+         "family": "Georgia",
+         "lineHeight": 13.5,
+         "size": 12,
+         "paragraphMargin": 5
+      }
+   },
+   "publish": {
+      "icch": true,
+      "facebook": true,
+      "facebookMessage": "Dear friends, our current bulletin is now online.\nThis Sunday as well as next, we have opportunity to celebrate the Sacrament of Penance and Reconciliation, each after Mass.\n\nWe hope to see you at Mass! Please remember to register: http://www.international-catholic-community-heidelberg.com/mass-attendance-registration-form/",
+      "htmlLink": "http://www.international-catholic-community-heidelberg.com/bulletins/2020-08-09-19th-sunday-in-ordinary-time.html"
+   },
+   "saveAs": "2020-08-09-19th-sunday-in-ordinary-time.markdown"
+}
