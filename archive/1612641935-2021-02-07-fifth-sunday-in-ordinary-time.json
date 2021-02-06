@@ -1,0 +1,45 @@
+{
+   "date": "February 7, 2021",
+   "dateChanged": "2021-02-06 05:46:09 +02:00",
+   "image": {
+      "enabled": true,
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Meister_des_Hitda-Evangeliars_002.jpg/343px-Meister_des_Hitda-Evangeliars_002.jpg",
+      "layout": "left",
+      "size": 50
+   },
+   "title": "Fifth Sunday in Ordinary Time",
+   "text": "Today we continue to read from Mark’s Gospel, learning more about the ministry of Jesus. Jesus cured Simon’s mother-in-law, and she immediately began to serve Jesus and his disciples. Jesus also cured many others who were brought to him, healing their illnesses and driving out demons. As we will see throughout Mark’s Gospel, Jesus did not permit the demons to speak because they knew his identity and would have revealed it to those who were present.\n\nOn the morning after this busy day, Jesus retreated in prayer, but was pursued by Simon and others who brought news that many people were looking for him. At this point in Mark’s Gospel, we begin to see a distinct role for the inner circle of Jesus’ disciples—they act as intermediaries between Jesus and the people. Jesus reports to his disciples that they need to leave Capernaum to preach in other places.\n\nToday’s Gospel completes a picture of Jesus’ ministry: preaching, curing the sick, driving out demons, and then moving on to continue this work in another place. Mark's Gospel tells us that Jesus did this throughout Galilee.\n\nJesus’ compassion and healing of the sick is a sign of the Kingdom of God. The Church continues to extend Christ’s healing presence to others in its ministry to the sick. In the Sacrament of the Anointing of the Sick, the Church prays for spiritual and physical healing, forgiveness of sins, and comfort for those who are suffering from illness.\n\nIn today’s Gospel we also notice the importance of prayer in Jesus’ daily life. Jesus rose early in the morning, removed himself from the crowds, and went to a deserted place to pray. When the disciples found him, he told them that it was time to move on. We believe that in his prayers Jesus found guidance and direction from God. We also bring our decision-making to God in prayer, asking for his guidance and direction in our lives.",
+   "father": "Welcome Father Cyril",
+   "source": "Source: https://www.loyolapress.com/catholic-resources/liturgical-year/sunday-connection/fifth-sunday-of-ordinary-time-b-sunday-connection/\nImage: Evangeliar der Äbtissin Hitda von Meschede, Szene: Jesus und die Schwiegermutter Petri",
+   "reading1": "Job 7:1-4, 6-7",
+   "reading2": "1 Cor 9:16-19, 22-23",
+   "reading3": "Mk 1:29-39",
+   "newsletter": "infoheidelberg@internationalcatholiccommunity.com",
+   "appointments": [
+      {
+         "epoch": "1613257200000",
+         "date": "14 February",
+         "description": "There will be confessions in English after Mass on Sunday, February 14 2021."
+      }
+   ],
+   "colors": {
+      "color1": "#3BBD00",
+      "color2": "#FFF",
+      "border": "#FFF"
+   },
+   "fonts": {
+      "text": {
+         "family": "Georgia",
+         "lineHeight": 13,
+         "size": 12,
+         "paragraphMargin": 20
+      }
+   },
+   "publish": {
+      "icch": true,
+      "facebook": true,
+      "facebookMessage": "Our bulletin is now online. By the way, if you intend to come for Mass these next few weeks and can imagine volunteering for the Welcome/Usher team, kindly let us know.\n\nWe look forward to seeing you soon.",
+      "htmlLink": "http://www.international-catholic-community-heidelberg.com/bulletins/2021-02-07-fifth-sunday-in-ordinary-time.html"
+   },
+   "saveAs": "2021-02-07-fifth-sunday-in-ordinary-time.markdown"
+}
