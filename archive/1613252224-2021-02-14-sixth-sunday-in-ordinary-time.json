@@ -1,0 +1,50 @@
+{
+   "date": "February 14, 2021",
+   "dateChanged": "2021-02-13 09:30:15 +02:00",
+   "image": {
+      "enabled": true,
+      "src": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Niels_Larsen_Stevns-_Spedalske.jpg",
+      "layout": "left",
+      "size": 57.5
+   },
+   "title": "Sixth Sunday in Ordinary Time",
+   "text": "###Only Say the Word, and My Soul Shall Be Healed\n\nIn the Gospel Reading, Jesus reaches out to touch a leper; and, by touching him heals him.\n\nLeprosy is a disease worth fearing. It disfigures and disables a person. The ancient world thought it could be transmitted by touch. For the sake of the health of the community, the law made lepers outcasts; but, even without the law, nobody wanted to touch a leper. The leper healed by Jesus must have lived without the touch of another human being for a long time.\n\nHow welcome the touch of Jesus must have been to that leper! And how overjoyed he must have been when he found himself healed!\n\nLeprosy is not the only thing that severely disfigures and disables a person. Sin does so too. And the touch of Jesus that heals leprosy heals sin as well.  That is why, at mass, we pray, “Only say the word, and my soul shall be healed.” Forego touch, Lord!  We would be so overjoyed if you just said the word! Your healing would be so welcome to us!\n\nBut we say those words at every mass, week after week, year after year. And still we struggle with our sins. Somewhere Nietzsche says, unkindly, about Christians, “They don’t even look like the redeemed!” That is a painful accusation, isn’t it? Why aren’t we healed, by word or by touch, as the leper was? Why do we have to keep asking for the Lord’s healing touch at every mass?\n\nBut think about it this way: how would Nietzsche know what the redeemed look like? For that matter, how would we? Why should we think that we are in a position to see the healing that the Lord does in our lives? Why would we think that we are in a position to judge how far we have come in conquering the sin in ourselves? The Lord tells us not to judge others (Mt 7:1). Why should we think we are able to judge ourselves?\n\nSo we do not have to see the effects of the healing touch of the Lord in order for it to do its work. The touch of the Word, for whose healing word we pray at every mass, does its healing deep within. Our job is to be open to that touch.",
+   "father": "Welcome Father Mathew",
+   "source": "Reflection by Eleonore Stump, St. Louis University, https://liturgy.sluhostedsites.org/6OrdB021421/reflections_stump.html\nImage: Niels Larsen Stevns (1913), \"Healing of the Leper\", https://commons.wikimedia.org/wiki/File:Niels_Larsen_Stevns-_Spedalske.jpg",
+   "reading1": "Lv 13:1-2, 44-46",
+   "reading2": "1 Cor 10:31-11:1",
+   "reading3": "Mk 1:40-45",
+   "newsletter": "infoheidelberg@internationalcatholiccommunity.com",
+   "appointments": [
+      {
+         "epoch": "1613257200000",
+         "date": "14 February",
+         "description": "Opportunity for **confessions** after Mass, in the parish office."
+      },
+      {
+         "epoch": "1613516400000",
+         "date": "17 February",
+         "description": "For **Ash Wednesday**, as there will be no service in English at ICCH, please check the list of Masses and services in Heidelberg at https://www.stadtkirche-heidelberg.de/gottesdienste/"
+      }
+   ],
+   "colors": {
+      "color1": "#40BF7A",
+      "color2": "#FFF",
+      "border": "#FFF"
+   },
+   "fonts": {
+      "text": {
+         "family": "Georgia",
+         "lineHeight": 14,
+         "size": 12,
+         "paragraphMargin": 5
+      }
+   },
+   "publish": {
+      "icch": true,
+      "facebook": true,
+      "facebookMessage": "Dear friends, our bulletin for this week is now online. We hope you'll enjoy reading it.\nAfter Mass this Sunday, we have opportunity for confessions - as in previous years, we also plan to make the Sacrament of Reconciliation available more often during Lent.",
+      "htmlLink": "http://www.international-catholic-community-heidelberg.com/bulletins/2021-02-14-sixth-sunday-in-ordinary-time.html"
+   },
+   "saveAs": "2021-02-14-sixth-sunday-in-ordinary-time.markdown"
+}
