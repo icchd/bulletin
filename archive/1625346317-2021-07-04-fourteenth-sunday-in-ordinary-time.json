@@ -1,0 +1,45 @@
+{
+   "date": "July 4, 2021",
+   "dateChanged": "2021-07-03 10:19:44 +02:00",
+   "image": {
+      "enabled": true,
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Bartolom%C3%A9_Esteban_Murillo_-_The_Baptism_of_Christ_-_Google_Art_Project.jpg/328px-Bartolom%C3%A9_Esteban_Murillo_-_The_Baptism_of_Christ_-_Google_Art_Project.jpg",
+      "layout": "left",
+      "size": 50
+   },
+   "title": "Fourteenth Sunday in Ordinary Time",
+   "text": "Today the prophet Ezekiel makes an appearance in our Sunday readings; he is among the most colorful characters in the Old Testament. Since we do not get to hear anywhere near the whole of his preaching in the Lectionary, we should read his prophecy carefully on our own. Aside from the fascinating and sometimes bizarre actions that Ezekiel performs, the spectacular visions he describes, and the passages of his prophecy that are sufficiently graphic that they are never read in church, Ezekiel and his contemporary Jeremiah are the greatest voices of the exile of Israel in Babylon. The exile of roughly 586 – 538 B.C. was an event of tremendous importance in the life of the people of Israel, helping to shape the form of Judaism and of the Bible as they were known in the time of Christ.\n\nJust as the scriptures came to their current form over time, so too they use language whose meaning has developed over time. For example, Ezekiel uses two terms today that did not have the same theological significance in his day (early 6th century B.C.) that they would come to have in their more familiar setting in the Gospel and in the early Church: “spirit,” and “son of man.” The fact that Ezekiel uses these terms in a manner that falls short of their New Testament meaning tells us that God reveals his will gradually and according to a pedagogy (cf. Galatians 3-4).\n\n“Spirit” for Ezekiel seems to have the sense of a divine or at least heavenly force that empowers Ezekiel to do and say what he is told. It is not yet understood by the prophet or his contemporary readers as we understand the “Holy Spirit”—as a co-equal “person” of God. Similarly the term “son of man” is often used in Ezekiel simply to describe him as a mortal human being in distinction from God; later “Son of Man” comes to be attributed to Christ in the Gospels and in the liturgy of the Church, and in that case we use it with the fully developed sense of a divine title of the Lord.\n\nOnly in the fullness of time would God fully reveal himself through his Son, Jesus Christ—yet even he was not widely recognized. That Christ is the complete Word of the Father is made clear in the opening of the Epistle to the Hebrews, when the author writes: “In times past, God spoke in partial and various ways to our ancestors through the prophets; in these last days, he spoke to us through a son” (Heb 1:1-2). This age-old teaching of the Church is restated in the Dogmatic Constitution on Divine Revelation of the Second Vatican Council where we read: “By…revelation then, the deepest truth about God and the salvation of man shines out for our sake in Christ, who is both the mediator and the fullness of all revelation” (Dei Verbum 2).\n\nLiving in the present day thus brings a great blessing to us in that we have the fullness of what God desired to reveal to us for the sake of our salvation. It also brings us a great responsibility because having heard the Word is not enough; we must put faith in it and live by it. The danger of failing to do this can be seen in the famous words of Jesus in today’s Gospel: “A prophet is not without honor except in his native place and among his own kin and in his own house” (Mark 6:4). Since knowledge of God does not suffice let us not “become too elated” as Saint Paul says (2 Cor 12:9) because God’s revelation is known to us; rather, taking a cue from Ezekiel let us attentively listen to the Word of the Lord and put it into action.",
+   "father": "Welcome Father Cyril",
+   "source": "Source: Father Edward Mazich, O.S.B., https://saintvincentarchabbey.org/2018/07/08/14th-sunday-of-ordinary-time-modern/\nImage: Bartolomé Esteban Murillo - The Baptism of Christ",
+   "reading1": "Ezek 2:2-5",
+   "reading2": "2 Cor 12:7-10",
+   "reading3": "Mk 6:1-6",
+   "newsletter": "infoheidelberg@internationalcatholiccommunity.com",
+   "appointments": [
+      {
+         "epoch": "1625954400000",
+         "date": "11 July",
+         "description": "There will be confessions in English after Mass on Sunday, July 11th 2021"
+      }
+   ],
+   "colors": {
+      "color1": "#3BBD00",
+      "color2": "#FFF",
+      "border": "#FFF"
+   },
+   "fonts": {
+      "text": {
+         "family": "Georgia",
+         "lineHeight": 12,
+         "size": 11,
+         "paragraphMargin": 5
+      }
+   },
+   "publish": {
+      "icch": true,
+      "facebook": true,
+      "facebookMessage": "Dear friends, we have now uploaded our bulletin and hope you enjoy reading it. Kindly be reminded of confessions next Sunday (July 11th) after Mass.",
+      "htmlLink": "http://www.international-catholic-community-heidelberg.com/bulletins/2021-07-04-fourteenth-sunday-in-ordinary-time.html"
+   },
+   "saveAs": "2021-07-04-fourteenth-sunday-in-ordinary-time.markdown"
+}
