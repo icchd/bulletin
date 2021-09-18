@@ -1,0 +1,50 @@
+{
+   "date": "September 19, 2021",
+   "dateChanged": "2021-09-18 11:50:03 +02:00",
+   "image": {
+      "enabled": true,
+      "src": "https://upload.wikimedia.org/wikipedia/commons/8/88/Nicolaes_Maes_-_Christ_Blessing_the_Children_-_WGA13814.jpg",
+      "layout": "left",
+      "size": 50
+   },
+   "title": "Twenty-Fifth Sunday in Ordinary Time",
+   "text": "The scene in the Gospel is an easy one to picture. Jesus and his disciples are walking through Galilee and most likely Jesus is up front leading the way like a good shepherd leading his flock. He’s telling them the harsh reality of what is going to happen; he’s going to be killed and on third day will rise. What a message! I would imagine that when the disciples heard this sobering instruction they would had all kinds of questions; who will hand you over?, who will kill you?, why?, what do you mean by “rise on the third day?”, and on and on.\n\nThere was no discussion with Jesus about what he said, instead a quiet conversation among them was taking place. The topic was, “Who among them was the greatest.”, or in other words “When Jesus dies, which one of us will take his place?” How callous could these disciples be?\n\nIt’s easy for us to question and maybe even think that we would never act like that. To do so would be disingenuous and a failure on our part to realize that each of us struggles in one way or another with false pride. False pride is when we lift ourselves up at the expense of another. This is different than a healthy pride in which we acknowledge some accomplishment and achievement that we earned by claiming and using some gift or talent God has given to us. It is false pride that comes before the fall and is addressed in the first reading from Wisdom as a characteristic of the wicked.\n\nThe reading from the letter of James also addresses false pride and gives us some excellent guidance on how to live a fruitful life in the Christian Community. It is believed that the James who authored this letter was not an apostle, but rather a relative of Jesus who is mentioned several times in the Gospels. He became a leader in the early church and when Peter moved to Rome, James remained in Jerusalem as the leader of that community. He had the gift of taking the Jewish heritage of the people of Israel and connecting it clearly to the message of Jesus. This just wasn’t a matter of making simple comparisons between the two, but of showing a progression of the Old Testament teachings to Jesus and how Jesus renewed them and gave a different interpretation to them through his ministry and teachings. Jesus is the Word made flesh who brings new life to the words of the Old Testament. James was familiar with the Old Testament Wisdom literature, and he knew well the teachings of Jesus and the some of the struggles of the early church. James tells us that this kind of behavior is a disorder, while God’s wisdom is what leads us to proper behavior. When we live by God’s way the following are present, peaceable, gentle, compliant, full of mercy and good fruits. It is in this way that we can rightfully boast, as Saint Paul did, in the works he accomplished by the grace of God.\n\nWe avoid the errors of the disciples and the early Christians if we take seriously the instruction of Jesus at the end of the Gospel; “If anyone wishes to be first, he shall be the last of all and the servant of all.” This goes against the grain of the temptation to build ourselves us regardless of the cost to us or others. It is by becoming a true servant of all that we can rise to be the leader, not by our own doing but by the recognition of others of God’s presence within us.",
+   "father": "Welcome Father Cyril",
+   "source": "Source: Father Killian Loch, O.S.B., https://saintvincentarchabbey.org/sunday_homilies/twenty-fifth-sunday-in-ordinary-time-3/\nImage: Nicolaes Maes: Christ Blessing the Children, https://upload.wikimedia.org/wikipedia/commons/8/88/Nicolaes_Maes_-_Christ_Blessing_the_Children_-_WGA13814.jpg",
+   "reading1": "Wis 2:12, 17-20",
+   "reading2": "Jas 3:16--4:3",
+   "reading3": "Mk 9:30-37",
+   "newsletter": "infoheidelberg@internationalcatholiccommunity.com",
+   "appointments": [
+      {
+         "epoch": "1632002555279",
+         "date": "19 September",
+         "description": "There will be confessions in English after Mass."
+      },
+      {
+         "epoch": "1632607200000",
+         "date": "26 September",
+         "description": "Due to another event taking place at St. Michael on September 26th, there might be a change in our Mass time. We will communicate this to you in the course of the week so kindly keep an eye out for the information in your mail or in the next bulletin."
+      }
+   ],
+   "colors": {
+      "color1": "#3BBD00",
+      "color2": "#FFF",
+      "border": "#FFF"
+   },
+   "fonts": {
+      "text": {
+         "family": "Georgia",
+         "lineHeight": 11.5,
+         "size": 11,
+         "paragraphMargin": 5
+      }
+   },
+   "publish": {
+      "icch": true,
+      "facebook": true,
+      "facebookMessage": "We invite you to read our bulletin for this week. Kindly note that there will be confessions after Mass.\n\nHave a blessed weekend!",
+      "htmlLink": "http://www.international-catholic-community-heidelberg.com/bulletins/2021-09-19-twenty-fifth-sunday-in-ordinary-time.html"
+   },
+   "saveAs": "2021-09-19-twenty-fifth-sunday-in-ordinary-time.markdown"
+}
