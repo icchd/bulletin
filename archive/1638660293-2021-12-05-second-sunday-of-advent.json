@@ -1,0 +1,55 @@
+{
+   "date": "December 5, 2021",
+   "dateChanged": "2021-12-04 11:59:43 +02:00",
+   "image": {
+      "enabled": true,
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Mengs%2C_Hl._Johannes_der_T%C3%A4ufer.jpg/426px-Mengs%2C_Hl._Johannes_der_T%C3%A4ufer.jpg",
+      "layout": "left",
+      "size": 50
+   },
+   "title": "Second Sunday of Advent\n",
+   "text": "###Prepare the Way\n\nNow begins the second week of the Church’s world-wide retreat in preparation for Christmas.\n\nIt is Advent, the quiet time, the great contrast with our culture’s wild consumer-bonanza. It lets you and me examine just how open we are to the birth of Christ in our souls.\n\nNo mistake about it, we are afraid. The present era of world time discourages many of us.\n\nTerrorism desiring to destroy our way of life, for one thing. But add in Iraq, Palestine, Chechnya, Afghanistan, Georgia, Africa, the Balkans, and so many more. And consider the gigantic unemployment and loss of jobs in the United States, the disenfranchisement of the poor, the biggest annual deficit in history, huge corruption in the most trusted and giant companies, the biggest annual budget spending increases in history, and the world-wide climate disaster—who would not be depressed? (...)\n\nIn the face of all this, who can just sit back and have Advent?\n\nBut listen to what the First Reading proposes for our Advent retreat. *Take off your robe of mourning and misery; put on the splendor of glory from God forever: wrapped in the cloak of justice from God, bear on your head the mitre that displays the glory of the eternal name.*\n\nGod will show all the earth your splendor: you will be named by God forever as the peace of justice, the glory of God's worship.\n\nHas someone quietly lost their mind? Or is Church just irreparably cut off from the “real world,” hiding in pews and doting on a comforting and “nice” view of life?\n\nNeither.\n\nWe are being asked to let our approach to life and to tragedy undergo some revision, some stretching.\n\nThe one who is gestating right now in our hearts, the one who is to be born there very soon, that one comes not to make the world pleasant and polite, but to connect it at its very roots with the mysterious depths of God, that one is on the way.\n\nWhat does it mean to have widespread terrorist factions planning to throw down our life and all that surrounds it? The One who wants to be born in us knows the answer intimately well. This happened to him. What does it mean to have failure and disillusion as your daily bread? He knows that too and he has been there.\n\nSo the question is, will you let him be born in you this year, a little more than in the past? Are you willing to let your womb stretch wider than ever before and so make room?\n\n  “Yes, but ... ”\n\nIs that your response?\n\nWell, be at rest. You do not have to be capable of such a Christ-like feat all by yourself. As Paul says in the Second Reading, “the one who began the good work in you will continue to complete it until the day of Christ Jesus.” The tender care of God and of his carefully-tending mother are with you just as they promised, if you will allow them to help.\n\nAgainst this background, the Gospel begins the Advent storytelling that is such native soil to human beings. Once upon a time the word of God came to John, son of Zechariah (John the Baptist) in the desert, and he began announcing the coming of Jesus.\n\nListen.\n\nLet us do all we can to “prepare the way of the Lord.”",
+   "father": "Welcome Father Martin",
+   "source": "Source of reflection: Fr John Foley, SJ, https://liturgy.sluhostedsites.org/2AdvC120521/reflections_foley.html\nSource of image: Anton Raphael Mengs, \"St. John the Baptist Preaching\" (ca. 1775), https://commons.wikimedia.org/wiki/File:Mengs,_Hl._Johannes_der_T%C3%A4ufer.jpg",
+   "reading1": "Bar 5:1-9",
+   "reading2": "Phil 1:4-6, 8-11",
+   "reading3": "Lk 3:1-6",
+   "newsletter": "infoheidelberg@internationalcatholiccommunity.com",
+   "appointments": [
+      {
+         "epoch": "1639263600000",
+         "date": "12 December",
+         "description": "Opportunity to celebrate the **Sacrament of Reconciliation**. Confessions will be heard after Mass in the parish office."
+      },
+      {
+         "epoch": "1639868400000",
+         "date": "19 December",
+         "description": "Second opportunity for **confessions** before Christmas, after Mass as well."
+      },
+      {
+         "epoch": "1640386800000",
+         "date": "25 December",
+         "description": "Mass on **Christmas Day** starts at 11:30 am."
+      }
+   ],
+   "colors": {
+      "color1": "#4D194C",
+      "color2": "#FFF",
+      "border": "#FFF"
+   },
+   "fonts": {
+      "text": {
+         "family": "Georgia",
+         "lineHeight": 12,
+         "size": 11,
+         "paragraphMargin": 5
+      }
+   },
+   "publish": {
+      "icch": true,
+      "facebook": true,
+      "facebookMessage": "Dear friends, here it is, our bulletin for the Second Sunday of Advent. \nIn the news section, find information on our schedule for confessions during Advent and for Mass on Christmas Day.",
+      "htmlLink": "http://www.international-catholic-community-heidelberg.com/bulletins/2021-12-05-second-sunday-of-advent.html"
+   },
+   "saveAs": "2021-12-05-second-sunday-of-advent.markdown"
+}
