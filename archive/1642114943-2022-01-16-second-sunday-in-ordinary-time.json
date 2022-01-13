@@ -1,0 +1,45 @@
+{
+   "date": "January 16, 2022",
+   "dateChanged": "2022-01-13 10:25:39 +02:00",
+   "image": {
+      "enabled": true,
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Gerard_David_-_The_Marriage_at_Cana_-_WGA6020.jpg/320px-Gerard_David_-_The_Marriage_at_Cana_-_WGA6020.jpg",
+      "layout": "left",
+      "size": 50
+   },
+   "title": "Second Sunday in Ordinary Time",
+   "text": "Although the Church’s annual cycle of worship began with Advent, some six weeks ago, today’s readings re-launch the Church into the “ordinary time” of the year following our celebration of the Advent and Christmas seasons. They do so on a note of joyful missionary zeal: the first reading from Isaiah conveys a sense of the obligation that the prophet felt—and that we are to feel—to share the good news of redemption and vindication with all whom we encounter. The Psalmist furthers this theme, urging us to spread the Good News abroad: “Sing to the Lord a new song…Announce his salvation, day after day. Tell his glory among the nations; among all peoples, his wondrous deeds” (Ps 96:2-3).\n\nHaving been given the impetus to share this message far and wide, it remains to consider how we are to go about our evangelical task. Saint Paul provides some insight here through the advice he gives to the early Corinthian Christians.  He writes of the “different kinds of spiritual gifts” and “different forms of service” that each believer brings to the larger community, all of which are intended to draw us closer to him.  Paul emphasizes that every Christian has such a gift and every Christian is meant to take some part in the work of evangelization: “To each individual the manifestation of the Spirit is given for some benefit” (1 Cor 12:7).\n\nWith this fervor stirred within us at mass, we then hear the story from the Gospel of John about Jesus turning water into wine at Cana, and we might ask ourselves what that has to do with Isaiah’s exhortation and the Psalmist’s zeal for sharing the message of salvation. The account of Mary coming to Jesus and asking him to help the embarrassed bride and groom is one we can all appreciate, and Jesus’ action of taking water and not only turning it into wine but wine fine enough to receive the admiration of the head waiter strikes every reader, but its place in the current stream of scripture readings can be hard to figure out.\n\nIf we think carefully however, we recall that turning water into wine at the wedding at Cana was the very first of Jesus’ seven “signs” in the Gospel of John. These signs—the evangelist uses the Greek word semeia to describe these incidents, literally meaning “sign”—are intended to reveal who Jesus was and to evoke belief in him on the part of those who observed the signs.  John himself tells us: “Jesus did this as the beginning of his signs at Cana in Galilee and so revealed his glory, and his disciples began to believe in him” (John 2:11).\n\nThe signs of John’s Gospel unfold over the course of just over two years as Jesus goes about his ministry in Galilee and Jerusalem, and they more or less follow a course of increasing impressiveness, from the water turned into wine recounted today, to the feeding of the multitude and walking on the Sea of Galilee in the middle of Jesus’ public life, to the raising of Lazarus from the dead shortly before Christ’s own death and resurrection.\n\nNow maybe we can see how the story of the wedding at Cana fits into today’s schema of readings:  the signs of John’s Gospel are meant to elicit faith in Jesus—to bring new members to the fold and to strengthen the faith of those who already believe in him.  Isaiah’s joyful proclamation of the Lord’s salvation came to its fullness in Christ; let us join together with the prophet, the Psalmist, Paul the apostle, John the evangelist and all our fellow believers in bringing this Good News to those whom we encounter in this new year.",
+   "father": "Welcome Father Martin",
+   "source": "Source: Father Edward Mazich, O.S.B., https://saintvincentarchabbey.org/sunday_homilies/second-sunday-of-ordinary-time/\nImage: Gerard David - The Marriage at Cana",
+   "reading1": "Is 62:1-5",
+   "reading2": "1 Cor 12:4-11",
+   "reading3": "Jn 2:1-11",
+   "newsletter": "infoheidelberg@internationalcatholiccommunity.com",
+   "appointments": [
+      {
+         "epoch": "1642287600000",
+         "date": "16 January",
+         "description": "Parishioners are to note that in line with the latest directives of the state Baden-Württemberg and the Archdiocese of Freiburg, the wearing of FFP2 masks in enclosed spaces is mandatory. Please bring your own masks since we do not have enough to distribute."
+      }
+   ],
+   "colors": {
+      "color1": "#3BBD00",
+      "color2": "#FFF",
+      "border": "#FFF"
+   },
+   "fonts": {
+      "text": {
+         "family": "Georgia",
+         "lineHeight": 12,
+         "size": 11,
+         "paragraphMargin": 5
+      }
+   },
+   "publish": {
+      "icch": true,
+      "facebook": true,
+      "facebookMessage": "Dear friends in Christ,\nwe hope you enjoy reading our bulletin. Kindly be reminded about the latest directives concerning wearing of masks: FFP2 masks are now mandatory in enclosed spaces. Please bring along your own masks since we do not have bulk supply to distribute.\nBest wishes to you!",
+      "htmlLink": "http://www.international-catholic-community-heidelberg.com/bulletins/2022-01-16-second-sunday-in-ordinary-time.html"
+   },
+   "saveAs": "2022-01-16-second-sunday-in-ordinary-time.markdown"
+}
