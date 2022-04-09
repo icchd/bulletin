@@ -1,0 +1,55 @@
+{
+   "date": "April 10, 2022",
+   "dateChanged": "2022-04-09 12:45:03 +02:00",
+   "image": {
+      "enabled": true,
+      "src": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Giotto_-_Scrovegni_-_-26-_-_Entry_into_Jerusalem2.jpg",
+      "layout": "left",
+      "size": 50
+   },
+   "title": "Palm Sunday",
+   "text": "“Let us go together to meet Christ on the Mount of Olives. Today he returns from Bethany and proceeds of his own free will toward his holy and blessed passion, to consummate the mystery of our salvation. He who came down from heaven to raise us from the depths of sin, to raise us with himself, we are told in Scripture, above every sovereignty, authority and power, and every other name that can be named, now comes of his own free will to make his journey to Jerusalem. He comes without pomp or ostentation. As the psalmist says: He will not dispute or raise his voice to make it heard in the streets. He will be meek and humble, and he will make his entry in simplicity.\n\nLet us run to accompany him as he hastens toward his passion, and imitate those who met him then, not by covering his path with garments, olive branches or palms, but by doing all we can to prostrate ourselves before him by being humble and by trying to live as he would wish. Then we shall be able to receive the Word at his coming, and God, whom no limits can contain, will be within us.\n\nIn his humility Christ entered the dark regions of our fallen world and he is glad that he became so humble for our sake, glad that he came and lived among us and shared in our nature in order to raise us up again to himself. And even though we are told that he has now ascended above the highest heavens - the proof, surely, of his power and godhead - his love for man will never rest until he has raised our earthbound nature from glory to glory, and made it one with his own in heaven.\n\nSo let us spread before his feet, not garments or soulless olive branches, which delight the eye for a few hours and then wither, but ourselves, clothed in his grace, or rather, clothed completely in him. We who have been baptized into Christ must ourselves be the garments that we spread before him. Now that the crimson stains of our sins have been washed away in the saving waters of baptism and we have become white as pure wool, let us present the conqueror of death, not with mere branches of palms but with the real rewards of his victory. Let our souls take the place of the welcoming branches as we join today in the children’s holy song: Blessed is he who comes in the name of the Lord. Blessed is the king of Israel.",
+   "father": "Welcome Father Martin",
+   "source": "Source: From a homily of St. Andrew of Crete\nImage: Giotto - Entry into Jerusalem",
+   "reading1": "Is 50:4-7",
+   "reading2": "Phil 2:6-11",
+   "reading3": "Lk 22:14—23:56",
+   "newsletter": "infoheidelberg@internationalcatholiccommunity.com",
+   "appointments": [
+      {
+         "epoch": "1649544966079",
+         "date": "10 April",
+         "description": "Confessions in English after Mass"
+      },
+      {
+         "epoch": "1649887200000",
+         "date": "14 April",
+         "description": "Mass in English on Holy Thursday starts at 18:30."
+      },
+      {
+         "epoch": "1650146400000",
+         "date": "17 April",
+         "description": "Mass on Easter Day starts at 11:30. We will have some coffee after Mass so do well to bring something along to share!"
+      }
+   ],
+   "colors": {
+      "color1": "#9B00BD",
+      "color2": "#FFF",
+      "border": "#FFF"
+   },
+   "fonts": {
+      "text": {
+         "family": "Georgia",
+         "lineHeight": 12,
+         "size": 11,
+         "paragraphMargin": 5
+      }
+   },
+   "publish": {
+      "icch": true,
+      "facebook": true,
+      "facebookMessage": "Dear friends, the Holy Week begins tomorrow with Palm Sunday. In these days, we continue to journey with our Lord through to the end of Lent into Easter. May the Passion of our Lord bring us renewed strength even as we strive for righteousness in these trying times.\n\nKindly take note of our Mass dates and times during the Easter Triduum.\n\nBest wishes\nCommunications",
+      "htmlLink": "http://www.international-catholic-community-heidelberg.com/bulletins/2022-04-10-palm-sunday.html"
+   },
+   "saveAs": "2022-04-10-palm-sunday.markdown"
+}
