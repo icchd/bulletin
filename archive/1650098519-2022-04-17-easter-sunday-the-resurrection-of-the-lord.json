@@ -1,0 +1,50 @@
+{
+   "date": "April 17, 2022",
+   "dateChanged": "2022-04-16 09:29:53 +02:00",
+   "image": {
+      "enabled": true,
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Kirillo-Belozersky_iconostasis_20_-_Harrowing.jpg/451px-Kirillo-Belozersky_iconostasis_20_-_Harrowing.jpg?20201017173830",
+      "layout": "left",
+      "size": 42.5
+   },
+   "title": "Easter Sunday: The Resurrection of the Lord",
+   "text": "Exult, let them exult, the hosts of heaven,\nexult, let Angel ministers of God exult,\nlet the trumpet of salvation\nsound aloud our mighty King's triumph!\n\nBe glad, let earth be glad, as glory floods her,\nablaze with light from her eternal King,\nlet all corners of the earth be glad,\nknowing an end to gloom and darkness.\n\nRejoice, let Mother Church also rejoice,\narrayed with the lightning of his glory,\nlet this holy building shake with joy,\nfilled with the mighty voices of the peoples. [...]\n\nIt is truly right and just,\nwith ardent love of mind and heart\nand with devoted service of our voice,\nto acclaim our God invisible, the almighty Father,\nand Jesus Christ, our Lord, his Son, his Only Begotten.\n\nWho for our sake paid Adam's debt to the eternal Father,\nand, pouring out his own dear Blood,\nwiped clean the record of our ancient sinfulness.\n\nThese, then, are the feasts of Passover,\nin which is slain the Lamb, the one true Lamb,\nwhose Blood anoints the doorposts of believers.\n\nThis is the night,\nwhen once you led our forebears, Israel's children,\nfrom slavery in Egypt\nand made them pass dry-shod through the Red Sea.\n\nThis is the night\nthat with a pillar of fire\nbanished the darkness of sin.\n\nThis is the night\nthat even now throughout the world,\nsets Christian believers apart from worldly vices\nand from the gloom of sin,\nleading them to grace\nand joining them to his holy ones.\n\nThis is the night\nwhen Christ broke the prison-bars of death\nand rose victorious from the underworld.\n\nOur birth would have been no gain,\nhad we not been redeemed.\nO wonder of your humble care for us!\nO love, O charity beyond all telling,\nto ransom a slave you gave away your Son!\n\nO truly necessary sin of Adam,\ndestroyed completely by the Death of Christ!\n\nO happy fault\nthat earned for us so great, so glorious a Redeemer!\n\nO truly blessed night,\nworthy alone to know the time and hour\nwhen Christ rose from the underworld!\n\nThis is the night\nof which it is written:\nThe night shall be as bright as day,\ndazzling is the night for me, and full of gladness.\n\nThe sanctifying power of this night\ndispels wickedness, washes faults away,\nrestores innocence to the fallen, and joy to mourners,\ndrives out hatred, fosters concord, and brings down the mighty. [...]",
+   "father": "Welcome Father Martin",
+   "source": "Text: Excerpt from the Easter Proclamation (\"Exsultet\"), read at the Easter Vigil\nImage: Icon of the Harrowing of Hell, anonymous Russian painter, https://commons.wikimedia.org/wiki/File:Kirillo-Belozersky_iconostasis_20_-_Harrowing.jpg",
+   "reading1": "Acts 10:34a, 37-43",
+   "reading2": "Col 3:1-4",
+   "reading3": "Jn 20:1-9",
+   "newsletter": "infoheidelberg@internationalcatholiccommunity.com",
+   "appointments": [
+      {
+         "epoch": "1650146400000",
+         "date": "17 April",
+         "description": "**Mass of the Resurrection of the Lord starts at 11:30 am**! There will be no mass at 13:00. Bring your own Easter candle to light if you so wish, we will also have a number of smaller ones at hand for you to take home."
+      },
+      {
+         "epoch": "1650146400000",
+         "date": "17 April",
+         "description": "After Mass, we invite you to continue celebrating with our church community for a little while with an **Easter Social** in front of the church. Coffee will be provided! If possible, bring something to eat or drink to share, or consider helping with the set-up (from 10:45 am) and/clean-up.\nFor our little ones, there might be a few Easter eggs waiting to be hunted down :-)"
+      }
+   ],
+   "colors": {
+      "color1": "#BFA440",
+      "color2": "#FFF",
+      "border": "#FFF"
+   },
+   "fonts": {
+      "text": {
+         "family": "Georgia",
+         "lineHeight": 13,
+         "size": 12,
+         "paragraphMargin": 5
+      }
+   },
+   "publish": {
+      "icch": true,
+      "facebook": true,
+      "facebookMessage": "Dear friends,\nour bulletin for Easter is now online. We hope to see some of you at Mass on Sunday (11:30am!) and invite you to bring a little spare time to continue celebrating with the community afterwards at an outdoor Easter social. Consider bringing some snacks to share or helping with the set-up (10:45)!",
+      "htmlLink": "http://www.international-catholic-community-heidelberg.com/bulletins/2022-04-17-easter-sunday-the-resurrection-of-the-lord.html"
+   },
+   "saveAs": "2022-04-17-easter-sunday-the-resurrection-of-the-lord.markdown"
+}
