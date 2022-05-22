@@ -1,0 +1,50 @@
+{
+   "date": "May 22, 2022",
+   "dateChanged": "2022-05-22 02:19:44 +02:00",
+   "image": {
+      "enabled": true,
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/La_nouvelle_J%C3%A9rusalem.jpg/320px-La_nouvelle_J%C3%A9rusalem.jpg\n",
+      "layout": "left",
+      "size": 50
+   },
+   "title": "Sixth Sunday of Easter",
+   "text": "For seven times seven days we celebrate what happened at the Easter Vigil. We need this long time not least to reflect on the diverse, often disparate Easter stories in the Bible. And their polyphony is no wonder. For if what is confessed in the original formulas of the Christian creed and what we still repeat today happened, then the right language must first be found for it. God raised his Jesus, exalted him, transfigured him, snatched him from death, the first Christians said. These were all words they knew from the images of hope in their Jewish faith, words that somehow came close to what they wanted to express - and yet did not really hit the mark. For the old words are supposed to herald something completely new, something that has not yet happened.\nPoets are usually best at this, those old dreamers and utopians who break the familiar and imagine what would happen if... - What if Easter were true, if Good Friday were nothing other than proof of God? A proof of God because death really cannot overwhelm the innermost God, the love for which Jesus stands? Because if he had overpowered it, the love that says to everything: \"I want you to be\", then only nothingness would reign, then we would simply no longer exist. But because the world exists after Good Friday, because we exist, that is why we know in the logic of faith that Easter is true and that God is God. \nBut for this, it needs its special language. It needs a language in images. Such visionary poetry is encountered at the very end of the New Testament: In the Apocalypse, the book of the Secret Revelation. All the second readings of the Easter Sundays in this reading year are taken from it. This book, written in the greatest distress of the young congregation, literally puts all its eggs in one basket against the overpowering appearance of doom: it extends, as it were, the Easter perspective into the present and beyond it to the end of history in the conviction that the God who has shown himself in his Jesus precisely as he has always been in history, namely as the faithful one who carries over every abyss - that he will also now prove his credibility as the one he is, the one he was and the one he will be. That is why the Apocalypse counters the scenario of persecution, fear and violence with a trembling heart, but nevertheless unwaveringly with visions of an Easter world. Its foundations are laid in the Easter Vigil, death and what follows from it is defeated, things are decided, decided for the good. Good will triumph - and hell may rage against it.\nIn the sequence of scenes of his images of hope, the author of the Apocalypse also included the sketch of something like an Easter city, the epitome of the heavenly Jerusalem of which today's second reading speaks. The city, the epitome and symbol of human community, of protection and shelter, exchange and home, becomes, when immersed in Easter, as it were, a single precious stone, radiant and transparent, without darkness from which danger threatened. \nThe wall she has is large and high, protection and salvation, but pierced on all sides by gates, four times three, that is, her twelve according to the sacred number. Walls, then, that literally consist only of gates. The city so open, neither fortress nor prison, that it is a single invitation to enter. The gates bear the names of the twelve tribes of Israel, which have always been God's human letter of invitation to the whole world to dwell near him. And with the names of the twelve apostles - which are nothing other than a renewed confirmation of the message of the twelve tribes - the foundation stones of the city wall are described, so that what he has prepared for them as a home and a goal may be sealed with the seal of God's care for his creatures. \nAnd then the seer sees something that at first irritates and at a second moment can almost become a thorn in the flesh for those later who contemplate his Easter city image, such as we do today. For the seer sees no temple in this city of God. In it, there is no longer a sanctuary, Latin: no sanctuarium, literally translated: no carved-out area that would be withdrawn from the human being in order to remind him of God's presence.\nThe new city no longer needs such a holy of holies, because God himself is its temple. The citizens of the paschal city have come directly to God, have entered into him completely and he into them. Just as Paul literally expresses it when he speaks of his conversion, which was his special Easter experience: I no longer live, but Christ lives in me. This is what happens to all who allow themselves to be drawn into the paschal mystery: God and the Lamb, as the visionary says, that is, the God of the Easter Vigil, who holds all creation in his hands, is omnipresent in the Easter city. For only in him can there be such a city with walls made only of gates, such a fearless openness of all to all, and a glow that needs no lights, not even heavenly lights, because it itself shines from within, made light by the God in it, who wraps himself in light as in a garment, as it says in the 104th Psalm.",
+   "father": "Welcome Father Martin",
+   "source": "Source (shortened): Father Martin Müller SJ (2022)\nImage: The New Jerusalem (Tapestry of the Apocalypse)",
+   "reading1": "Acts 15:1-2, 22-29",
+   "reading2": "Rev 21:10-14, 22-23",
+   "reading3": "Jn 14:23-29",
+   "newsletter": "infoheidelberg@internationalcatholiccommunity.com",
+   "appointments": [
+      {
+         "epoch": "1654380000000",
+         "date": "5 June",
+         "description": "On June 5th, we celebrate the feast of Pentecost. After Mass, we will meet to have a Social Gathering during which we can interact with one another over some finger food. Do come along with your families as well as something to share!"
+      },
+      {
+         "epoch": "1654984800000",
+         "date": "12 June",
+         "description": "The next opportunity to receive the Sacrament of Penance and Reconciliation is June 12th."
+      }
+   ],
+   "colors": {
+      "color1": "#CECA2F",
+      "color2": "#000",
+      "border": "#FFF"
+   },
+   "fonts": {
+      "text": {
+         "family": "Georgia",
+         "lineHeight": 11,
+         "size": 10,
+         "paragraphMargin": 5
+      }
+   },
+   "publish": {
+      "icch": true,
+      "facebook": true,
+      "facebookMessage": "Our bulletin is now online. We hope you enjoy reading it.\nHave a lovely Sunday!",
+      "htmlLink": "http://www.international-catholic-community-heidelberg.com/bulletins/2022-05-22-sixth-sunday-of-easter.html"
+   },
+   "saveAs": "2022-05-22-sixth-sunday-of-easter.markdown"
+}
