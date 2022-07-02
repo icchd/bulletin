@@ -856,8 +856,8 @@ var app = new Vue({
                     try {
                         // got data
                         if (oResponse && oResponse.success) {
-                            app.bulletin.title = oResponse.title;
-                            alert.show("confirm", "Title updated: '" + oResponse.title + "'");
+                            app.bulletin.title = oResponse.result.title;
+                            alert.show("confirm", "Title updated: '" + oResponse.result.title + "'");
 
                             app.historySave("title");
                         }
