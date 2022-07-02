@@ -1,0 +1,50 @@
+{
+   "date": "July 3, 2022",
+   "dateChanged": "2022-07-03 01:09:07 +02:00",
+   "image": {
+      "enabled": true,
+      "src": "https://upload.wikimedia.org/wikipedia/commons/a/a4/70Apostles.jpg",
+      "layout": "left",
+      "size": 50
+   },
+   "title": "Fourteenth Sunday in Ordinary Time",
+   "text": "Sometimes our Lord and Saviour admonishes us with words, sometimes also with deeds. For his deeds are also instructions. By he does something without words, he reveals to us what we are to do. Look, he sends the disciples two by two to preach, because there are two commandments of love: love of God and love of neighbour. Among less than two there can be no love. For one can not say from anybody in the true sense of of the word that he or she feels love for him- or herself.\nBeing truly love, it rather has to direct love towards another. In twos, the Lord sends the disciples to preach. With this act he makes it clear to us, without words, that one who does not have love for his neighbour, may not take over the task of proclamation.\nQuite rightly it goes on to say: \"He sent them before him into every city where he himself wanted to come\". The Lord follows his proclaimers, because the proclamation precedes and the Lord only then comes to the house of our heart when it has been preceded by admonishing words and thus the truth is received in the heart. Isaiah already said to the proclaimers: \"Prepare the way of the Lord, make the paths of our God straight.\" And the Psalmist says: \"Make a way for him who passes over the sunset.\" For above the sunset rose the Lord, for his downfall in the Passion was matched by an even greater  revelation of his glory in the resurrection. Above the sunset ascended the Lord, when the death he suffered, in his resurrection was trampled underfoot. Him who rises above the sunset, we prepare the way, then, as we proclaim his glory to your hearts, so that He Himself may come and touch your hearts with His presence of his love.",
+   "father": "Welcome Father Matthew",
+   "source": "Source: From a sermon by Gregory the Great (Pope, 540 - 604 AD)\nImage: Seventy Apostles",
+   "reading1": "Is 66:10-14c",
+   "reading2": "Gal 6:14-18",
+   "reading3": "Lk 10:1-12, 17-20",
+   "newsletter": "infoheidelberg@internationalcatholiccommunity.com",
+   "appointments": [
+      {
+         "epoch": "1656803834275",
+         "date": "3 July",
+         "description": "We will have our monthly social gathering after Mass. Please bring along some time (and if possible something edible) to share with the community."
+      },
+      {
+         "epoch": "1657404000000",
+         "date": "10 July",
+         "description": "There will be confessions after Mass on July 10th 2022."
+      }
+   ],
+   "colors": {
+      "color1": "#000",
+      "color2": "#FFF",
+      "border": "#FFF"
+   },
+   "fonts": {
+      "text": {
+         "family": "Georgia",
+         "lineHeight": 13,
+         "size": 12,
+         "paragraphMargin": 20
+      }
+   },
+   "publish": {
+      "icch": true,
+      "facebook": true,
+      "facebookMessage": "",
+      "htmlLink": "http://www.international-catholic-community-heidelberg.com/bulletins/2022-07-03-fourteenth-sunday-in-ordinary-time.html"
+   },
+   "saveAs": "2022-07-03-fourteenth-sunday-in-ordinary-time.markdown"
+}
