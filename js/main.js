@@ -2,6 +2,8 @@ var S_TITLE_DATE_FORMAT = "MMMM D, YYYY";
 
 var S_BULLETIN_FACEBOOK_LINK_BASE = "http://www.international-catholic-community-heidelberg.com" ;
 
+var READINGS_API = "http://icch-api.cloudno.de/readings";
+
 var O_APIS = [
     {
         "name": "Cloudno.de",
@@ -790,11 +792,6 @@ var app = new Vue({
             }
         },
         updateReadingFromSunday: function () {
-            function getReading(oResponse, sType) {
-                return oResponse.ReadingGroups[0].Readings.filter(
-                    function (oReading) { return oReading.Type === sType; }
-                )[0];
-            }
             function abbrevReading(sReading) {
                 var aReading = sReading.split(" ");
                 var sBookName = aReading.shift();
@@ -810,58 +807,66 @@ var app = new Vue({
                     return sReading;
                 }
             }
-            var sSelectedSunday = m(app.bulletin.date, "MMMM D, YYYY").format("YYYY-MM-DD");
-            getJson('https://www.ewtn.com/se/readings/readingsservice.svc/day/' + sSelectedSunday + '/en')
+            var sSelectedSunday = m(app.bulletin.date, "MMMM D, YYYY").format("MMDDYY");
+            getJson(`${READINGS_API}/${sSelectedSunday}`)
                 .then(function (oResponse) {
-
                     try {
-                        // erase current readings
-                        [1,2,3].forEach(function (x) {
-                            app.bulletin['reading' + x] = "";
-                        });
-                        // get the first reading
-                        var oReading1 = getReading(oResponse, "Reading 1");
-                        var oReading2 = getReading(oResponse, "Reading 2");
-                        var oReading3 = getReading(oResponse, "Gospel");
-                        if (!oReading2) {
-                            oReading2 = getReading(oResponse, "Psalm");
+                        if (oResponse && oResponse.success) {
+                            // erase current readings
+                            [1,2,3].forEach(function (x) {
+                                app.bulletin['reading' + x] = "";
+                            });
+                            // get the first reading
+                            var sReading1 = oResponse.result.reading1;
+                            var sReading2 = oResponse.result.reading2;
+                            var sReading3 = oResponse.result.gospel;
+                            if (!sReading2) {
+                                sReading2 = oResponse.result.psalm;
+                            }
+
+                            // var sReading1 = abbrevReading(oReading1.Citations[0].Reference);
+                            // var sReading2 = abbrevReading(oReading2.Citations[0].Reference);
+                            // var sReading3 = abbrevReading(oReading3.Citations[0].Reference);
+
+                            app.bulletin.reading1 = sReading1;
+                            app.bulletin.reading2 = sReading2;
+                            app.bulletin.reading3 = sReading3;
+                            alert.show("confirm",
+                                "Updated readings: " + [sReading1, sReading2, sReading3].join(", ")
+                            );
+
+                            app.historySave("reading1");
+                            app.historySave("reading2");
+                            app.historySave("reading3");
+                        } else {
+                            alert.show("error", "Cannot update readings from API");
                         }
-
-                        var sReading1 = abbrevReading(oReading1.Citations[0].Reference);
-                        var sReading2 = abbrevReading(oReading2.Citations[0].Reference);
-                        var sReading3 = abbrevReading(oReading3.Citations[0].Reference);
-
-                        app.bulletin.reading1 = sReading1;
-                        app.bulletin.reading2 = sReading2;
-                        app.bulletin.reading3 = sReading3;
-                        alert.show("confirm",
-                            "Updated readings: " + [sReading1, sReading2, sReading3].join(", ")
-                        );
-
-                        app.historySave("reading1");
-                        app.historySave("reading2");
-                        app.historySave("reading3");
                     } catch (e) {
-                        throw new Error(e);
                         alert.show("error", "Error occurred while getting data for the Sunday");
+                        throw new Error(e);
                     }
                 }, function () {
                     alert.show("error", "Error occurred while getting data for the Sunday");
                 });
         },
         updateTitleFromSunday: function () {
-            var sSelectedSunday = m(app.bulletin.date, "MMMM D, YYYY").format("YYYY-MM-DD");
-            getJson('https://www.ewtn.com/se/readings/readingsservice.svc/day/' + sSelectedSunday + '/en')
+            var sSelectedSunday = m(app.bulletin.date, "MMMM D, YYYY").format("MMDDYY");
+            getJson(`${READINGS_API}/${sSelectedSunday}`)
                 .then(function (oResponse) {
                     try {
                         // got data
-                        app.bulletin.title = oResponse.Title;
-                        alert.show("confirm", "Title updated: '" + oResponse.Title + "'");
+                        if (oResponse && oResponse.success) {
+                            app.bulletin.title = oResponse.title;
+                            alert.show("confirm", "Title updated: '" + oResponse.title + "'");
 
-                        app.historySave("title");
+                            app.historySave("title");
+                        }
+                        else {
+                            alert.show("error", "Cannot update title from API");
+                        }
                     } catch (e) {
-                        throw new Error(e);
                         alert.show("error", "Error occurred while getting data for the Sunday");
+                        throw new Error(e);
                     }
 
                 }, function () {
