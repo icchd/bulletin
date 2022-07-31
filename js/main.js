@@ -2,12 +2,12 @@ var S_TITLE_DATE_FORMAT = "MMMM D, YYYY";
 
 var S_BULLETIN_FACEBOOK_LINK_BASE = "http://www.international-catholic-community-heidelberg.com" ;
 
-var READINGS_API = "http://icch-api.cloudno.de/readings";
+var READINGS_API = "http://ec2-18-204-18-96.compute-1.amazonaws.com:8081/readings";
 
 var O_APIS = [
     {
-        "name": "Cloudno.de",
-        "endpoint": "http://icch-api.cloudno.de/bulletin"
+        "name": "AWS",
+        "endpoint": "http://ec2-18-204-18-96.compute-1.amazonaws.com:8081/bulletin"
     }
 ];
 
