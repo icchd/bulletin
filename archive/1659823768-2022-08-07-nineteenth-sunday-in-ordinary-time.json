@@ -1,0 +1,50 @@
+{
+   "date": "August 7, 2022",
+   "dateChanged": "2022-08-06 10:02:16 +02:00",
+   "image": {
+      "enabled": true,
+      "src": "http://www.jesuswalk.com/luke/images/must-be-prepared-243x300.jpg",
+      "layout": "left",
+      "size": 32.5
+   },
+   "title": "Nineteenth Sunday in Ordinary Time ",
+   "text": "[...] Being a Christian also has to do with a change of view. Christians have the same life to live as everyone else, the same happiness, the same hardship. But everything that comes into being, that passes away, that is lived and suffered, still has something ahead of it. Everything we do and leave behind does not flow indifferently and endlessly, but goes towards a future. \"The Son of Man is coming\", the Gospel says for this. By this it means: Everything enters once into an immediate presence of God.\n\nThis makes what we live and create temporary. But at the same time it gives it external weight, because when God comes to meet us as the future, it is not indifferent what we bring with us into the encounter with him. Moving towards this future therefore means living awake in the here and now, so that I may now acquire what will one day endure.\n\nSo do we have to earn eternity - and ultimately spend our whole lives worrying whether what we have brought together will be enough? The Gospel sees it differently: Blessed are the servants whom the Lord finds awake when he comes. Amen, I say to you, he will gird himself, make them sit down at the table and serve them in turn.\n\nWherever a master comes home, he has ordered his servants to stay awake so that they can wait on him when he returns. With God it is the other way round. Everyone who waits for him, who has not forgotten him, is served by God. When one day Jesus approaches the hated tax collector Zacchaeus, not to give him a telling off, but to visit him as if he were a good friend, he makes visible in human gestures what today's Gospel promises to those who stay awake. What you have brought together, what you have to offer at the\nend of the day - humanly speaking - is not important. What matters is that you have reckoned with God - however hiddenly - throughout your life. You will experience what someone once said in prayer:\n\nI set off to meet you, \nbut already I saw that you were coming to meet me.\n\nI wanted to say to you: I love you,\nbut already I heard you whisper: You are dear to me.\n\nI wanted to ask you for forgiveness,\nbut I learned that you had already forgiven me.\n\nI wanted to call you father,\nbut I heard you call: My child!\n\nMy God, I will never be the first.\nYou always come before me to follow me.\n\nGod is obliging. That is our future. How good, therefore, that I do not forget him now. He does not reward me for my performance, because he knows how often I am weak and fail. But he rewards my patience with him, my faithful hope in him. In abundance. [...]",
+   "father": "Welcome Father Martin",
+   "source": "Source of reflection: excerpt from a homily by Father Martin Müller SJ (2022)\nSource of image: \"Must be prepared\", by unknown artist, via http://www.jesuswalk.com/luke/images/must-be-prepared-243x300.jpg",
+   "reading1": "Wis 18:6-9",
+   "reading2": "Heb 11:1-2, 8-19",
+   "reading3": "Lk 12:32-48",
+   "newsletter": "infoheidelberg@internationalcatholiccommunity.com",
+   "appointments": [
+      {
+         "epoch": "1659823393223",
+         "date": "7 August",
+         "description": "This month's \"Social Sunday\" with **Children's Church** parallel to the Mass, and a **social gathering** afterwards. Consider helping with the set-up (from 12:30 on) and/or bring something edible to share with the community if possible."
+      },
+      {
+         "epoch": "1661032800000",
+         "date": "21 August",
+         "description": "Our monthly opportunity for **confessions** will be moved to this Sunday - as usual after Mass."
+      }
+   ],
+   "colors": {
+      "color1": "#2D4586",
+      "color2": "#FFF",
+      "border": "#FFF"
+   },
+   "fonts": {
+      "text": {
+         "family": "Georgia",
+         "lineHeight": 14,
+         "size": 12,
+         "paragraphMargin": 5
+      }
+   },
+   "publish": {
+      "icch": true,
+      "facebook": true,
+      "facebookMessage": "Dear friends, find our bulletin for this Sunday, August 7, now online.\nIf you are around, join us tomorrow at Mass - with Childrens' Church for the younger members - and a social gathering afterwards! ",
+      "htmlLink": "http://www.international-catholic-community-heidelberg.com/bulletins/2022-08-07-nineteenth-sunday-in-ordinary-time.html"
+   },
+   "saveAs": "2022-08-07-nineteenth-sunday-in-ordinary-time.markdown"
+}
