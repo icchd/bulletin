@@ -1,0 +1,45 @@
+{
+   "date": "February 12, 2023",
+   "dateChanged": "2023-02-11 08:39:50 +02:00",
+   "image": {
+      "enabled": true,
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Holy_Wisdom_%2816th_c.%2C_Vologda_museum%29.jpg/367px-Holy_Wisdom_%2816th_c.%2C_Vologda_museum%29.jpg",
+      "layout": "left",
+      "size": 50
+   },
+   "title": "Sixth Sunday in Ordinary Time",
+   "text": "Today’s scripture readings engage us in a reflection on the nature of sin and law, and they begin with a biblical author for whom the Torah and its commandments were life-defining.  We hear from this author, Jesus ben-Sira, on Sundays at least twice each year. His advice is sometimes quite specific, for instance, when we read Sirach on the feast of the Holy Family, and he teaches us about respect for one’s parents.  On other occasions Sirach’s teaching concerns broad foundational principles, and that is the case today.\n\nWe read: “If you choose you can keep the commandments, they will save you… No one does he command to act unjustly, to none does he give license to sin” (Sir 15:15, 20). The commands of God, whether expressed in the Torah or in the teaching of Jesus, are intended for our good—“they will save you”—and lead us to the fullest possible realization of our human nature and dignity. This good aim and intention of God’s commands is something we can attain by the strength of God’s grace, the guidance of the Lord’s instruction, and our own human freedom.\n\nSirach’s point now becomes clear: when we turn against God’s commands and sin we have no one else to blame, because we are free: “Before man are life and death, good and evil, whichever he chooses shall be given him” (Sir 15:17). It may seem frustrating that God leaves open the possibility of us making evil decisions and sinning, but in fact what God is doing is allowing us to share in his own perfect freedom, and thus to play a role in our own salvation—an astounding honor. The Psalmist confirms this by exclaiming, “Blessed are they who follow the law of the Lord!” (Ps 119:1).\n\nHaving been reminded by Sirach of the good and constructive purpose of law—guiding us toward our ultimate good—we now hear our Lord himself engage in a discourse on law and morality in the Gospel. Today’s teaching from Jesus is drawn from his famous Sermon on the Mount, which we also heard from last week and which will conclude at next Sunday’s mass. He opens by telling his hearers: “Do not think that I have come to abolish the law or the prophets. I have come not to abolish but to fulfill. Amen, I say to you, until heaven and earth pass away, not the smallest letter or the smallest part of a letter will pass from the law, until all things have taken place” (Matt 5:17-18).\n\nJesus thus affirms the value of God’s commands while at the same time pointing to what lies beyond them: the fact that he himself will fulfill them and thus live a truly righteous life. Not only that, but Jesus will share the perfect righteousness which he alone manifests with all those who put their faith in him. In fact, he tells his listeners that their righteousness must go beyond that of the Pharisees—a tall order—yet it will be the righteousness of Christ acting within them, not a righteousness of their own making or doing: “Unless your righteousness surpasses that of the scribes and Pharisees, you will not enter into the kingdom of heaven” (Matt 5:20).\n\nRejoicing in the gift of freedom by which we follow God’s law and by which we find our righteousness in Jesus, let us resolve to turn away from sin and to joyfully answer the command with which he concludes the Sermon on the Mount: “be perfect, just as your heavenly Father is perfect” (Matt 5:48).",
+   "father": "Welcome Father Daniel",
+   "source": "Source: Father Edward Mazich, O.S.B., https://saintvincentarchabbey.org/sunday_homilies/6th-sunday-of-ordinary-time/\nImage:  Icon of Holy Wisdom (\"Novgorod type\"), from the \"warm\" church (heated winter church)of St. George in Vologda (late 16 century)",
+   "reading1": "Sir 15:15-20",
+   "reading2": "1 Cor 2:6-10",
+   "reading3": "Mt 5:17-37",
+   "newsletter": "infoheidelberg@internationalcatholiccommunity.com",
+   "appointments": [
+      {
+         "epoch": "1676156400000",
+         "date": "12 February",
+         "description": "There will be confessions in English before (12.30) and after Mass."
+      }
+   ],
+   "colors": {
+      "color1": "#3BBD00",
+      "color2": "#FFF",
+      "border": "#FFF"
+   },
+   "fonts": {
+      "text": {
+         "family": "Georgia",
+         "lineHeight": 12,
+         "size": 11,
+         "paragraphMargin": 5
+      }
+   },
+   "publish": {
+      "icch": true,
+      "facebook": true,
+      "facebookMessage": "",
+      "htmlLink": "http://www.international-catholic-community-heidelberg.com/bulletins/2023-02-12-sixth-sunday-in-ordinary-time.html"
+   },
+   "saveAs": "2023-02-12-sixth-sunday-in-ordinary-time.markdown"
+}
