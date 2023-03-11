@@ -1,0 +1,50 @@
+{
+   "date": "March 12, 2023",
+   "dateChanged": "2022-12-18 01:35:13 +02:00",
+   "image": {
+      "enabled": true,
+      "src": "https://diglib.library.vanderbilt.edu/cdri/jpeg/Mafa014.jpg",
+      "layout": "left",
+      "size": 55
+   },
+   "title": "Third Sunday of Lent",
+   "text": "####Cravings\n\nThe readings for Sunday speak of a key desire within us, a longing, a craving. The best symbol for this desire is the thirst for water. [...]\n\nYou can fast from food for but not from water. In the Gospel Jesus uses a water as a symbol to the Samaritan woman about slaking her thirst forever, about putting a flowing fountain of water right inside her. He is talking about the longing each of us has deep within for “the love poured forth from God in Jesus through the Holy Spirit.” That is the way Paul puts it in the second reading. This need of ours is much like thirst except that it is more subtle. We use many other substitutes to fill it. Food, work, looks, accomplishment, alcohol, other persons, sexual satisfaction, and so on. They do not work. They leave us croaking the famous line \"Is that all there is?\"\n\nIt is not. We are constructed in such a way that without real love we die. St. Ignatius points to this fact again and again. Our small selves are constructed with a soul that can open wide enough to admit even the very presence of God himself. And God is able to become whatever size will fit us. Tagore, a non-Christian poet, put it this way:\n\n*“What is there but the sky, O Sun, that can hold thine image? I dream of thee, but to serve thee I can never hope,” the dewdrop wept and said; “I am too small to take thee unto me, great lord, and my life is all tears.”*\n\n*“I illumine the limitless sky, yet I can yield myself up to a tiny drop of dew,” thus the Sun said; “I shall become but a sparkle of light and fill you, and your little life will be a laughing orb.”*\n\nNothing else can slake our heart’s thirst for God except God. Jesus, take your staff, strike our hearts of stone, and cause a fountain of God-love to spring forth within us.\n\nWe pray with the Samaritan woman, “Sir, give me this water.”",
+   "father": "Welcome Father Chinedu",
+   "source": "Source of reflection: © 2023, Father John Foley, SJ, https://liturgy.slu.edu/3LentA031223/reflections_foley.html\nSource of image: JESUS MAFA. Jesus and the Samaritan Woman, from Art in the Christian Tradition, Vanderbilt Divinity Library, Nashville, TN. https://diglib.library.vanderbilt.edu/act-imagelink.pl?RC=48282 [retrieved March 11, 2023]. Original source: http://www.librairie-emmanuel.fr (contact page: https://www.librairie-emmanuel.fr/contact). ",
+   "reading1": "Ex 17:3-7",
+   "reading2": "Rom 5:1-2, 5-8",
+   "reading3": "Jn 4:5-42",
+   "newsletter": "infoheidelberg@internationalcatholiccommunity.com",
+   "appointments": [
+      {
+         "epoch": "1678575600000",
+         "date": "12 March",
+         "description": "Opportunity to receive the Sacrament of Reconciliation (confession) **before** Mass, from 12:20pm --> Father Chinedu Nweke"
+      },
+      {
+         "epoch": "1679785200000",
+         "date": "26 March",
+         "description": "Additional opportunity to receive the Sacrament of Reconciliation during Lent, **after** Mass --> Father Eckhard"
+      }
+   ],
+   "colors": {
+      "color1": "#797BD2",
+      "color2": "#FFF",
+      "border": "#FFF"
+   },
+   "fonts": {
+      "text": {
+         "family": "Georgia",
+         "lineHeight": 15,
+         "size": 12.5,
+         "paragraphMargin": 5
+      }
+   },
+   "publish": {
+      "icch": true,
+      "facebook": true,
+      "facebookMessage": "Dear friends, our bulletin for March 12 is now online.\n\nIn order to make the Sacrament of Reconciliation more available during the Lenten season, we will have two scheduled opportunities for confessions this month - one being this Sunday BEFORE Mass (from 12:20), the other following in two week's time, March 26, as usual after Mass.",
+      "htmlLink": "http://www.international-catholic-community-heidelberg.com/bulletins/2023-03-12-third-sunday-of-lent.html"
+   },
+   "saveAs": "2023-03-12-third-sunday-of-lent.markdown"
+}
