@@ -6,6 +6,10 @@ var READINGS_API = "https://icch-api.glitch.me/readings";
 
 var O_APIS = [
     {
+        "name": "Render",
+        "endpoint": "https://icch-api.onrender.com/bulletin"
+    },
+    {
         "name": "GLITCH",
         "endpoint": "https://icch-api.glitch.me/bulletin"
     },
