@@ -1,0 +1,55 @@
+{
+   "date": "April 20, 2025",
+   "dateChanged": "2025-04-19 12:04:35 +02:00",
+   "image": {
+      "enabled": true,
+      "src": "https://diglib.library.vanderbilt.edu/cdri/jpeg/Koenig-marym90j897y6.jpg",
+      "layout": "left",
+      "size": 55
+   },
+   "title": "Easter Sunday",
+   "text": "###The Exsultet: \n\n**The Proclamation of Easter**\n\nExult, let them exult, the hosts of heaven,\nexult, let Angel ministers of God exult,\nlet the trumpet of salvation\nsound aloud our mighty King's triumph!\n\nBe glad, let earth be glad, as glory floods her,\nablaze with light from her eternal King,\nlet all corners of the earth be glad,\nknowing an end to gloom and darkness.\n\nRejoice, let Mother Church also rejoice,\narrayed with the lightning of his glory,\nlet this holy building shake with joy,\nfilled with the mighty voices of the peoples.\n[...]\n\nThis is the night,\nwhen once you led our forebears, Israel's children,\nfrom slavery in Egypt\nand made them pass dry-shod through the Red Sea.\n\nThis is the night\nthat with a pillar of fire\nbanished the darkness of sin.\n\nThis is the night\nthat even now, throughout the world,\nsets Christian believers apart from worldly vices\nand from the gloom of sin,\nleading them to grace\nand joining them to his holy ones.\n\nThis is the night,\nwhen Christ broke the prison-bars of death\nand rose victorious from the underworld.\n[...]\n\nThis is the night\nof which it is written:\nThe night shall be as bright as day,\ndazzling is the night for me,\nand full of gladness.\n\nThe sanctifying power of this night\ndispels wickedness, washes faults away,\nrestores innocence to the fallen, and joy to mourners,\ndrives out hatred, fosters concord, and brings down the mighty.\n[...]\n\nChrist your Son,\nwho, coming back from death's domain,\nhas shed his peaceful light on humanity,\nand lives and reigns for ever and ever.",
+   "father": "Welcome Father Eckhard",
+   "source": "Source of text: Shortened from the Easter \"Exsultet\", via https://www.usccb.org/prayer-worship/liturgical-year/easter/easter-proclamation-exsultet\nSource of image: Koenig, Peter. Mary Meets Jesus After the Resurrection, from Art in the Christian Tradition, a project of the Vanderbilt Divinity Library, Nashville, TN. https://diglib.library.vanderbilt.edu/act-imagelink.pl?RC=58538 [retrieved April 19, 2025]. Original source: Peter Winfried (Canisius) Koenig, https://www.pwkoenig.co.uk/.",
+   "reading1": "Acts 10:34a, 37-43",
+   "reading2": "Col 3:1-4",
+   "reading3": "John 20:1-9",
+   "newsletter": "infoheidelberg@internationalcatholiccommunity.com",
+   "appointments": [
+      {
+         "epoch": "1745100000000",
+         "date": "20 April",
+         "description": "Our Mass of the Resurrection on Easter Sunday starts at **11:00**am! If you'd like to take the light of the Resurrection home, make sure to bring a candle to light it at the Easter candle. A number of small candles will also be provided for that purpose, albeit a very limited one."
+      },
+      {
+         "epoch": "1745100000000",
+         "date": "20 April",
+         "description": "**Easter Social Gathering**: We invite you to join us in celebrating the Resurrection together as a community after Mass.\nKindly consider helping with the set-up (as of 10:30) or clean-up, and *bring some food to share* with everyone if possible!"
+      },
+      {
+         "epoch": "1745186400000",
+         "date": "21 April",
+         "description": "At ICCH, there won't be Mass in English on the **Second Day of Easter**. If you're interested in finding a Mass on that holy day of obligation, please refer to the City Church: https://www.stadtkirche-heidelberg.de/gottesdienste/"
+      }
+   ],
+   "colors": {
+      "color1": "#D2C579",
+      "color2": "#3D862D",
+      "border": "#FFF"
+   },
+   "fonts": {
+      "text": {
+         "family": "Georgia",
+         "lineHeight": 13,
+         "size": 12,
+         "paragraphMargin": 5
+      }
+   },
+   "publish": {
+      "icch": true,
+      "facebook": true,
+      "facebookMessage": "Dear friends,\njoin us on Easter Sunday in celebration of the Resurrection of the Lord!\n\nKindly note: Mass starts at 11AM. There'll be a social gathering afterwards, bring food to share if possible.",
+      "htmlLink": "http://www.international-catholic-community-heidelberg.com/bulletins/2025-04-20-easter-sunday.html"
+   },
+   "saveAs": "2025-04-20-easter-sunday.markdown"
+}
