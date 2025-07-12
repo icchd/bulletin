@@ -1,0 +1,50 @@
+{
+   "date": "July 13, 2025",
+   "dateChanged": "2025-07-12 11:48:54 +02:00",
+   "image": {
+      "enabled": true,
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Th%C3%A9odule-Augustin_Ribot_-_The_Good_Samaritan_-_WGA19393.jpg/960px-Th%C3%A9odule-Augustin_Ribot_-_The_Good_Samaritan_-_WGA19393.jpg?20110625083420",
+      "layout": "left",
+      "size": 50
+   },
+   "title": "Fifteenth Sunday in Ordinary Time ",
+   "text": "###Beloved of God\n\nIf we listen carefully to the readings this Sunday, we will hear the whole Christian and Catholic life very gently stated [...]\nIn the First Reading Moses describes how simple God's command is. I would like to quote his words because they are beautiful.\n\n*God’s command is not too mysterious and remote for you. It is not up in the sky, that you should say, ‘who will go up in the sky to get it for us and tell us of it, that we may carry it out?’ Nor is it across the sea, that you should say, ‘who will cross the sea to get it for us and tell us of it, that we may carry it out?’*\n\nThe commandment of the Lord is very near to us, already in our hearts and in our mouths. We have only to carry it out.\n\nBut what is that commandment?\n\nIn the Gospel, a lawyer is very interested in this question. He asks Jesus to collapse the whole law down to a single saying. Since the answer is, to quote, “not too mysterious and remote,” Jesus asks the lawyer what he thinks it is. The man says, by rote:\n\n*You shall love the Lord, your God,\nwith all your heart,\nwith all your being,\nwith all your strength,\nand with all your mind,\nand your neighbor as yourself.*\n\n“You have answered correctly,” Jesus says. “Do this and you will live.” But the man wants specifics. He is digging. He asks, who is my neighbor?\n\nWhat would be your answer to this question, which seems to be the crux of the matter? Take your time.\n\nFor his part, Jesus is trying to get the man (and you?) to find a simple answer without being handed one. As before, Jesus does not respond directly, but this time gives the lawyer a parable to chew on:\n\nA man fell victim to robbers. They beat him terribly, took his money, and left him lying in the road, half-dead. A priest (an Israelite) saw this wounded man on the road and passed right by, averting his eyes. A Levite (an Israelite) did the same thing. Then along came a Samaritan, who theoretically should have been an enemy of the Israelis. But he did not avert his eyes or cross to the other side of the road.\n\n*He approached the victim,\npoured oil and wine over his wounds and bandaged them.\nThen he lifted him up on his own animal,\ntook him to an inn, and cared for him.\nThe next day he took out two silver coins\nand gave them to the innkeeper with the instruction,\n‘Take care of him.’*\n\nNow the lawyer starts to get it. Jesus asks him, “which of these three, in your opinion, was neighbor to the robbers' victim?” and the lawyer says immediately, “the one who treated him with mercy.” Jesus answers, “Go and do likewise.”\n\nJesus also “does likewise” with you and me. He keeps working with us, trying to get us to see the simple answer that hides inside us. God has given us an open heart. Help those in need. If only you would let your heart receive God’s love and pass it on to his other people!\n\nThis is not too mysterious or remote. Start now. Become what you were made to be. It is written within the law and within you.\n",
+   "father": "Welcome Father Daniel",
+   "source": "Source of reflection: © 2025, John B. Foley, SJ, https://liturgy.sluhostedsites.org/15OrdC071325/reflections_foley.html\nSource of image: Augustin Théodule Ribot, \"The Good Samaritan\" (1870), via Wikimedia Commons",
+   "reading1": "Deut 30:10-14",
+   "reading2": "Col 1:15-20",
+   "reading3": "Lk 10:25-37",
+   "newsletter": "infoheidelberg@internationalcatholiccommunity.com",
+   "appointments": [
+      {
+         "epoch": "1752358054387",
+         "date": "13 July",
+         "description": "It's our community's **last Mass at St. Michael**! We want to give thanks with you for the past 12 years of ICCH there, and pray for a smooth transition to our new home in Wieblingen. After Mass, join us for the **social gathering** - bringing food to share and help with setting up half an hour before Mass very much appreciated!"
+      },
+      {
+         "epoch": "1752962400000",
+         "date": "20 July",
+         "description": "ICCH celebrates its **first Mass at our new church** St. Bartholomäus, Wieblingen - at 1pm just as we're used to. We are joined by the leading priest of the City Church and will be officially welcomed by the community at Wieblingen as well."
+      }
+   ],
+   "colors": {
+      "color1": "#194D33",
+      "color2": "#FFF",
+      "border": "#FFF"
+   },
+   "fonts": {
+      "text": {
+         "family": "Georgia",
+         "lineHeight": 12,
+         "size": 11,
+         "paragraphMargin": 5
+      }
+   },
+   "publish": {
+      "icch": true,
+      "facebook": true,
+      "facebookMessage": "It's time to say goodbye!\nJoin us for our last Mass at St. Michael's, and for a social gathering afterwards!",
+      "htmlLink": "http://www.international-catholic-community-heidelberg.com/bulletins/2025-07-13-fifteenth-sunday-in-ordinary-time.html"
+   },
+   "saveAs": "2025-07-13-fifteenth-sunday-in-ordinary-time.markdown"
+}
