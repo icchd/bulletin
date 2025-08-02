@@ -1,0 +1,50 @@
+{
+   "date": "August 3, 2025",
+   "dateChanged": "2025-08-02 06:07:39 +02:00",
+   "image": {
+      "enabled": true,
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Rembrandt_-_The_Parable_of_the_Rich_Fool.jpg/330px-Rembrandt_-_The_Parable_of_the_Rich_Fool.jpg",
+      "layout": "left",
+      "size": 50
+   },
+   "title": "Eighteenth Sunday in Ordinary Time",
+   "text": "“Vanity of vanities, says Qoheleth, vanity of vanities!  All things are vanity!” (Qoh 1:2).  I am delighted to have a reading this Sunday from the Book of Ecclesiastes, also known as the Book of Qoheleth.  I am pleased first and foremost since this book conveys much wisdom and prudent advice, and it does so in a manner that may appeal to people who otherwise would have little to do with the Bible or religion.  I am also glad to hear from Qoheleth this Sunday because, sadly, the words of this book are rarely heard in Church, and many Catholics, to be honest, have never heard of it at all.\n\nPerhaps because of its matter-of-fact realism and its honest acceptance of the darker side of human life Qoheleth is not the sort of biblical book to attract readers looking for a quick inspiration for the day.  If one goes deeper, however, one can find the biblical author thinking and writing in a remarkably frank way that does justice to many of the thoughts that weigh on our hearts and that we might feel are not “worthy” or “pious” enough to be allowed into our prayerful dialogue with God.\n\nToday’s passage from Qoheleth highlights the vanity or futility that strikes rich and poor alike when they live in a manner disconnected from loving faith in God.  For the rich the futility arrives when they realize—like the rich man in today’s Gospel parable—that all their stored-up wealth means nothing in view of eternity, and that often it only causes jealousy and division in the present life.  For the poor the seeming vanity of life emerges from the endless struggle simply to make ends meet and to find meaning in a life which appears to be a continual obstacle course.\n\nAs Jesus urges in the Gospel, we can indeed find a way beyond this vanity by placing our trust, like Qoheleth ultimately does (see Qoh 12:13-14), not in pleasure or wealth or knowledge, but “in what matters to God” (Luke 12:21).  What, then, does “what matters to God” mean?  For an answer to this question we can turn to the second reading for today, from the Letter to the Colossians.  There Saint Paul tells us: “Put to death, then, the parts of you that are earthly: immorality, impurity, passion, evil desire, and the greed that is idolatry.  Stop lying to one another, since you have taken off the old self with its practices and have put on the new self, which is being renewed, for knowledge, in the image of its creator” (Col 3:5, 9-10).\n\nTo “put on the new self” in Christ and thus to be conformed ever more “in the image of [our] creator” is what will bring the life-defining joy and peace that Qoheleth sought, and we today seek, amid the many vanities of our world.  As we enter this peace by focusing ourselves on “what matters to God” let us humbly take heed of poignant words spoken by a biblical commentator regarding the Book of Qoheleth, and the way in which it among all books of the Bible speaks to many people disaffected by religion today—and perhaps speaks to a hidden spiritual recess within each one of us:\n\n“For many modern agnostics this book is the last bridge to the Bible. Some Christians today find in. Qoheleth a kind of back door—at once sinister and highly esteemed—through which their minds can admit those skeptical and melancholy sentiments that would be refused entry at portals where cultivation of virtue and belief in the afterlife are inscribed on the lintel.” —N. Lohfink, Qoheleth (Minneaopolis: Augsburg Fortress, 2003), 1.",
+   "father": "Welcome Father Eckhard",
+   "source": "Source: Father Edward Mazich, O.S.B., https://saintvincentarchabbey.org/sunday_homilies/18th-sunday-of-the-year-2/\nImage: Rembrandt: The Parable of the Rich Fool",
+   "reading1": "Eccl 1:2; 2:21-23",
+   "reading2": "Col 3:1-5, 9-11",
+   "reading3": "Lk 12:13-21",
+   "newsletter": "infoheidelberg@internationalcatholiccommunity.com",
+   "appointments": [
+      {
+         "epoch": "1754172000000",
+         "date": "3 August",
+         "description": "Our first \"Social Sunday\" (aka first Sunday of the month) in St. Bartholomäus - due to it already being in the holiday season, with many of us travelling, we will not have an extensive social gathering as usual. Please bring along some cookies or any light pastry of your choice to go with coffee. We look forward to meeting you in our new meeting space!"
+      },
+      {
+         "epoch": "1754172000000",
+         "date": "3 August",
+         "description": "There will be Children's Church during Mass. Parents are invited to bring their children along."
+      }
+   ],
+   "colors": {
+      "color1": "#40BF80",
+      "color2": "#FFF",
+      "border": "#FFF"
+   },
+   "fonts": {
+      "text": {
+         "family": "Georgia",
+         "lineHeight": 12,
+         "size": 11,
+         "paragraphMargin": 5
+      }
+   },
+   "publish": {
+      "icch": true,
+      "facebook": true,
+      "facebookMessage": "",
+      "htmlLink": "http://www.international-catholic-community-heidelberg.com/bulletins/2025-08-03-eighteenth-sunday-in-ordinary-time.html"
+   },
+   "saveAs": "2025-08-03-eighteenth-sunday-in-ordinary-time.markdown"
+}
