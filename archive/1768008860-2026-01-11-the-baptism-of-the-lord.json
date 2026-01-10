@@ -1,0 +1,50 @@
+{
+   "date": "January 11, 2026",
+   "dateChanged": "2026-01-10 12:43:40 +02:00",
+   "image": {
+      "enabled": true,
+      "src": "https://diglib.library.vanderbilt.edu/cdri/jpeg/Mafa021.jpg",
+      "layout": "left",
+      "size": 50
+   },
+   "title": "The Baptism of the Lord",
+   "text": "**Gospel Summary**\n\nWhen Jesus presents himself for baptism, John the Baptist protests that he is not worthy to perform this ritual for one greater than himself. But Jesus insists and John relents. This insistence of Jesus seems to be based upon his desire to join all those in Israel, who are not just renouncing their sinfulness (which Jesus would not need to do), but are also declaring their readiness to receive the Lord in whatever manner he may wish to come. After all, the baptism of Jesus is not just an episode in his private life; it is the invitation of a whole people to accept God’s initiative for salvation.\n\nIn Matthew’s account of Jesus’ baptism, only the consequences are actually described and they are very rich in symbolism. The opening of the heavens clears the way for God to re-establish contact with his Chosen People. Thus, the heavens are opened from the other side as God eagerly responds to the presence of his appointed Messiah.\n\n“The Spirit of God descending like a dove and coming upon him” is the signal for a new creation. This same “Spirit” had hovered over the deep in the original creation (Genesis 1:2); and a new beginning was signaled again to Noah when the dove returned to him after the flood (Genesis 8:11). This means that the coming of Jesus also represents a new beginning. History will never be the same again.\n\nThe nature of the new creation is revealed in the final climactic words from heaven. When Jesus is called God’s “beloved Son,” it means that this new world will be filled with the love of God, radiating from his Son, who will become, in a sense, the embodiment of God’s love among us.\n\n**Life Implications**\n\nIn today’s Catholic practice, the meaning of baptism is expressed by the sponsors with the assumption that the baptized child will, when old enough, be expected to accept in his or her own name the profound commitments that constitute the reality of a Christian life. The first reality is a discovery and rejection of the “big lie” of Satan, the “father of lies” (John 8:44). This ultimate lie is the belief that selfishness is the path to happiness. Conversely, the ultimate truth is therefore a profound recognition and commitment to a life or love and unselfishness. This pate alone, though difficult at times, is the only way to true happiness.\n\nIn this way, God’s heavenly realm is opened to us and the creative Spirit calls us to a new kind of life. The possibilities of this new existence are contained in the words of the Father, “You are my beloved Son,” now understood as spoken to us also. For in our baptism we become children of God and thus join Jesus in the family of God.\n\nThis fact has two important consequences. First of all, we are told by God that we are his beloved children and this affirmation, heard throughout our lives, liberates us from the bondage of fear and guilt and doubt. Perhaps the most perfect prayer for Christians is, therefore, to ask God to tell us what we need to hear. His answer to each of us will be, “You are my beloved child.” There are no words in this world that we need to hear more than these words!",
+   "father": "Welcome Father Loice",
+   "source": "Source: Demetrius R. Dumm, O.S.B, https://saintvincentarchabbey.org/sunday_homilies/the-baptism-of-the-lord-4/\nImage: \tJESUS MAFA. John baptizes Jesus, from Art in the Christian Tradition, a project of the Vanderbilt Divinity Library, Nashville, TN. https://diglib.library.vanderbilt.edu/act-imagelink.pl?RC=48290 [retrieved January 9, 2026]. Original source: http://www.librairie-emmanuel.fr (contact page: https://www.librairie-emmanuel.fr/contact).",
+   "reading1": "Is 42:1-4, 6-7",
+   "reading2": "Acts 10:34-38",
+   "reading3": "Mt 3:13-17",
+   "newsletter": "infoheidelberg@internationalcatholiccommunity.com",
+   "appointments": [
+      {
+         "epoch": "1768086000000",
+         "date": "11 January",
+         "description": "As announced, this Sunday is a special one for our ICCH community as we mark the start of the year with a New Year's reception held in collaboration with the German speaking community of St. Bartholomäus. This takes place right after our 1pm Mass, starting with a brief dialogue session in a Q&A format called \"10 questions to... ICCH\" with the primary objective of getting to know each other better. From then on, we move upstairs to our Social Gathering, the first of this year.\nPlease bring enough fingerfood to share with one another (a little more than we usually do so there is enough for everybody); something from your home country would be splendid! Also, we count on your usual volunteering support in setting up (12.30 latest)."
+      },
+      {
+         "epoch": "1768086000000",
+         "date": "11 January",
+         "description": "There will be Children's Church on Sunday. We invite parents to bring along their children as we go through the readings in a child-friendly language."
+      }
+   ],
+   "colors": {
+      "color1": "#CECA2F",
+      "color2": "#000",
+      "border": "#FFF"
+   },
+   "fonts": {
+      "text": {
+         "family": "Georgia",
+         "lineHeight": 12,
+         "size": 11,
+         "paragraphMargin": 5
+      }
+   },
+   "publish": {
+      "icch": true,
+      "facebook": true,
+      "facebookMessage": "",
+      "htmlLink": "http://www.international-catholic-community-heidelberg.com/bulletins/2026-01-11-the-baptism-of-the-lord.html"
+   },
+   "saveAs": "2026-01-11-the-baptism-of-the-lord.markdown"
+}
