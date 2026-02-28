@@ -1,0 +1,45 @@
+{
+   "date": "March 1, 2026",
+   "dateChanged": "2026-02-28 07:30:31 +02:00",
+   "image": {
+      "enabled": true,
+      "src": "https://diglib.library.vanderbilt.edu/cdri/jpeg/Mafa038.jpg",
+      "layout": "left",
+      "size": 50
+   },
+   "title": "Second Sunday of Lent",
+   "text": "Every year on the Second Sunday of Lent we hear the story of the Transfiguration. That is not accidental. Last Sunday we were in the desert with Jesus being tempted. This Sunday we are on a mountain, and everything changes — His face shines, His clothes become dazzling white, and the Father’s voice says, “This is my beloved Son… listen to Him.” Why give us this Gospel so early in Lent? Because Lent can start to feel like it is mostly about what we are giving up. We focus on sacrifice, we examine our sins, and we take on disciplines. If we are not careful, it can begin to feel like we are simply working on ourselves. So before we go any further, the Church lifts our eyes and reminds us where this is going.\n\nIn the first reading, God tells Abram, “Go forth from your land… to a land I will show you.” There are no details, no map, no timeline — only a promise. Abram has to leave what is familiar before he sees what is promised. That is faith, and that is Lent. God asks us to leave something behind — a habit, a resentment, a pattern that keeps us from growing. We do not always see immediately what we are gaining. We are simply asked to trust.\n\nSt. Paul tells Timothy, “Bear your share of hardship for the Gospel.” Following Christ involves perseverance. It means staying faithful when things are not easy. But Paul also reminds him that Christ has destroyed death and brought life and immortality to light. Hardship is not the destination; it is part of the road.\n\nIn the Gospel, right before the Transfiguration, Jesus tells the disciples that He is going to suffer and die, and that they must take up their cross. That must have been difficult to hear. They left everything to follow Him, and now He is speaking about suffering. So He takes Peter, James, and John up a mountain and allows them to see who He truly is. For a moment, they see His glory. The same Jesus who will be arrested, mocked, and crucified is the beloved Son of the Father. He shows them this so that when they stand at the foot of the cross, they will remember the mountain. When everything looks confusing, they will remember what they saw.\n\nLent is not an end in itself. It is a preparation. The Transfiguration reminds us that the Christian life is not only about discipline; it is about transformation. On the mountain, Jesus did not become something new. He revealed what was already true. That is what God desires for us. Through prayer, fasting, and charity, God is not trying to make us someone else. He is drawing out what He has already placed within us. The Father’s instruction is simple and direct: “Listen to Him.” Listen when He asks you to forgive. Listen when He asks you to trust. Listen when He asks you to let go.\n\nPeter wants to stay on the mountain. “Let us make three tents,” he says. That makes sense. We all prefer the moments that feel clear — when faith seems steady and things make sense. But they cannot remain there. They have to come down. The Christian life is lived in ordinary days — in responsibilities, conversations, small sacrifices, parish life, and family life. We live those days differently when we remember what the goal is.\n\nBefore Lent moves any further, the Church reminds us that this is leading somewhere. We are not walking toward defeat. We are walking toward Easter. Whatever you are working on this Lent, whatever you are trying to surrender, whatever feels unfinished in your life — remember the mountain, remember the voice, and listen to Him.",
+   "father": "Welcome Father Eckhard",
+   "source": "Source: Fr. Nicholas O'Brien, https://catholicsermons.com/2026/02/27/march-1-2026/\nImage: JESUS MAFA. Transfiguration, from Art in the Christian Tradition, a project of the Vanderbilt Divinity Library, Nashville, TN. https://diglib.library.vanderbilt.edu/act-imagelink.pl?RC=48307 [retrieved February 28, 2026]. Original source: http://www.librairie-emmanuel.fr (contact page: https://www.librairie-emmanuel.fr/contact).",
+   "reading1": "Gn 12:1-4a",
+   "reading2": "2 Tm 1:8b-10",
+   "reading3": "Mt 17:1-9",
+   "newsletter": "infoheidelberg@internationalcatholiccommunity.com",
+   "appointments": [
+      {
+         "epoch": "1772319600000",
+         "date": "1 March",
+         "description": "Our monthly \"Social Sunday\" includes Children's Church during the Liturgy of the Word as well as our social gathering after Mass - help prepare, bring food, join us!"
+      }
+   ],
+   "colors": {
+      "color1": "#9B00BD",
+      "color2": "#FFF",
+      "border": "#FFF"
+   },
+   "fonts": {
+      "text": {
+         "family": "Georgia",
+         "lineHeight": 12,
+         "size": 11,
+         "paragraphMargin": 5
+      }
+   },
+   "publish": {
+      "icch": true,
+      "facebook": true,
+      "facebookMessage": "",
+      "htmlLink": "http://www.international-catholic-community-heidelberg.com/bulletins/2026-03-01-second-sunday-of-lent.html"
+   },
+   "saveAs": "2026-03-01-second-sunday-of-lent.markdown"
+}
