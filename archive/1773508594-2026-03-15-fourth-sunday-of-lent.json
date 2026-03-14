@@ -1,0 +1,50 @@
+{
+   "date": "March 15, 2026",
+   "dateChanged": "2026-03-14 05:37:23 +02:00",
+   "image": {
+      "enabled": true,
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/The_Anointing_of_David_-_Veronese_1555.jpg/330px-The_Anointing_of_David_-_Veronese_1555.jpg",
+      "layout": "left",
+      "size": 50
+   },
+   "title": "Fourth Sunday of Lent",
+   "text": "Today is Laetare Sunday, the day when the opening antiphon for mass is taken from the final chapter of the book of the prophet Isaiah:  “Rejoice, Jerusalem, and all who love her…” (Isa 66:10-11).  The term Laetare, meaning “rejoice”, is the first word of this antiphon in its Latin version.  The essential idea of today’s liturgy is that we reflect on the joy we sense as the days of Lent progress and the time of Holy Week and Easter begins to draw near.  The celebrant at mass may wear special rose colored vestments today to highlight further this note of joyful anticipation.\n\nArriving at true joy involves coming to terms with reality, seeing clearly who we are and where we stand, and the scripture readings for mass take up this theme of perception with some vivid scenes.  First, we hear the account from the First Book of Samuel in which the great Samuel, whom the Bible is careful to identify as a “seer” rather than a “prophet,” was sent by God to Bethlehem to anoint the new king of Israel.  When Samuel entered the city and encountered Jesse he saw the eldest and strongest of Jesse’s sons, Eliab, standing with his father.  He thought to himself:  “Surely the Lord’s anointed is here before him”.  Immediately, however, a word of clarity and reproof came to him:  “The Lord said to Samuel:  ‘Do not judge from his appearance….There—anoint him, for this is the one!’” (1 Sam 16:6-7).  “The one” whom Samuel was told to anoint was of course David, who would later become the greatest of Israel’s kings and even a figure to whom Christ himself is compared, but whose beginnings were nonetheless shrouded in obscurity and dismissal.\n\nThe next image of vision and perception comes in the gospel, where we encounter the striking story of the man born blind.  This is a long reading but I think it is important for the entire selection to be read at mass (John 9:1-41) instead of the abbreviated version because of the incisive nature of this powerful narrative.  Everyone in this story comes to terms with reality for better or for worse:  the man born blind both literally sees for the first time, and figuratively he “sees” the goodness and holiness of Jesus.  The Pharisees “see” not only what Jesus did, but they perceive as well what it portends for their way of life and they respond with fear and anger, preferring the blind illusion of control over the frightening vision of freedom in Christ.\n\nWhat this tells us is that it is not enough to see clearly; rather, when we see clearly who we are and where we stand we must also respond to our situation in a way characterized by the Christian virtues of humility, charity, and a desire for conversion.  The man born blind “saw” that he had been given not only the gift of literal sight but that of new life in Christ.  The Pharisees who denied their need for Christ—“They ridiculed him and said, ‘You are that man’s disciple; we are disciples of Moses!’”—ultimately refused the gift of new life and remained blind:  “Jesus said to them, ‘If you were blind, you would have no sin; but now you are saying, “We see,” so your sin remains’” (John 9:28, 41).\n\nOn this Laetare Sunday given to reflection on Christian joy, let us rejoice in Christ and his gift of new spiritual vision and new life, taking to heart St. Paul’s inspired words “You were once darkness, but now you are light in the Lord.  Live as children of light” (Eph 5).",
+   "father": "Welcome Father Eckhard",
+   "source": "Source: Father Edward Mazich, O.S.B., https://saintvincentarchabbey.org/sunday_homilies/fourth-sunday-of-lent-5/\nImage: Paolo Veronese: The Anointing of David",
+   "reading1": "1 Sam 16:1b, 6-7, 10-13a",
+   "reading2": "Eph 5:8-14",
+   "reading3": "John 9:1-41",
+   "newsletter": "infoheidelberg@internationalcatholiccommunity.com",
+   "appointments": [
+      {
+         "epoch": "1773529200000",
+         "date": "15 March",
+         "description": "From 11:30 to 12:30, we invite our adult community members to join the faith sharing group with Father Eckhard (topic: \"Lent - How to become more immune to evil\"). Parallel to this, Kids Catechesis invites all our younger members to a session about Lent/ Holy Week. At our 13:00 Mass, we will try and engage all members, with a special emphasis on kids and teens, in a \"Family Mass\"."
+      },
+      {
+         "epoch": "1773529200000",
+         "date": "15 March",
+         "description": "There will be confessions in English after Mass (kindly refer to our Lent and Easter programme for the other dates)."
+      }
+   ],
+   "colors": {
+      "color1": "#FFCAEA",
+      "color2": "#000",
+      "border": "#FFF"
+   },
+   "fonts": {
+      "text": {
+         "family": "Georgia",
+         "lineHeight": 12,
+         "size": 11,
+         "paragraphMargin": 5
+      }
+   },
+   "publish": {
+      "icch": true,
+      "facebook": true,
+      "facebookMessage": "",
+      "htmlLink": "http://www.international-catholic-community-heidelberg.com/bulletins/2026-03-15-fourth-sunday-of-lent.html"
+   },
+   "saveAs": "2026-03-15-fourth-sunday-of-lent.markdown"
+}
