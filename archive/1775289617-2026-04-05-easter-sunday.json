@@ -1,0 +1,55 @@
+{
+   "date": "April 5, 2026",
+   "dateChanged": "2026-04-04 09:24:12 +02:00",
+   "image": {
+      "enabled": true,
+      "src": "https://diglib.library.vanderbilt.edu/cdri/jpeg/whyweep1640axvu.jpg",
+      "layout": "left",
+      "size": 50
+   },
+   "title": "Easter Sunday",
+   "text": "*for your background information: the reflection below is based on the Gospel reading of Good Friday and its continuation up to the day of the Resurrection*\n\n###Wildness, Stillness\n\nThere is a special kind of pain in watching someone whom you love in agony and being helpless to help him. This must have been what Mary Magdalene suffered at the death of Jesus. The gospels report that when Jesus was crucified she was there. The comfort of being able to give him any comfort was unavailable to her. It must have been heartbreaking for her.\n\nIn these circumstances, she formed a plan. She watched till he was taken down from the cross, and she marked where they put his body. She gathered the necessary things and waited till the Sabbath was over. On the morning after, she went to the tomb to anoint him. If she could not comfort him in his dying, she could anoint his body after his death. It must have been her heart’s desire to do so.\n\nHow much she had her heart in that plan is shown by her reaction to its failure. When she came to the tomb and found his body missing, she wept hard. Angels came to her to try to comfort her, but without making any real impression on her. There is no other biblical story in which angelic visits have so little impact on the person being visited! In her heartbrokenness over not being able to anoint the body of Jesus, Mary Magdalene brushed off even angels. In her grief, she must have thought that she had lost her heart’s desire irredeemably.\n\nAnd yet we know the end of her story. When Jesus appeared to her on Easter morning, he said to her, “Mary!” and she recognized him in the saying of her name. In that electric moment, her weeping ended. Her heartbreak at his death was over, and her heart’s desire to anoint him, so pain-filled in its formulation, fell away. What she had wanted was so small by comparison with what she received then. What she had then was him, and she had him gloriously. Who could fail to miss his love for her? Neither she nor anyone else in her community - that is the answer. The whole community - apostles, disciples, family - first learned that Jesus was still present among them from her report of her experience of him.\n\nAnd so, for her, the heartbreak of Good Friday was redeemed in love. That is the Good Friday lesson for us too.",
+   "father": "Welcome Father Eckhard",
+   "source": "Source of reflection: © 2020, Eleonore Stump. https://liturgy.sluhostedsites.org/Triduum2026A/A_Good_Friday/reflections_stump.html\nSource line 2. (this empty space is for the pencil icon, it's not printed on paper!) ->",
+   "reading1": "",
+   "reading2": "",
+   "reading3": "John 18:1-19:42",
+   "newsletter": "infoheidelberg@internationalcatholiccommunity.com",
+   "appointments": [
+      {
+         "epoch": "1775340000000",
+         "date": "5 April",
+         "description": "**Mass on Easter Sunday starts at 11 AM!**"
+      },
+      {
+         "epoch": "1775340000000",
+         "date": "5 April",
+         "description": "After Mass, let's continue to celebrate together with an **Easter Social Gathering**! There will also be an **egg hunt** for our ICCH kids and youth :)\nIf you can make it, kindly consider helping the team set up everything half an hour before Mass (10:30 AM). Bring food to share if possible."
+      },
+      {
+         "epoch": "1775340000000",
+         "date": "5 April",
+         "description": "If you wish to take home some freshly blessed **Holy Water**, kindly bring with you a container of your own choice (may be already filled with water or not)."
+      }
+   ],
+   "colors": {
+      "color1": "#D2C579",
+      "color2": "#000",
+      "border": "#FFF"
+   },
+   "fonts": {
+      "text": {
+         "family": "Georgia",
+         "lineHeight": 13.5,
+         "size": 12,
+         "paragraphMargin": 5
+      }
+   },
+   "publish": {
+      "icch": true,
+      "facebook": true,
+      "facebookMessage": "",
+      "htmlLink": "http://www.international-catholic-community-heidelberg.com/bulletins/2026-04-05-easter-sunday.html"
+   },
+   "saveAs": "2026-04-05-easter-sunday.markdown"
+}
